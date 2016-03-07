@@ -55,7 +55,6 @@ li {
 	display: inline-block;
 	line-height:40px;
     letter-spacing:normal;
-    /*width: 145px;    */
 }
 
 /*SIDEBAR*/
@@ -78,19 +77,12 @@ li {
 	border: 1px solid lightgrey;
 	border-bottom: 0px;
 	line-height: 	40px;
-	/*margin: 0px auto;*/
 	text-decoration: none;
-	/*padding-left: 25px;*/
 }
 
 .sidebar li:last-child {
 	border-bottom: 1px solid lightgrey;
 }
-
-/*.sidebar li:nth-child(3) {*/
-	/*background: #f3f3f3;*/
-	/*padding-left: 35px;*/
-
 
 .sidebar a {
 	color: #807e7e;
@@ -104,15 +96,23 @@ li {
 .sidebar a:hover {
 	color: #000;
 	background: #f3f3f3;
-	padding: 0;
+	padding-left: 30px;
 }
-
 
 /*IMG*/
 
 .img {
 	border: 	1px solid #c8c8c8;
 	padding: 	50px 88px;
+}
+
+/*CONTENT*/
+
+.content p { 
+	font-size: 14px;
+	line-height: 20px;
+	margin: 40px 0px 50px;	
+	padding-left: 30px;
 }
 
 /*CLEARFIX*/
@@ -129,18 +129,6 @@ li {
 	clear: 	both;	
 }
 
-
-
-/*CONTENT*/
-
-.content p { 
-	font-size: 13px;
-	line-height: 20px;
-	margin: 40px 0px 50px;	
-	width: 650px;
-	padding-left: 25px;
-}
-
 /*FOOTER*/
 
 .footer {
@@ -151,30 +139,27 @@ li {
 .container ul {
 	float: left;
 	font-size: 0;
-	/*letter-spacing: -1px;*/
-	/*line-height: 0;*/
 	padding-left: 0px;
 }
 
 .container li {
 	display: inline-block;
 	font-size: 14px;
-	letter-spacing: normal;
 	line-height: 40px;
 	padding-left: 	25px;
-	width: 125px;
 }
 
-.container a {
+.container a{
+	text-decoration: none;
+	color: #2c2c2c;
+	font-family: Times;
+}
+
+.container a:hover {
 	color: #2c2c2c;
 	font-family: times; 
-	text-decoration: none;
-}
-
-.container li:nth-child(2){
 	text-decoration: underline;
 }
-
 
 .copy {
 	color: 	#2c2c2c;
