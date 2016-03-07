@@ -104,37 +104,46 @@ li {
 .sidebar a:hover {
 	color: #000;
 	background: #f3f3f3;
-	padding: 0 30px;
+	padding: 0;
 }
+
 
 /*IMG*/
 
 .img {
 	border: 	1px solid #c8c8c8;
-	float: left;
 	padding: 	50px 88px;
 }
 
-.clearfix:after {
+/*CLEARFIX*/
+
+.secondcolumn {
+	background: white;
+	float: right;
+	width: 680px;
+}
+
+.middle:after {
 	display: 	block;	
 	content: 	'';
 	clear: 	both;	
 }
 
+
+
 /*CONTENT*/
 
 .content p { 
-	font-size: 13.33px;
+	font-size: 13px;
 	line-height: 20px;
-	margin: 40px 0px 50px 320px;	
+	margin: 40px 0px 50px;	
 	width: 650px;
+	padding-left: 25px;
 }
 
 /*FOOTER*/
 
 .footer {
-	position: relative;
-	overflow: hidden;
 	padding: 0px;
 	background: #e1e1e1;
 }
@@ -142,8 +151,8 @@ li {
 .container ul {
 	float: left;
 	font-size: 0;
-	letter-spacing: -1px;
-	line-height: 0;
+	/*letter-spacing: -1px;*/
+	/*line-height: 0;*/
 	padding-left: 0px;
 }
 
