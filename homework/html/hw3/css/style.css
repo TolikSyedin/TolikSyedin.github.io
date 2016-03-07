@@ -111,14 +111,19 @@ li {
 	padding: 	50px 88px;
 }
 
+.clearfix:after {
+	display: 	block;	
+	content: 	'';
+	clear: 	both;	
+}
 /*CONTENT*/
 
 .content p { 
 	font-size: 13.33px;
 	line-height: 20px;
-	margin-left: 320px;
-	margin-top: 40px;
-	width: 650px;
+	/*margin-left: 320px;*/
+	/*margin-top: 40px;*/
+	/*width: 650px;*/
 }
 
 /*FOOTER*/
