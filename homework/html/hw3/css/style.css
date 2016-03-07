@@ -24,38 +24,43 @@ li {
 
 /*HEADER*/
 
+.menu {
+	margin: 40px 0 40px;
+}
 
 .menu a {
 	color: white;
 	display: block;
-	font-size: 14.67px;
+	font-size: 14px;
 	text-decoration: none;
-	padding-left: 	25px;
+	padding: 0 30px;
+	margin: 0 1px;
 }
 
-.menu .active  {
+.menu a:hover {
 	background: linear-gradient(to bottom, #494949, #303030);
 	border-left: 1px solid #838383;
 	border-right: 1px solid #838383;
 	display: 	inline-block;
-	width: 	101px;	
+	/*width: 	101px;	*/
 }
 
 
 .menu ul {
 	background: linear-gradient(to bottom,#5e5e5e, #464545);
-	font-size: 0;
-	letter-spacing:-1px;
-	line-height: 0;
-	margin-bottom: 40px;
-	padding: 0px;
+	/*font-size: 0;*/
+	/*letter-spacing:-1px;*/
+	/*line-height: 0;*/
+	/*margin-bottom: 40px;*/
+	padding-left: 0px;
 }
 
 .menu li {
+	font-size: 14px;
 	display: inline-block;
 	line-height:40px;
     letter-spacing:normal;
-    width: 145px;    
+    /*width: 145px;    */
 }
 
 /*SIDEBAR*/
