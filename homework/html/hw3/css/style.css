@@ -116,14 +116,15 @@ li {
 	content: 	'';
 	clear: 	both;	
 }
+
 /*CONTENT*/
 
 .content p { 
 	font-size: 13.33px;
 	line-height: 20px;
-	/*margin-left: 320px;*/
-	/*margin-top: 40px;*/
-	/*width: 650px;*/
+	margin: 40px 0px 50px 320px;	
+	width: 650px;
+
 }
 
 /*FOOTER*/
@@ -133,7 +134,7 @@ li {
 	font-size: 0;
 	letter-spacing: -1px;
 	line-height: 0;
-	margin-top: 50px;
+	/*margin-top: 50px;*/
 	padding-left: 0px;
 }
 
