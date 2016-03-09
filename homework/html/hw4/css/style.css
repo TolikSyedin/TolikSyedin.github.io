@@ -1,0 +1,204 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-image: url(../img/bg.jpg); #0e85a8;
+	background-repeat: repeat-x;	
+	/*background: #0e85a8;*/
+}	
+
+.wrapper {
+	margin: 0 auto;
+	width: 1000px;
+	box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.75);
+}
+.wrapper:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+/*HEADER*/
+
+.header {
+	background: white;
+	padding-right: 30px;
+}
+
+.logo p {
+	margin: 0;
+	padding: 0;
+	float: left;
+	background: white;
+}
+.contacts {
+	margin: 10px 0px 30px 300px; 
+	color: #5fa5bb;
+	float: right;	
+}
+
+.contacts span {
+	display: block;
+}
+
+.countries {
+	float: right;
+}
+
+.countries li{
+	display: inline-block;
+	margin-left: 15px;
+	list-style: none;
+	text-align: center;
+}
+.countries img{
+	display: block;
+	
+}
+.countries a {
+	font-size: 8px;
+	
+}
+.header:after{
+	display: block;
+	content: ' ';
+	clear: both;
+}
+/*CENTER*/
+.center {
+	background: white;
+}
+.center p {
+	margin-bottom: -9px;
+}
+.center:after {
+	clear: both;
+	content: ' ';
+	display: block;
+}
+
+/*MENU*/
+
+.menu {
+	background: white;
+	margin: 0 auto;
+	float: left;
+	width: 	100%;
+}
+
+.menu > ul {
+	padding: 0 56px;
+	display: block;
+  	list-style: none;
+ 	border: 1px	solid black;
+	background:  linear-gradient(to bottom, #373737, #303030);
+	-webkit-box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.75);
+	box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.75);
+}
+.menu ul:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.menu li {
+	display: inline-block;
+	line-height: 40px;
+	text-align: center;
+    position: relative;
+}
+.menu  a {
+	color: white;
+	padding: 0 23px;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+}
+
+.menu a:hover {
+	color: grey;
+}
+
+.menu ul.submenu {
+	border-top: 1px solid black;
+	position: absolute;	
+	display: none;
+	width: 115%	;
+	line-height: 40px;
+	background:  #303030;
+	box-shadow:0px 5px 15px 1px rgba(0,0,0,0.75);
+	z-index: 	1;
+}
+.menu ul.submenu > li> a:hover {
+	 text-decoration: underline;
+}
+
+.menu li:hover >  ul.submenu {
+	display: block;
+}
+
+
+.menu:after{
+	content: ' ';
+	display: block;
+	clear: both;
+
+}
+
+/*CONTENT*/
+
+.content {
+	float: left;
+	position: relative;
+	overflow: 	hidden;	
+	background: white;
+}
+
+.content h3 {
+	text-align: center;
+	line-height: 40px;
+}
+
+.content p {
+	padding: 0 15px;
+}
+
+.content:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+
+.first  {
+	position: absolute;
+	float: left;
+	background: #edeef0;
+	width: 22%;
+	border: 1px solid #c7cacf;
+	color: #424c43;
+	padding-bottom: 1500px;
+}
+
+
+.second {
+	padding-left: 225px;
+	float: left;
+	width: 55%;
+}
+
+.third {
+	float: right;
+	background: #edeef0;
+	width: 22%;
+	border: 1px solid #c7cacf;
+	color: #424c43;
+}
+
+.footer {
+	line-height: 60px;
+	text-align: center;
+	color: white;
+}
