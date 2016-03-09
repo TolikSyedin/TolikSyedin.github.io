@@ -173,18 +173,17 @@ body {
 }
 
 .first  {
-	position: absolute;
 	float: left;
 	background: #edeef0;
 	width: 22%;
 	border: 1px solid #c7cacf;
 	color: #424c43;
 	padding-bottom: 1500px;
+	margin-bottom:  -1500px;
 }
 
 
 .second {
-	padding-left: 225px;
 	float: left;
 	width: 55%;
 }
