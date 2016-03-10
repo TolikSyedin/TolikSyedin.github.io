@@ -6,7 +6,7 @@
 body {
 	background-image: url(../img/bg.jpg); #0e85a8;
 	background-repeat: repeat-x;	
-	/*background: #0e85a8;*/
+	background: #0e85a8;
 }	
 
 .wrapper {
@@ -27,16 +27,20 @@ body {
 	padding-right: 30px;
 }
 
-.logo p {
+.logo {
 	margin: 0;
 	padding: 0;
-	float: left;
 	background: white;
+	float: left;
+}
+.logo2 {
+	float: right;
+	
 }
 .contacts {
 	margin: 10px 0px 30px 300px; 
 	color: #5fa5bb;
-	float: right;	
+
 }
 
 .contacts span {
@@ -44,8 +48,9 @@ body {
 }
 
 .countries {
-	float: right;
+	float: right; /*Когда убираю этот пункт, строка становится не точно,*/
 }
+
 
 .countries li{
 	display: inline-block;
@@ -61,6 +66,11 @@ body {
 	font-size: 8px;
 	
 }
+.logo:after {
+	clear: both;
+	display: block;
+	content: '';
+}
 .header:after{
 	display: block;
 	content: ' ';
@@ -70,9 +80,7 @@ body {
 .center {
 	background: white;
 }
-.center p {
-	margin-bottom: -9px;
-}
+
 .center:after {
 	clear: both;
 	content: ' ';
@@ -81,12 +89,6 @@ body {
 
 /*MENU*/
 
-.menu {
-	background: white;
-	margin: 0 auto;
-	float: left;
-	width: 	100%;
-}
 
 .menu > ul {
 	padding: 0 56px;
@@ -109,13 +111,16 @@ body {
 	line-height: 40px;
 	text-align: center;
     position: relative;
+	padding: 0 23px;  
+
 }
 .menu  a {
+	display: block;
 	color: white;
-	padding: 0 23px;
 	text-align: center;
 	text-decoration: none;
 	color: white;
+
 }
 
 .menu a:hover {
@@ -151,7 +156,6 @@ body {
 /*CONTENT*/
 
 .content {
-	float: left;
 	position: relative;
 	overflow: 	hidden;	
 	background: white;
