@@ -145,13 +145,13 @@ li {
 	display: inline-block;
 	font-size: 14px;
 	line-height: 40px;
-	padding: 0 45px;
 }
 
 .container a{
 	text-decoration: none;
 	color: #2c2c2c;
 	font-family: Times;
+	padding: 0 45px;
 }
 
 .container a:hover {

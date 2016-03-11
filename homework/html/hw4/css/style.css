@@ -4,9 +4,10 @@
 }
 
 body {
-	background-image: url(../img/bg.jpg); #0e85a8;
-	background-repeat: repeat-x;	
-	background: #0e85a8;
+	background: #0c739f;
+	background-image: url(../img/bg.jpg); 
+	background-repeat: repeat-x; 
+		
 }	
 
 .wrapper {
@@ -48,7 +49,7 @@ body {
 }
 
 .countries {
-	float: right; /*Когда убираю этот пункт, строка становится не точно,*/
+	float: right;
 }
 
 
@@ -91,7 +92,7 @@ body {
 
 
 .menu > ul {
-	padding: 0 56px;
+	
 	display: block;
   	list-style: none;
  	border: 1px	solid black;
@@ -111,10 +112,10 @@ body {
 	line-height: 40px;
 	text-align: center;
     position: relative;
-	padding: 0 23px;  
 
 }
 .menu  a {
+	padding: 0 23px;  
 	display: block;
 	color: white;
 	text-align: center;
