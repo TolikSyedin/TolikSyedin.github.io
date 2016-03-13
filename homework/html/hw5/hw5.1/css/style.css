@@ -1,0 +1,137 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: Helvetica Neue, Tahoma, sans-serif;
+}
+
+body {
+	background-image: url(../img/bg.jpg);
+	background-size: cover; 
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('fonts/helveticaneue-ultralightital-webfont.eot');
+    src: url('fonts/helveticaneue-ultralightital-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helveticaneue-ultralightital-webfont.woff2') format('woff2'),
+         url('fonts/helveticaneue-ultralightital-webfont.woff') format('woff'),
+         url('fonts/helveticaneue-ultralightital-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*MENU*/
+.header {
+	font-size: 14px;
+	background: #074f8d;
+}
+.header ul {
+	float: right;
+}
+.header li {
+	display: inline-block;
+	list-style: none;
+	color: white;
+	padding-left: 0 23px;
+}
+.header a {
+	padding: 0 15px;
+	display: block;
+	text-decoration: none;
+	color: #60b5ed;
+	line-height: 30px;
+}
+.header a > img {
+	vertical-align: middle;
+}
+
+.firstline:hover,
+.middleline > a:hover {
+	background-color: #4eabda;
+	color: white;
+}
+.middleline {
+	border-left: 1px solid #56a2dc;
+}
+.lastline {
+	background: linear-gradient(to bottom, #4faedb, #2e7ac4);
+	color: white;
+	padding-left: 15px;
+	margin-right: 15px;
+}
+.lastline > li > a {
+	color: white;
+	text-decoration: underline;
+}
+
+.header:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+/*MIDDLE*/
+
+.wrapper {
+	width: 40%;
+	background: rgba(0, 0, 0, 0.5);
+	margin: 150px auto;
+}
+.head {
+	line-height: 50px;
+	text-align: center;
+	color: white;
+	border-bottom: 	2px solid rgba(255, 255, 255, 0.5);
+
+}
+.head:after {
+	content: 	'';
+	clear: 	both;	
+	display: 	block;	
+}
+.registry {
+		padding: 20px;
+		text-align: 	center;
+		margin: 0 auto;
+		display: 	block;	
+		width: 	50%;
+
+}
+.forms  {
+	line-height: 	40px;
+	margin: 5px;	
+	padding: 	0 25px;
+	background: 	#000;
+	border: 0 solid grey;
+	border-bottom: 	1px solid grey;
+	color: white;
+	width: 80%;
+}	
+
+.forms:focus {
+	background: #1b5288;
+	box-shadow: 0px 0px 5px 3px rgba(27,82,136,0.8);
+	border-bottom: 1px solid #1f5384;
+}
+.checkbox {
+	color: white;
+	font-size: 	13px;
+	line-height: 40px;
+		
+}
+.checkbox:hover {
+	text-decoration: underline;
+}
+.createacc [type=submit] {
+	background: linear-gradient(to bottom, #67c6e6, #3686ca);
+	line-height: 40px;
+	width: 150px;
+	color: white;
+	border: 0;
+	border-radius: 3px;
+	margin-bottom: 10px;
+}
+.agreement p {
+	color: #fff;
+	font-size: 9px;	
+}
