@@ -1,7 +1,8 @@
 *{
 	padding: 0;
 	margin: 0;
-	font-family: Helvetica Neue, Tahoma, sans-serif;
+	font-family: 'Helvetica Neue', Tahoma, sans-serif;
+
 }
 
 body {
@@ -23,8 +24,10 @@ body {
 
 /*MENU*/
 .header {
+	
+	height: 40px;
 	font-size: 14px;
-	background: #074f8d;
+	background: url(../img/upperbg.png);
 }
 .header ul {
 	float: right;
@@ -40,19 +43,26 @@ body {
 	display: block;
 	text-decoration: none;
 	color: #60b5ed;
-	line-height: 30px;
+	line-height: 40px;
 }
-.header a > img {
-	vertical-align: middle;
-}
-
-.firstline:hover,
-.middleline > a:hover {
+.firstline:hover {
 	background-color: #4eabda;
 	color: white;
 }
 .middleline {
 	border-left: 1px solid #56a2dc;
+	height: 40px;
+	padding: 0 10px;
+}
+.middleline span {
+	color: #60b5ed;
+}
+
+.middleline:before {
+	content: url(../img/flag.png);
+	position: relative;
+	top: 8px;
+	padding: 0 5px;	
 }
 .lastline {
 	background: linear-gradient(to bottom, #4faedb, #2e7ac4);
@@ -73,29 +83,38 @@ body {
 /*MIDDLE*/
 
 .wrapper {
-	width: 40%;
+	width: 450px;
 	background: rgba(0, 0, 0, 0.5);
 	margin: 150px auto;
 }
 .head {
-	line-height: 50px;
+	padding: 15px;
 	text-align: center;
 	color: white;
 	border-bottom: 	2px solid rgba(255, 255, 255, 0.5);
-
 }
+
 .head:after {
 	content: 	'';
 	clear: 	both;	
 	display: 	block;	
+}
+.facebook button {
+	width: 229px;
+	height: 40px;
+	margin-left: 5px;
+}
+.facebook a {
+	display: block;
+	text-decoration: none;
+	font-size: 20px;
 }
 .registry {
 		padding: 20px;
 		text-align: 	center;
 		margin: 0 auto;
 		display: 	block;	
-		width: 	50%;
-
+		width: 	225px;
 }
 .forms  {
 	line-height: 	40px;
@@ -105,7 +124,7 @@ body {
 	border: 0 solid grey;
 	border-bottom: 	1px solid grey;
 	color: white;
-	width: 80%;
+	width: 180px;
 }	
 
 .forms:focus {

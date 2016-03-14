@@ -1,0 +1,24 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+table {
+	border-collapse: collapse;
+}
+td {
+	padding: 40px;
+	border: 10px solid #000;
+	text-align: center;
+}
+
+td.firstline {
+	padding: 20px 60px;
+}
+
+td.firstline:nth-child(3) {
+	background: yellow;
+}
+
+td.secondline:nth-child(2){
+
+}
