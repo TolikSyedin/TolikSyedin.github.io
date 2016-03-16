@@ -25,7 +25,9 @@ body {
 
 .header {
 	background: white;
-	padding-right: 30px;
+	padding-right: 35px;
+	height: 176px;
+	overflow: hidden;
 }
 
 .logo {
@@ -36,75 +38,53 @@ body {
 }
 .logo2 {
 	float: right;
-	
+	width: 340px;	
+	height: 175px;
 }
 .contacts {
-	margin: 10px 0px 30px 300px; 
+	margin-top: 10px;
+	float: right;
 	color: #5fa5bb;
-
 }
 
 .contacts span {
+	margin: 5px;
 	display: block;
 }
 
 .countries {
+	margin-top: 15px;
+	margin-bottom: 10px;
 	float: right;
 }
 
 
 .countries li{
 	display: inline-block;
-	margin-left: 15px;
+	margin-left: 10px;
 	list-style: none;
 	text-align: center;
 }
-.countries img{
-	display: block;
-	
-}
+
 .countries a {
-	font-size: 8px;
-	
+	font-size: 8px;	
 }
-.logo:after {
-	clear: both;
-	display: block;
-	content: '';
-}
-.header:after{
-	display: block;
-	content: ' ';
-	clear: both;
-}
+
 /*CENTER*/
 .center {
 	background: white;
-}
-
-.center:after {
-	clear: both;
-	content: ' ';
-	display: block;
 }
 
 /*MENU*/
 
 
 .menu > ul {
-	
-	display: block;
   	list-style: none;
  	border: 1px	solid black;
 	background:  linear-gradient(to bottom, #373737, #303030);
 	-webkit-box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.75);
 	box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.75);
-}
-.menu ul:after{
-	content: '';
-	display: block;
-	clear: both;
 }
 
 .menu li {
@@ -118,10 +98,7 @@ body {
 	padding: 0 23px;  
 	display: block;
 	color: white;
-	text-align: center;
 	text-decoration: none;
-	color: white;
-
 }
 
 .menu a:hover {
@@ -132,7 +109,6 @@ body {
 	border-top: 1px solid black;
 	position: absolute;	
 	display: none;
-	width: 115%	;
 	line-height: 40px;
 	background:  #303030;
 	box-shadow:0px 5px 15px 1px rgba(0,0,0,0.75);
@@ -141,16 +117,21 @@ body {
 .menu ul.submenu > li> a:hover {
 	 text-decoration: underline;
 }
-
-.menu li:hover >  ul.submenu {
+.menu li:hover > ul.submenu {
 	display: block;
+}
+.menu .sublist a:after {
+	content: url(../img/triangle.png);
+	vertical-align: middle;
+	
 }
 
 
-.menu:after{
-	content: ' ';
-	display: block;
-	clear: both;
+
+.menu ul.submenu a{
+	/*width: 150px;*/
+	/*padding-left: 15px;*/
+	margin-left: 15px;
 
 }
 
