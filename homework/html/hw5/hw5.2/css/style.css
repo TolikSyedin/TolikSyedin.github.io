@@ -14,11 +14,44 @@ td {
 td.firstline {
 	padding: 20px 60px;
 }
-
+td.firstline:first-child {
+	padding: 0 20px;
+}
 td.firstline:nth-child(3) {
 	background: yellow;
 }
-
+/*.secondline {
+	padding: 50px 60px;
+}*/
 td.secondline:nth-child(2){
+	background:  red;
+}
 
+td.secondline:last-child {
+	background: yellow;
+
+}
+.fourthline {
+	padding: 20px;
+}
+td.fourthline:first-child {
+	background: black;
+}
+.fifthline {
+	padding: 20px 40px;
+}
+td.fifthline:first-child{
+	background: yellow;
+}
+.fifthline:nth-child(3){
+	background: blue;
+}
+.sixthline {
+	padding: 20px 40px;
+}
+.sixthline:nth-child(2){
+	background: black;
+}
+.seventhline {
+	padding: 20px 40px;
 }
