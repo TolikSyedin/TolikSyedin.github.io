@@ -1,0 +1,59 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	width: 1000px;
+	padding: 17px 46px;
+	margin: 0 auto;
+	background: #000;
+	-webkit-box-shadow: 0px 4px 13px 4px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 4px 13px 4px rgba(0,0,0,0.75);
+	box-shadow: 0px 4px 13px 4px rgba(0,0,0,0.75);
+}	
+header {
+	font-size: 12px;
+	line-height: 25px;
+	overflow: hidden;
+}
+.phone:before {
+	content: url(../img/phone.png);
+	
+}
+.phone {
+	float: left;
+	vertical-align: middle;
+	color: #5e696d;
+	font-size: 20px;
+	font-family: "Arial";
+	color: rgb(94, 105, 109);
+	line-height: 1.415px;
+	text-align: center;
+	margin: 0 8px;
+}
+.login form:before {
+	content: url(../img/login.png);	
+	vertical-align: middle;
+	position: relative;
+	top: 6px;
+	margin: 0 3px 0 8px;
+
+}
+.login {
+	vertical-align: middle;
+	float: left;
+	padding: 0  qpx;
+	background: blue;
+	width: 495px;
+	display: inline-block;
+}
+
+.log_in, .password {
+	width: 100px;
+	margin-right: 8px;
+
+}
+.sitemap {
+	display: inline-block;
+}
