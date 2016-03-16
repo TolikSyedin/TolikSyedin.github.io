@@ -120,7 +120,7 @@ body {
 	line-height: 35px;
 }
 .btnFacebook:before {
-	border-right: 1px solid #345195;
+	border-right: 2px groove #4c68a9;
 	content: 'f';
 	font-weight: 900;
 	padding: 0 15px;
@@ -180,6 +180,7 @@ body {
 	background: #1b5288;
 	box-shadow: 0px 0px 5px 3px rgba(27,82,136,0.8);
 	border-bottom: 1px solid #1f5384;
+	border: 1px solid #689bcc;
 }
 .checkbox {
 	color: white;
