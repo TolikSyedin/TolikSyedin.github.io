@@ -12,11 +12,11 @@ body {
 
 @font-face {
     font-family: 'Helvetica Neue';
-    src: url('fonts/helveticaneue-ultralightital-webfont.eot');
-    src: url('fonts/helveticaneue-ultralightital-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/helveticaneue-ultralightital-webfont.woff2') format('woff2'),
-         url('fonts/helveticaneue-ultralightital-webfont.woff') format('woff'),
-         url('fonts/helveticaneue-ultralightital-webfont.ttf') format('truetype');
+    src: url('../fonts/helveticaneuecyr-light-webfont.eot');
+    src: url('../fonts/helveticaneuecyr-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helveticaneuecyr-light-webfont.woff2') format('woff2'),
+         url('../fonts/helveticaneuecyr-light-webfont.woff') format('woff'),
+         url('../fonts/helveticaneuecyr-light-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
@@ -37,6 +37,7 @@ body {
 	list-style: none;
 	color: white;
 	padding-left: 0 23px;
+	position: relative;
 }
 .header a {
 	padding: 0 15px;
@@ -51,18 +52,18 @@ body {
 }
 .middleline {
 	border-left: 1px solid #56a2dc;
-	height: 40px;
 	padding: 0 10px;
 }
-.middleline span {
+.middleline span { 
+	vertical-align: middle;
+	display: inline-block;
 	color: #60b5ed;
 }
 
 .middleline:before {
 	content: url(../img/flag.png);
-	position: relative;
-	top: 8px;
-	padding: 0 5px;	
+	display: inline-block;
+	vertical-align: middle;
 }
 .lastline {
 	background: linear-gradient(to bottom, #4faedb, #2e7ac4);
@@ -99,22 +100,69 @@ body {
 	clear: 	both;	
 	display: 	block;	
 }
-.facebook button {
-	width: 229px;
-	height: 40px;
-	margin-left: 5px;
-}
-.facebook a {
-	display: block;
-	text-decoration: none;
-	font-size: 20px;
-}
 .registry {
 		padding: 20px;
 		text-align: 	center;
 		margin: 0 auto;
 		display: 	block;	
 		width: 	225px;
+}
+.btnFacebook {
+	display: block;
+	border-radius: 4px;
+	margin-left: 5px;
+	width: 225px;
+	color: white;
+	text-decoration: none;
+	background: linear-gradient(to bottom, #3e559b, #2b4276);
+	font-family: Arial, sans-serif;
+	padding: 0 auto;
+	line-height: 35px;
+}
+.btnFacebook:before {
+	border-right: 1px solid #345195;
+	content: 'f';
+	font-weight: 900;
+	padding: 0 15px;
+	float: left;
+}
+
+.login {
+	font-family: Arial, sans-serif;
+	font-weight: 700;
+	font-size: 14px;
+}
+.with {
+	font-weight: 200;
+
+}
+.oudiv{
+	display: inline-block;
+	line-height: 40px;
+	margin-left: 5px;
+	color: #949494;
+
+}
+.ou:before {
+	display: inline-block;
+	content: '';
+	clear: both;
+	border-top: 1px solid grey;
+	border-bottom: 1px solid black;
+	vertical-align: middle;
+	width: 92px;
+	margin-right: 6px;
+}
+.ou:after {
+	content: '';
+	clear: both;
+	display: inline-block;
+	border-top: 1px solid grey;
+	border-bottom: 1px solid black;
+	vertical-align: middle;
+	width: 92px;
+	margin-left: 6px;
+	
 }
 .forms  {
 	line-height: 	40px;
@@ -124,7 +172,8 @@ body {
 	border: 0 solid grey;
 	border-bottom: 	1px solid grey;
 	color: white;
-	width: 180px;
+	width: 175px;
+
 }	
 
 .forms:focus {
@@ -149,6 +198,7 @@ body {
 	border: 0;
 	border-radius: 3px;
 	margin-bottom: 10px;
+	cursor: pointer;
 }
 .agreement p {
 	color: #fff;
