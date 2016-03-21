@@ -10,9 +10,7 @@
 	width: 910px;
 	padding: 16px 45px;
 	margin: 0 auto;
-	-webkit-box-shadow: 0px -15px 13px 4px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px -15px 13px 4px rgba(0,0,0,0.75);
-	box-shadow: 0px -15px 13px 4px rgba(0,0,0,0.75);
+
 }
 
 	/*HEADER*/
@@ -88,14 +86,19 @@ form {
 	border-left: 1px solid white;
 
 }
+
 a.forgetpswrd {
-	border-bottom: 1px solid #bfbfbf;
+
 	color: #bfbfbf;	
 	padding:10px 2px 2px;
 	float: right;
 	text-align: right;
 	letter-spacing: 0px;
 }
+header a:hover {
+	text-decoration: underline;
+}
+
 .sitemap {
 	float: left;
 	width: 65px; 
