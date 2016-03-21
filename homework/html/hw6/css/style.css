@@ -574,18 +574,18 @@ section  span {
 	border-radius: 2px;
 	width: 526px;
 	float: left;
-
-
+	padding-bottom: 22px;
 }
-figure {
 
+figure {
+	float: left;
 	width: 140px;
 	display: inline-block;
 	text-align: center;
-	float: left;
 	margin: 10px -1px 0 9px;
 	padding: 7px 10px 0;
 }
+
 figure p {
 	margin-top: 1px;
 	color: #206988;
@@ -595,13 +595,10 @@ figure p {
 	letter-spacing: 0px;
 	font-weight: 600;
 	padding-left: 8px;
+}
 
-}
-figure:first-child p{
-	padding-left: 6px;
-}
 figure span{
-
+	margin-bottom: 1px;
 	font-size: 12px;
 	display: block;
 	color: #1f2528;	
@@ -609,34 +606,15 @@ figure span{
 	font-weight: normal;
 	
 }
-figure:first-child span {
-	padding-left: 4px;
-}
+
 
 figure img {
 	display: block;
-	padding: 4px 34px 4px;
+	padding: 4px 28px 4px;
 	background: white;
 	border: 1px solid grey;
 	border-radius: 7px;
-}
-
-figure:first-child img {
-	padding-top: 7px;
-	margin-left: -1px;
-	padding-left: 28px;
-}
-figure:nth-child(2) img{
-	padding-top: 4px;
-	margin-left: -6px;
-	padding-bottom: 5px;
-}
-
-figure:last-child img {
-	padding-left: 27px; 
-	padding-right: 30px;
-	margin-left: -5px;
-
+	margin-left: -4px;
 }
 
 
@@ -648,15 +626,20 @@ figcaption {
     font-style: italic;
     font-family: arial;
     font-weight: bold;
-    margin-bottom: 26px;
+    margin-bottom: 9px;
     letter-spacing: 1px;
     word-spacing: 1px;
 }
-figure:nth-child(3) figcaption {
-	margin-bottom: 29px;
+
+.box1 img, .box4 img, .box7 img {
+	padding-left: 30px;
+	padding-right: 32px;
+	margin-top: 2px;
+
 }
-figure:nth-child(2) figcaption {
-	margin-bottom: 27px;
+.box2 img, .box5 img, .box8 img {
+	padding-left: 31px;
+	padding-right: 35px;
 }
 
 /*/RIGHT/*/
@@ -750,7 +733,7 @@ footer {
 	text-align: center;
 	margin-top: 23px;
 }
-footer img {
+.logo {
 	margin-bottom: 21px;
 }
 .footermenu {
@@ -769,27 +752,20 @@ footer li {
 	display: inline-block;
 	color: grey;
 	line-height: 11px;
+	padding: 0 10px;
+	border-left: 1px solid white;
+}
+footer li:first-child {
+	border-left: 0px;
 }
 
 footer a {
 	display: block;
-	padding-left: 10px;
-	padding-right: 13px;
 	letter-spacing: 0.4px;
 	color: white;
 	font-family: arial;
 }
-footer li:first-child a{
-	padding-right: 6px;
-	color: #4792af;
-}
-footer li:nth-child(2) {
-	border-left: 1px solid white;
-	border-right: 1px solid white;
-}
-footer li:nth-child(3) {
-	border-right: 1px solid white;
-}
+
 footer p {
 	font-size: 10px;
 	margin-top: 14px;
