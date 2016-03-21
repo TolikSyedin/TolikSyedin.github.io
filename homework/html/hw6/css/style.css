@@ -81,14 +81,12 @@ form {
 	letter-spacing: -1px;
 }
 .registration {
-
 	padding-left: 5px;
 	border-left: 1px solid white;
 
 }
 
 a.forgetpswrd {
-
 	color: #bfbfbf;	
 	padding:10px 2px 2px;
 	float: right;
@@ -114,10 +112,8 @@ header a:hover {
 .sitemap span{
 	margin-top: -2px;
 	float: left;
-	/*display: block;*/
 	padding: 0 3px 2px 4px;
 	line-height: 19px;
-	/*display: inline-block;*/
 	
 }
 /*IMG*/
@@ -151,12 +147,13 @@ header a:hover {
 	clear: both;
 }
 .leftmenu ul {
-	padding: 0 0 5px 125px;
+	float: left;
+	padding: 0 0 2px 137px;
 
 }
 .menu a {
 	display: block;
-	padding: 1px 14px 0 0;
+	padding: 1px 14px;
 	color: #b1bcc0;
 	font-size: 13.5px;
 	letter-spacing: 0.1px;
@@ -166,45 +163,23 @@ header a:hover {
 	float: left;
 	text-transform: uppercase;
 }
-.leftmenu li:first-child > a {
-	padding: 1px 19px 0 21px; 
-}
-.leftmenu li:nth-child(2) a {
-	padding-left: 15px;
-}
-.leftmenu li:nth-child(3) a {
-	padding-left: 16px;
-}
-
-.leftmenu li:nth-child(4) a {
-	padding-left: 17px;
-}
-.leftmenu li:nth-child(5) a {
-	padding-left: 12px;
-}
-/*.menu a:hover, a:focus,  {
+.menu a:hover   {
 	background: #195779;
 	border-radius: 13px;
 	color: white;
-}*/
-.leftmenu .chosen {
-	background: #195779;
-	border-radius: 13px;
-	color: #fff;
 }
+
 .rightmenu {
 	margin-right: 12px;
 	text-align: right;
 	font-size: 11px;
-
-	height: 25px;
 	letter-spacing: 0.12px;
 }
 
 .rightmenu li {
+	margin-top: -3px;
 	color:  #868e92;
 	float: right;
-	margin-top: -4px;
 	padding-left: 10px;
 }
 .rightmenu span {
@@ -218,7 +193,8 @@ header a:hover {
 .rightmenu:after {
 	content: url(../img/basket.png);
 	display: block;
-	margin-top: -1px;
+	margin-top: 3px;
+	
 }
 .rightmenu li:nth-child(3){
 	width: 3px;
@@ -581,7 +557,7 @@ section  span {
 	margin-left: -3px;
 	padding-right: 2px;	
 }
-.catalog .chosen {
+.catalog a:hover {
 	font-family: arial;
 	text-decoration: underline;
 	font-size: 14px;
