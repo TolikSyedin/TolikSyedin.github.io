@@ -84,7 +84,9 @@ header:after {
 	border-color: #edbfff;
 	text-shadow: 1px 1px 2px white, 0 0 1px black;
 }
-
+.hiddenmenu {
+	display: none;
+}
 
 .main {
 	margin-top: 160px;
@@ -149,18 +151,25 @@ header:after {
 	width: 960px;
 	margin: 0 auto;
 	padding: 43px 0;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
 }
 
 .info__box {
 	width: 225px;
 	padding-left: 20px;
 	margin-right: -3px;
-	float: right;
+	margin-left: 40px;
+
 	
 }
-.info__box:nth-child(2) {
+/*.info__box:nth-child(2) {
 	margin: 0 92px 0 97px;
-}
+}*/
 .info__icon {
 	position: relative;
 	left: -51px;
@@ -209,7 +218,7 @@ header:after {
 	font-size: 16px;
 	line-height: 24px;
 	letter-spacing: -0.1px;	
-	/*overflow-wrap: break-word;*/
+
 }
 
 .info__readmore {
@@ -234,7 +243,6 @@ header:after {
 	height: 483px;
 	background: #f9f9f9;
 	border-bottom: 1px solid #fff;
-	/*background: black;*/
 }
 
 .blog {
@@ -259,11 +267,7 @@ header:after {
 	margin-left: -23px;
 	margin-top: 16px;
 	margin-right: 12px;
-/*
-	position: relative;
-	left: -30px;
-	top: 52px;
-*/
+
 }
 
 .blog__text--head {
@@ -365,8 +369,11 @@ header:after {
 
 }
 
-.bottom__box1, .bottom__box2, .bottom__box3 {
+.bottom__box1, .bottom__box2, .bottom__box3, .bottom__box3--hidden  {
 	width: 280px;
+}
+.bottom__box3--hidden {
+	display: none;
 }
 
 .bottom__logo {
@@ -454,4 +461,110 @@ header:after {
 .bottommenu__copyright span {
 	font-family: 'Open Sans Extrabold';
 	font-weight: bold;
+}
+
+@media (max-width: 960px) {   
+	header, .main__content, .info, .blog, .logos, .bottom, .bottommenu {
+		width: 768px;
+	}
+	
+	.header__menu{
+		clear: left;
+		float: left;
+	}
+
+	.header__item {
+		margin: 30px 50px 0px 0px;	
+	}
+	.main__text {
+		width: 450px;
+	}
+	.main__img {
+		right: 20px;
+	}
+	.blog__blockquote {
+		background: #fff;
+		width: 370px;
+		float: left;
+	}
+	.logos {
+		margin: 0 auto;
+	}
+	.blog__updates {
+		width: 350px;
+	}
+	.optional {
+		display: none;
+	}
+	.bottom__box1, .bottom__box2 {
+		display: none;
+	}
+	
+	.hidden {
+		display: block;
+	} 	
+	
+	.end {
+		background: url(../img/bgbottommode.jpg);
+		height: 200px;
+	}
+
+	.bottommenu__copyright {
+		clear: left;
+		flex-flow: right;
+	}
+
+}	
+
+@media (max-width: 768px) {
+	header, .main__content, .info, .blog, .logos, .bottom, .bottommenu {
+		width: 480px;
+	}
+	.header__logo {
+		float: none;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.header__menu {
+		float: none;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.header__item {
+		margin: 20px auto;
+	}
+	.visible {
+		display: none;
+	}
+	.header__menu {
+		position: relative;
+		z-index: 3;
+	}
+	.innermenu  {
+		z-index: 2;
+		color: white;
+
+
+	}
+	.hiddenmenu{
+		display: block;
+		position: absolute;
+		left: 70px;
+		background: #000;
+		top: 50px;
+		padding: 0 117px;	
+		border: 1px solid yellow;
+		z-index: 0;
+	}
+	
+	.innermenu {
+		border: 1px solid #000;
+		padding: 0 151px;
+	}
+	
+	
+	/* .innermenu:hover > .hiddenmenu {
+		display: block;
+	}*/
+	
 }
