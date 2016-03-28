@@ -515,7 +515,6 @@ header:after {
 	}
 
 }	
-
 @media (max-width: 768px) {
 	header, .main__content, .info, .blog, .logos, .bottom, .bottommenu {
 		width: 480px;
