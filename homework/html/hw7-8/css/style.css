@@ -472,7 +472,24 @@ header:after {
 	header, .main__content, .info, .blog, .logos, .bottom, .bottommenu {
 		width: 768px;
 	}
+	.innermenu {
+		margin: 0;
+		display: block;
+		float: left;
+		clear: left;
+	}
 
+	.header__menu {
+		float: none;
+	}
+	.hiddenmenu {
+		position: relative;
+		top: -30px;
+		left: 50px;
+	}
+	
+
+	}
 	.main__text {
 		width: 450px;
 	}
@@ -516,36 +533,7 @@ header:after {
 	header, .main__content, .info, .blog, .logos, .bottom, .bottommenu {
 		width: 480px;
 	}
-
-	
-/*	.header__logo {
-		float: none;
-		margin: 0 auto;
-		text-align: center;
-	}
-	.header__menu {
-		float: none;
-		text-align: center;
-		margin: 0 auto;
-	}
-	.header__item {
-		margin: 20px auto;
-	}
-	.visible {
+	header {
 		display: none;
 	}
-
-
-	.innermenu:hover > .hiddenmenu {
-		display: block;
-	}
-
-	.innermenu:hover {
-		border: 1px solid #000;
-		padding: 0 133px;
-		background: rgba(62, 51, 71, .9);
-		border-radius: 10px;
-	}
-*/
 	
-}
