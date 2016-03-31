@@ -514,13 +514,13 @@ header:after {
 	} 	
 	
 	.end {
-		background: url(../img/bgbottommode.jpg) 0 0 no-repeat;
+		background: url(../img/bgbottommode.jpg) center center no-repeat;
 		min-height: 200px;
 	}
 
 	.bottommenu__copyright {
 		clear: left;
-		flex-flow: right;
+		float: right;
 	}
 
 }	
@@ -583,7 +583,7 @@ header:after {
 		position: absolute;
 		left: -41px;
 		top: 44px;
-		border-right: 0 0 10px 10px;
+		border-radius: 0 0 10px 10px;
 		z-index: 2;
 
 	}
@@ -628,7 +628,7 @@ header:after {
 		width: 26px;
 	}
 	.blog__updates {
-		float: none
+		float: none;
 		margin: 0 auto;		
 	}
 	.blog__readmore {
