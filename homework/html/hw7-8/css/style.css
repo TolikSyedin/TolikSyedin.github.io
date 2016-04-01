@@ -686,6 +686,14 @@ img {
 	.blog {
 		padding: 50px 0;
 	}
+	.blog__blockquote {
+		width: auto;
+		margin: 0 20px;
+
+	}
+	.blog__blockquote:after {
+		display: none;
+	}
 	.blog__updates {
 		float: none;
 		margin: 0 20px;	
