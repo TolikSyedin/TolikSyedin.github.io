@@ -578,7 +578,7 @@ img {
 }	
 
 @media only screen and (max-width: 480px) {
-		header, .main__content, .info, .blog, .logos, .bottom, .bottommenu {
+		header, .main__content, .info, .blog, .logos, .bottom, .bottommenu  {
 		max-width: 480px;
 		width: auto;
 	}
@@ -676,15 +676,20 @@ img {
 	}
 	.info__box {
 		width: auto;
+		margin: 0 20px 0 30px;
 	}
 
 	.info__icon2, .info__icon3 {
 		background-position: 0 0;	
 		width: 26px;
 	}
+	.blog {
+		padding: 50px 0;
+	}
 	.blog__updates {
 		float: none;
-		margin: 0 auto;		
+		margin: 0 20px;	
+		width: auto;	
 	}
 	.blog__readmore {
 		display: none;
@@ -693,25 +698,38 @@ img {
 		display: block;
 	}
 	.img {
-		display: none;
+		width: auto;
+		text-align: center;
 	}
-	.img2 {
-		display: block;
-		margin: 0 auto;
-		padding: 50px 0;
-		width: 350px;
+	.logo {
+		float: none;
+		vertical-align: middle;
 	}
+
 	.bottom {
 		flex-flow: column;
 
 	}
-	.bottom__box3 {
-		margin-bottom: 50px;
+	.bottom__box3  {
+		width: auto;
+		margin: 0 20px;
 	}
+	.hidden {
+		width: auto;
+	}
+	.end {
+		padding-top: 40px;
+	}
+	.bottommenu__menu {
+		float: none;
+		text-align: center;
+		margin: 0 auto;
 
+	}
 	.bottommenu__item {
-		margin: 0 7px;
+		margin: 0 auto;
 		margin-bottom: 50px;
+
 	}
 	.bottommenu__copyright {
 		float: none;
