@@ -61,7 +61,6 @@ header:after {
 	word-spacing: 0px;
 	margin-left: 40px;
 	padding: 0 4px 0 6px;
-	margin-right: -2px;
 	text-transform: uppercase;
 }
 
@@ -160,7 +159,6 @@ header:after {
 .info__box {
 	width: 225px;
 	padding-left: 20px;
-	margin-right: -3px;
 	margin-left: 40px;
 
 	
@@ -268,7 +266,7 @@ header:after {
 	content: '';
 	display: block;
 	position: absolute;
-	left: 380px;
+	right: 20px;
 	bottom: -19px;
 	border: 10px solid transparent;
 	border-top: 10px solid #fff;
@@ -518,7 +516,7 @@ header:after {
 
 	.blog__blockquote {
 		background: #fff;
-		width: auto;
+		width: 300px;
 		float: left;
 	}
 	.blog__updates {
