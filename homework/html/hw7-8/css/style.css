@@ -309,7 +309,7 @@ header:after {
 	display: block;
 	content: '';
 }
-.blog__box {
+.blog__info {
 	float: left;
 	margin: 0 0 15px 0;
 }
