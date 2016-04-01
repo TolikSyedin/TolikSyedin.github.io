@@ -485,6 +485,10 @@ header:after {
 	font-weight: bold;
 }
 
+img {
+	min-width: 100%;
+}
+
 @media only screen and (max-width: 768px) {   
 	header, .main__content, .info, .blog, .logos, .bottom, .bottommenu {
 		max-width: 768px;
@@ -516,9 +520,13 @@ header:after {
 	.main__text {
 		width: 420px;
 	}
+	.main--text--text {
+		width: auto;
+	}
+
 	.main__img {
-		right: 120px;
-		width: 150px;
+
+		width: 250px;
 	}
 
 	.blog__blockquote {
@@ -599,7 +607,7 @@ header:after {
 		border: 1px solid #000;	
 		background: rgba(68, 50, 72, .9);	
 		border-radius: 10px 10px 0 0;
-}
+	}
 	.innermenu:hover .hiddenmenu{
 		display: block;
 	}
