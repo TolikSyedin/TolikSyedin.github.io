@@ -309,12 +309,16 @@ header:after {
 	display: block;
 	content: '';
 }
-.blog__box {
+.blog__info {
 	float: left;
+}
+
+.blog__box {
 	margin: 0 0 15px 0;
+	
 }
 .blog__box:after {
-		clear: both;
+	clear: both;
 	display: block;
 	content: '';
 }
