@@ -421,6 +421,7 @@ header:after {
 	line-height: 24px;
 	letter-spacing: -0.1px;	
 	color: #787878;
+	text-shadow: 0 1px 0 #fff;
 }
 .bottom__head {
 	margin-top: 9px;
@@ -489,6 +490,10 @@ header:after {
 		max-width: 768px;
 		width: auto;
 	}
+	.head {
+		min-height: 0;
+		padding: 0 0 50px 0;
+	}
 	.innermenu {
 		margin: 40px 0;
 		display: block;
@@ -505,7 +510,9 @@ header:after {
 		left: 50px;
 	}
 	
-
+	.main	{
+		margin-top: 0;
+	}
 	.main__text {
 		width: 420px;
 	}
@@ -520,24 +527,31 @@ header:after {
 		float: left;
 	}
 	.blog__updates {
-		width: auto;
+
+		width: 350px;
 		padding: 30px 0;
 	}
 
 	.logo {
 		margin: 0 23px;
 	}
-	.blog__updates {
-		width: 350px;
-	}
+	
 	.optional {
 		display: none;
+	}
+	.states {
+		min-height: 0;
+		padding: 70px 0;
+	}
+	.bottom {
+		padding-top: 0;
 	}
 	.bottom__box1, .bottom__box2 {
 		display: none;
 	}
 	
-	.hidden {
+	.bottom__box3, .hidden {
+		width: 230px;
 		display: block;
 	} 	
 	
