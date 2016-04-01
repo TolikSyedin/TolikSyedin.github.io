@@ -642,7 +642,7 @@ img {
 	}
 	.main	{
 		margin-top: 50px;
-		height: 200px;
+		min-height: 200px;
 	}
 	.main__content {
 		margin: 0;
@@ -665,7 +665,8 @@ img {
 		display: none;
 	}
 	.main__img {
-		margin-right: -45px;
+		right: 0;
+		width: 200px;
 		z-index: 0;
 	}
 	.info {
@@ -712,6 +713,8 @@ img {
 	.logo {
 		float: none;
 		vertical-align: middle;
+		padding: 5px 0;
+
 	}
 
 	.bottom {
@@ -758,7 +761,7 @@ img {
 	}
 	.main__text {
 		float: none;
-		margin-left: 80px;
+		margin: 0 auto;
 	}
 	.main__img {
 		display: none;
@@ -766,9 +769,7 @@ img {
 	.info__text--text span {
 		display: none;
 	}
-	.blog__blockquote {
-		width: 230px;
-	}
+
 	.blog__text--head span {
 		display: block;
 	}
@@ -779,14 +780,6 @@ img {
 		display: none;
 	}
 
-	.img2 {
-		display: none;
-	}
-	.img3{
-		display: block;
-		width: 240px;
-		margin: 50px auto;
-	}
 	.states {
 		display: none;
 	}
