@@ -157,7 +157,7 @@ header:after {
 	justify-content: space-between;
 }
 
-.info__box {
+.info__box1, .info__box2, .info__box3 {
 	width: 225px;
 	padding-left: 20px;
 	margin-right: -3px;
@@ -166,17 +166,21 @@ header:after {
 	
 }
 
-.info__icon {
+.info__box1:before {
+	display: block;
 	position: relative;
 	left: -51px;
 	top: 41px;
 	width: 25px;
 	height: 25px;
+	content: '';
 	background: url(../img/icons.png) 0 0  no-repeat;
 	background-position: 0 0;
 
 }
-.info__icon2 { 
+.info__box2:before { 
+
+	display: block;
 	position: relative;
 	left: -52px;
 	top: 41px;
@@ -187,7 +191,8 @@ header:after {
 	background-position: -26px 0;
 }
 
-.info__icon3 {
+.info__box3:before {
+	display: block;
 	position: relative;
 	left: -51px;
 	top: 41px;
@@ -253,14 +258,25 @@ header:after {
 }
 .blog__blockquote {
 	float: left;
-	background: url(../img/bqbg.png) 0 0 no-repeat;
+	background: #fff;
 	width: 430px;
 	height: 300px;
 	margin-left: 21px;
+	position: relative;
+}
+.blog__blockquote:after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 380px;
+	bottom: -19px;
+	border: 10px solid transparent;
+	border-top: 10px solid #fff;
+	border-right: 10px solid #fff;
+	
 }
 
-.blog__blockquote:before{
-	content: url(../img/face.png);
+.blog__faceicon {
 	display: block;	
 	width: 51px;
 	height: 320px;
@@ -303,28 +319,13 @@ header:after {
 	font-weight: 800;
 	margin-bottom: 1px;
 }
-
-.blog__text--head2:before {
-	margin-right: 16px;
+.blog__icon1, .blog__icon2, .blog__icon3 {
 	vertical-align: middle;
-	content: '';
 	display: block;
 	float: left;
-	height: 49px;
-	width: 49px;
-	background: url(../img/icons2.png) 0 0 no-repeat;
-	background-position: 0 0;
+	margin-right: 15px;
 }
-.blog__text--head2:nth-child(4):before {
-	background-position: 0 -67px;
 
-}
-.blog__text--head2:nth-child(6) {
-	margin-top: -4px;
-}
-.blog__text--head2:nth-child(6):before {
-	background-position: 0 -132px;
-}
 
 .blog__readmore {
 	color: black;
@@ -370,9 +371,12 @@ header:after {
 	justify-content: space-between;
 	align-items: center;
 
-
 }
-
+.bottom__box1, .bottom__box2, .bottom__box3 {
+	width: 300px;
+	vertical-align: top;
+	display: inline-block;
+}
 .hidden {
 	display: none;
 }
@@ -514,7 +518,9 @@ header:after {
 	} 	
 	
 	.end {
-		background: url(../img/bgbottommode.jpg) center center no-repeat;
+		background: url(../img/bgbottommode.jpg);
+		-webkit-background-size: cover;
+		background-size: cover;
 		min-height: 200px;
 	}
 
