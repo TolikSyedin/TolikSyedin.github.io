@@ -666,7 +666,7 @@ img {
 	}
 	.main__img {
 		right: 0;
-		width: 200px;
+		width: 170px;
 		z-index: 0;
 	}
 	.info {
@@ -688,6 +688,7 @@ img {
 		padding: 50px 0;
 	}
 	.blog__blockquote {
+		float: none;
 		width: auto;
 		margin: 0 20px;
 
@@ -723,7 +724,7 @@ img {
 	}
 	.bottom__box3  {
 		width: auto;
-		margin: 0 20px;
+		margin: 20px 20px 0 20px;
 	}
 	.hidden {
 		width: auto;
