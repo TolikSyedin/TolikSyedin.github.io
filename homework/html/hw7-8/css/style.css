@@ -627,6 +627,7 @@ img {
 	}
 	.header__menu {
 		text-align: center;
+		margin: 0 20px;
 	}
 	.hiddenitem {
 		display: block;
@@ -655,6 +656,7 @@ img {
 		top: 100%;
 		border-radius: 0 0 10px 10px;
 		z-index: 2;
+		width: 100%;
 
 	}
 	.main	{
