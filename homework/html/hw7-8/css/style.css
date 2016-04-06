@@ -448,6 +448,7 @@ header:after {
 	margin-top: 45px;
 	float: left;
 	margin-left: -7px;
+		width: 100%;
 }
 
 .bottommenu__item {
@@ -455,8 +456,7 @@ header:after {
 	display: inline-block;
 	line-height: 28px;
 	word-spacing: 0px;
-	margin-right: 29px;
-	padding: 0 4px 0 6px;
+	margin-right: 5%;
 	text-transform: uppercase;
 }
 
@@ -519,7 +519,7 @@ img {
 		margin-left: 50px;
 	}
 	.hiddenitem {
-		margin-left: 5%;
+		margin-left: 3%;
 
 	}
 	
@@ -609,7 +609,6 @@ img {
 	.innermenu {
 		position: relative;
 		border: 1px solid transparent;
-		/*padding: 0 131px;*/
 		line-height: 40px;	
 
 	}
@@ -633,12 +632,15 @@ img {
 		display: block;
 		border: 1px solid #000;
 		margin: 0;
+		padding: 0 12px 0 12px;
 		line-height: 40px;
 		text-align: center;
 		background: rgba(68, 50, 72, .9);
 		border-top: 2px groove #88659d;
+
 		
 	}
+
 	.hiddenitem:last-child {
 		border-radius: 0 0 10px 10px;
 	}
@@ -652,7 +654,7 @@ img {
 		display: none;
 		float: none;
 		position: absolute;
-		margin: 0;
+		margin: 0 0 0 -1px;
 		top: 100%;
 		border-radius: 0 0 10px 10px;
 		z-index: 2;
@@ -669,7 +671,7 @@ img {
 		width: auto;
 	}
 	.main__text {
-		width: 240px;
+		width: 55%;
 	}
 	.main__text--head {
 		font-size: 36px;
@@ -686,7 +688,7 @@ img {
 	}
 	.main__img {
 		right: 0;
-		width: 170px;
+		width: 45%;
 		z-index: 0;
 	}
 	.info {
@@ -757,6 +759,7 @@ img {
 		text-align: center;
 		margin: 0 auto;
 
+
 	}
 	.bottommenu__item {
 		margin: 0 auto;
@@ -769,7 +772,7 @@ img {
 	}
 }
 @media only screen and (max-width: 320px) {
-		header, .main__content, .info, .blog, .logos, .bottom, .bottommenu {
+		header,  .info, .blog, .logos, .bottom, .bottommenu {
 		max-width: 320px;
 		width: 100%;
 	}
@@ -778,10 +781,15 @@ img {
 		left: 10px;
 	}
 	.main {
+		margin-top: 0px;
 		background: none;
+	}
+	.main__c0ntent {
+		width: auto;
 	}
 	.main__text {
 		float: none;
+		width: 80%;
 		margin: 0 auto;
 	}
 	.main__img {
