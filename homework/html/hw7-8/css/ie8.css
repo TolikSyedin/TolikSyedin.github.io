@@ -1,0 +1,19 @@
+
+header, nav, section, article, aside, footer {
+   display:block;
+}
+
+.main {
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#33000000',endColorstr='#33000000');
+}
+
+.aboutus {
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#745082', endColorstr='#33253a',GradientType=0 );
+}
+.info__box {
+  display: inline-block;
+
+}
+.bottommenu {
+
+}

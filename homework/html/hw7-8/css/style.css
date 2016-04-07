@@ -17,11 +17,14 @@
 }
 .head {
 	min-height: 847px;
-	background: url('../img/bg.jpg') center center, no-repeat;
-	background-size: cover;
+	background: url('../img/bg.jpg') center top no-repeat;
 	-webkit-background-size: cover;
+	background-size: cover;
 	border-bottom: 1px solid #000;
+
 }
+
+
 
 .head:after {
 	display: block;
@@ -447,8 +450,7 @@ header:after {
 .bottommenu__menu {
 	margin-top: 45px;
 	float: left;
-	margin-left: -7px;
-		width: 100%;
+	width: 100%;
 }
 
 .bottommenu__item {
@@ -583,6 +585,9 @@ img {
 		background-size: cover;
 		min-height: 200px;
 	}
+	.bottommenu__menu {
+		margin-left: 0;
+	}
 
 	.bottommenu__copyright {
 		clear: left;
@@ -627,6 +632,12 @@ img {
 	.header__menu {
 		text-align: center;
 		margin: 0 20px;
+	
+	}
+	.header__menu:after {
+		clear: both;
+		display: block;
+		content: '';
 	}
 	.hiddenitem {
 		display: block;
