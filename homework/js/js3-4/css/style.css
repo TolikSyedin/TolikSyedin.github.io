@@ -1,0 +1,26 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 960px;
+}
+
+h1 {
+	text-align: center;
+	margin: 50px auto;
+}
+
+.questions {
+	font-size: 18px;
+}
+
+.answerItems {
+	list-style: none;
+}
+
+label {
+	color: red;
+}
