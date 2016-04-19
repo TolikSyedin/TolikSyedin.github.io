@@ -13,14 +13,18 @@ h1 {
 	margin: 50px auto;
 }
 
-.questions {
-	font-size: 18px;
-}
-
-.answerItems {
+ul {
 	list-style: none;
+	margin: 10px auto;
 }
 
-label {
-	color: red;
+li {
+	margin: 5px auto;
+}
+
+button {
+	display: block;
+	margin: 0 auto;
+	padding: 20px 40px;
+
 }
