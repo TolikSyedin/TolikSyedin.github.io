@@ -1,0 +1,59 @@
+* {
+	margin: 0;	
+	padding: 0;
+}
+
+.wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.clock {
+	height: 300px;
+	width: 940px;
+	border: 15px solid #000;
+	border-radius: 100px;
+	margin: 50px auto;
+	background: grey;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-around;
+}
+
+.clock p {
+	font-size: 150px;
+}
+.clock span {
+	font-size: 100px;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.pure-button {
+	width: 450px;	
+	border: 15px solid black;
+	border-radius: 100px;
+	font-size: 100px;
+	font-weight: bold;
+}
+
+.left .pure-button {
+	background: green;
+}
+
+.right .pure-button {
+	background: red;
+}
+
+.pure-button:hover {
+	background: rgba(0, 5, 5, .6);
+}
