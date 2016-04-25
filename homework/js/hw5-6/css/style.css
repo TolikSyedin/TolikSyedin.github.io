@@ -14,7 +14,7 @@
 	border: 15px solid #000;
 	border-radius: 100px;
 	margin: 50px auto;
-	background: grey;
+	background: lightblue;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -27,6 +27,8 @@
 	font-size: 150px;
 }
 .clock span {
+	text-align: right;
+	display: block;
 	font-size: 100px;
 }
 
@@ -39,7 +41,9 @@
 }
 
 .pure-button {
-	width: 450px;	
+	padding: 20px 0 35px;
+	display: block;
+	width: 480px;	
 	border: 15px solid black;
 	border-radius: 100px;
 	font-size: 100px;
@@ -55,5 +59,5 @@
 }
 
 .pure-button:hover {
-	background: rgba(0, 5, 5, .6);
+	background: rgba(0, 0, 0, .4);
 }

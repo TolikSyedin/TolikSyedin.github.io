@@ -1,5 +1,15 @@
+var startPauseButton = document.getElementById('startPause');
+startPauseButton.addEventListener('click', startPause);
+
+
+var resetButton = document.getElementById('reset');
+resetButton.addEventListener('click', reset);
+
+
 var time = 0;
+
 var running = 0; 
+
 
 function startPause(){
 	if (running == 0) {
@@ -18,7 +28,7 @@ function reset() {
 	running = 0;
 	time = 0;
 	document.getElementById('startPause').innerHTML = 'start';
-	document.getElementById('output').innerHTML = '00:00:00:0';
+	document.getElementById('output').innerHTML = '00:00:00<span>0</span>';
 }
 
 
@@ -27,10 +37,15 @@ function increment() {
 	if (running == 1) {
 		setTimeout(function(){
 			time++;
-			var mins = Math.floor(time/10/60);
-			var secs = Math.floor(time/10 % 60);
-			var hours = Math.floor(time/10/60/60);
-			var tenth = (time);
+
+			var hours = Math.floor(time/100/60/60 % 24); // 1 day = 360000*24
+			var mins = Math.floor(time/100/60 % 60); // 360000 = 1 hour
+			var secs = Math.floor(time/100 % 60); // 6000 = 1 min
+			var tenth = time % 100; // 100 = 1 sec/
+
+			if (hours < 10) {
+				hours = '0' + hours;
+			}
 
 			if (mins < 10) {
 				mins = '0' + mins;
@@ -38,55 +53,16 @@ function increment() {
 
 			if (secs < 10){
 				secs = '0' + secs;
+			} 
+
+			if (tenth < 10) {
+				tenth = '0' + tenth;
 			}
 			
-			document.getElementById('output').innerHTML = ('0'+hours + ':' + mins + ':' + secs + ':' + tenth);
+			document.getElementById('output').innerHTML = (hours + ':' + mins + ':' + secs + '<span>' + tenth + '</span>');
 			increment();
 
-		}, 100)
+		}, 1) 
 	}
 
 }
-
-
-
-
-
-
-
-
-
-// var sec = document.querySelector('.sec');
-// sec.innerHTML = '<p>00</p><span>0</span>';
-
-// var min = document.querySelector('.min');
-// min.innerHTML = '<p>00</p>';
-
-// var hour = document.querySelector('.hour');
-// hour.innerHTML = '<p>00</p>'
-
-
-
-// function startTimer (){
-// 	setInterval(counter, 1);
-// }
-
-// var i = 0;
-
-// function counter() {
-
-
-// 	if (i < 1000) {
-// 	var counter = document.querySelector('.sec span');
-// 	counter.innerHTML = i;
-// 	i++;
-// 	// console.log(number);		
-// 	} else if (i==1000) {
-
-// 	}
-
-// }
-
-// var start = document.querySelector('a.pure-button');
-// start.addEventListener('click', startTimer);
-// console.log(start);
