@@ -62,7 +62,7 @@ function increment() {
 			document.getElementById('output').innerHTML = (hours + ':' + mins + ':' + secs + '<span>' + tenth + '</span>');
 			increment();
 
-		}, 1) 
+		}, 10) 
 	}
 
 }
