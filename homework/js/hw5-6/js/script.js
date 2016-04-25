@@ -20,6 +20,7 @@ function startPause(){
 		running = 0;
 		document.getElementById('startPause').innerHTML = 'resume';
 
+
 	}
 }
 
@@ -32,10 +33,9 @@ function reset() {
 }
 
 
-
 function increment() {
-	if (running == 1) {
-		setTimeout(function(){
+		var run = setInterval(function(){
+		if (running == 1) {
 			time++;
 
 			var hours = Math.floor(time/100/60/60 % 24); // 1 day = 360000*24
@@ -60,9 +60,9 @@ function increment() {
 			}
 			
 			document.getElementById('output').innerHTML = (hours + ':' + mins + ':' + secs + '<span>' + tenth + '</span>');
-			increment();
-
-		}, 10) 
-	}
+		} else {		
+				clearInterval(run);
+		}
+	},  10) 
 
 }
