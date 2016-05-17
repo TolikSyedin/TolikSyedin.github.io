@@ -1,0 +1,71 @@
+.wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+
+/* TABS */
+
+.tab-links li {
+    margin: 0px 5px;
+    display: inline-block;
+    list-style: none;
+}
+
+.tab-links a {
+    padding: 9px 15px;
+    display: inline-block;
+    border-radius: 3px 3px 0px 0px;
+    background: #7FB5DA;
+    font-size: 16px;
+    font-weight: 600;
+    color: #4c4c4c;
+
+}
+
+.tab-links a:hover {
+    background: #a7cce5;
+    text-decoration: none;
+}
+
+li.active a {
+    cursor: pointer;
+    background: #fff;
+
+}
+
+.tab-content {
+    padding:15px;
+
+    background:#fff;
+}
+
+.tab {
+    display:none;
+}
+
+.tab.active {
+    display:block;
+    transition: all 2s;
+}
+
+
+
+/* FORMS */
+
+section p {
+    display: inline-block;
+}
+
+section>p {
+    width: 100px;
+}
+
+.helpmsg {
+    margin-left: 20px;
+    width: 200px;
+    border: 1px solid black;
+    padding: 0 10px;
+    box-shadow: 0px 0px 1px 0.5px;
+    border-radius: 4px;
+    display: none;
+}

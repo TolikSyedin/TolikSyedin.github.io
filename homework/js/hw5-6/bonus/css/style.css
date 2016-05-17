@@ -1,0 +1,43 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	padding-top: 150px;
+	width: 960px;
+	margin: 0 auto;
+	background: #eee;
+}
+
+.timer {
+	width: 500px;
+	height: 100px;
+	margin: 0 auto;
+}
+
+.timer p {
+	font-size: 80px;
+	width: auto;	
+	text-align: center;
+}
+
+.buttons {
+	margin: 0 auto;
+	width: 500px;
+}
+
+button {
+	width: 160px;
+	padding: 10px 25px;
+	margin-bottom: 15px;
+	font-size: 30px;
+
+
+}
+
+.list {
+	width: 500px;
+	margin: 0 auto;
+	padding-left: 30px;
+}
