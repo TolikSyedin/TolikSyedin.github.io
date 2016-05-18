@@ -9,29 +9,11 @@ $('.tab-links a').on('click', function(e){
 //  FORMS // 
 
 $('#help').on('click', function(){
-	$('.helpmsg').css('display', 'inline-block');
+	$('.helpmsg').toggleClass('show');
 });
 
-
-$('#firstname').on('mouseenter', function(){
-	$('#firstnamehelp').css('display', 'inline-block');
-});
-$('#firstname').on('mouseleave', function(){
-	$('#firstnamehelp').css('display', 'none')
-});
-
-
-$('#lastname').on('mouseenter', function(){
-	$('#lastnamehelp').css('display', 'inline-block');
-});
-$('#lastname').on('mouseleave', function(){
-	$('#lastnamehelp').css('display', 'none');
-});
-
-
-$('#email').on('mouseenter', function(){
-	$('#emailhelp').css('display', 'inline-block')
-});
-$('#email').on('mouseleave', function(){
-	$('#emailhelp').css('display', 'none')
+$('.string').hover(function(){
+	$(this).find('.helpmsg').addClass('show')},
+	function(){
+	$(this).find('.helpmsg').removeClass('show')	
 });

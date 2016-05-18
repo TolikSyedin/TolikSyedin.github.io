@@ -69,3 +69,7 @@ section>p {
     border-radius: 4px;
     display: none;
 }
+
+.helpmsg.show {
+    display: inline-block;
+}
