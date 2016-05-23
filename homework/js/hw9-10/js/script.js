@@ -4,7 +4,8 @@ $(function() {
 	var $carousel = $('.jcarousel');
     $carousel.jcarousel({
     	
-    	wrap: 'circular'	
+    	wrap: 'circular',
+    	vertical: true	
     })
     .jcarouselAutoscroll({
         interval: 5000,
@@ -26,5 +27,5 @@ $(function() {
 });
 
 	$('body select').msDropdown();
-	
+
 });
