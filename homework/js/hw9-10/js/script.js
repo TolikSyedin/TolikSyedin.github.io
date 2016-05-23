@@ -1,14 +1,30 @@
 $(document).ready(function(){
 
-
 $(function() {
+	var $carousel = $('.jcarousel');
+    $carousel.jcarousel({
+    	
+    	wrap: 'circular'	
+    })
+    .jcarouselAutoscroll({
+        interval: 5000,
+        target: '+=1',
+        autostart: true
+	})
+	.jcarouselAutoscroll({
+    	target: '+=1'
+	});
 
-    $('.jcarousel').jcarousel({
+    $('.jcarousel-prev').jcarouselControl({
+        target: '-=1'
+    });
 
+    $('.jcarousel-next').jcarouselControl({
+        target: '+=1'
     });
 
 });
 
-console.log($('.jcarousel'))
-
+	$('body select').msDropdown();
+	
 });
