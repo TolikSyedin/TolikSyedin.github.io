@@ -1,6 +1,6 @@
 $(function() {
-	var $carousel = $('.jcarousel');
-    $carousel.jcarousel({
+	$('.jcarousel')
+	.jcarousel({
     	
     	wrap: 'circular',
     	vertical: true	// вертикально переключает, но с 5-го клика. Есть бага с пред и след картинкой. вместо них белый фон, а на примере должны быть "склеяны" и идти друг за другом
@@ -9,9 +9,6 @@ $(function() {
         interval: 5000,
         target: '+=1',
         autostart: true
-	})
-	.jcarouselAutoscroll({
-    	target: '+=1'
 	});
 
     $('.jcarousel-prev').jcarouselControl({
