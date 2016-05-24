@@ -36,7 +36,7 @@ $(function() {
 
 
 	$('.submenu li').hover(function(){
-		$(this).find('.submenu2').fadeIn(1000);
+		$(this).find('.submenu2').stop(true, true).fadeIn(1000);
 	}, function(){
 		$(this).find('.submenu2').fadeOut(400);
 	});
