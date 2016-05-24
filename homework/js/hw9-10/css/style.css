@@ -1,17 +1,20 @@
 * {
 	margin: 0;
 	padding: 0;
+	list-style: none;
+	text-decoration: none;
 }
 .wrapper{
 	width: 1200px;
 	margin: 0 auto;
-	background: lightgrey;
+
 }
 
 .slider {
 	height: 780px;
 	width: 1200px;
 	position: relative;
+	margin-bottom: 50px;
 }
 
 .jcarousel {
@@ -39,8 +42,7 @@
 .jcarousel-next a, .jcarousel-prev a {
 	display: block;
 	width: 50px;
-	height: 100%;
-	padding-top: 300px;
+	padding: 300px 0px 400px;
 	font-size: 60px;
 	font-weight: 900;
 	text-decoration: none;
@@ -75,33 +77,74 @@
 	color: white;
 }
 
-.selectbox {
-	width: 300px;
-}
+.niceCheck {
 
-input[type=checkbox] {
-	position: absolute;
-	clip: rect(0, 0, 0, 0);
+	width: 17px;
+	height: 17px;
+	display: inline-block;
+	cursor: pointer;
+	background: url(../icons/checkbox-sprite.png);
+}
+.niceCheck input {
+	display: none;
 }
 label {
 	cursor: pointer;
 }
-label:after {
+.checkbox, .checkbox2 {
+	width: 250px;
+}
+.checkbox2 input {
+	display: none;
+}
+
+.checkbox2 label:after {
 	content: " ";
 	display: inline-block;
 	width: 17px;
 	height: 17px;
-	background: url(img/checkbox-2.png);
+	background: url(../icons/checkbox-sprite.png);
 	position: relative;
 	top: 3px;
 	margin-left: 15px;
 }
-input[type=checkbox]:checked + label:after {
+.checkbox2 input[type=checkbox]:checked + label:after {
 background-position: 0 -17px;
 }
-label:hover:after {
-background-position: 0 -34px;
+
+/*  // NAVBAR //  */
+
+.navbar {
+	background: red;
+	margin-bottom: 500px;
+	text-align: center;	
 }
-input[type=checkbox]:checked + label:hover:after {
-background-position: 0 -51px;
+
+
+.navbar  a {
+	display: block;
+	font-weight: 900;
+	line-height: 50px;
+	color: white;	
+}
+
+.menu > li {
+	display: inline-block;
+	padding: 0 70px;
+}
+
+.submenu {
+	display: none;
+	background: green;
+	position: absolute;
+	left: 570px;
+	width: 200px;
+}
+.submenu2 {
+	display: none;
+	background: linear-gradient(to bottom, #000, #999);
+	position: absolute;
+	width: 200px;
+	left: 200px;
+	top: 104px;
 }

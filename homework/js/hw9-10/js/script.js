@@ -1,5 +1,3 @@
-$(document).ready(function(){
-
 $(function() {
 	var $carousel = $('.jcarousel');
     $carousel.jcarousel({
@@ -24,8 +22,20 @@ $(function() {
         target: '+=1'
     });
 
-});
 
 	$('body select').msDropdown();
+	$('#webmenu_msdd').css("width", "200px");
+
+	$('.menu li').hover(function(){
+		$(this).find('.submenu').slideDown(300);
+	}, function(){
+		$(this).find('.submenu').slideUp(400);
+	});
+
+	$('.submenu li').hover(function(){
+		$(this).find('.submenu2').fadeIn(1000);
+	}, function(){
+		$(this).find('.submenu2').fadeOut(400);
+	});
 
 });
