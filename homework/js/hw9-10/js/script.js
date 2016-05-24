@@ -27,9 +27,13 @@ $(function() {
 	$('#webmenu_msdd').css("width", "200px");
 
 	$('.menu li').hover(function(){
-		$(this).find('.submenu').slideDown(300);
+		$(this).find('.submenu').slideDown(300).animate({
+			backgroundColor: "#03c"
+		}, 300);
 	}, function(){
-		$(this).find('.submenu').slideUp(400);
+		$(this).find('.submenu').slideUp(400).animate({
+			backgroundColor: "#0ff"
+		}, 300);;
 	});
 
 	$('.submenu li').hover(function(){
