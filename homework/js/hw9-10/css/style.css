@@ -133,14 +133,14 @@ background-position: 0 -17px;
 	padding: 0 70px;
 }
 
-.submenu {
+#submenu {
 	display: none;
 	background: green;
 	position: absolute;
 	left: 570px;
 	width: 200px;
 }
-.submenu2 {
+#submenu2 {
 	display: none;
 	background: linear-gradient(to bottom, #000, #ddd);
 	position: absolute;

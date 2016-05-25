@@ -26,20 +26,20 @@ $(function() {
 
 
 	$('.menu li').hover(function(){
-		$(this).find('.submenu').stop(true, true).slideDown(300).animate({
+		$(this).find('#submenu').stop(true, true).slideDown(300).animate({
 			backgroundColor: "#03c" 
 		}, 300);
 	}, function(){
-		$(this).find('.submenu').slideUp(400).animate({
+		$(this).find('#submenu').slideUp(400).animate({
 			backgroundColor: "#0ff" 
 		}, 300)
 	});
 
 
-	$('.submenu li').hover(function(){
-		$(this).find('.submenu2').stop(true, true).fadeIn(1000);
+	$('#submenu li').hover(function(){
+		$(this).find('#submenu2').stop(true, true).fadeIn(1000);
 	}, function(){
-		$(this).find('.submenu2').fadeOut(400);
+		$(this).find('#submenu2').fadeOut(400);
 	});
 
 });
