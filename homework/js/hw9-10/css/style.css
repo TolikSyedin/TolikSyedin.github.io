@@ -28,7 +28,7 @@
 }
 
 .jcarousel ul {
-    width: 20000em;
+    height: 1200px;
     position: relative;
     list-style: none;
     margin: 0;
@@ -115,7 +115,7 @@ background-position: 0 -17px;
 /*   NAVBAR   */
 
 .navbar {
-	background: red;
+	background-color: red;
 	margin-bottom: 500px;
 	text-align: center;	
 }
@@ -142,7 +142,7 @@ background-position: 0 -17px;
 }
 .submenu2 {
 	display: none;
-	background: linear-gradient(to bottom, #000, #999);
+	background: linear-gradient(to bottom, #000, #ddd);
 	position: absolute;
 	width: 200px;
 	left: 200px;

@@ -1,7 +1,6 @@
 $(function() {
 	$('.jcarousel')
 	.jcarousel({
-
     	wrap: 'circular',
     	vertical: true	// вертикально переключает, но с 5-го клика. Есть бага с пред и след картинкой. вместо них белый фон, а на примере должны быть "склеяны" и идти друг за другом
     })
@@ -21,18 +20,20 @@ $(function() {
 
 
 	$('body select').msDropdown();
+
+
 	$('#webmenu_msdd').css("width", "200px");
+
 
 	$('.menu li').hover(function(){
 		$(this).find('.submenu').stop(true, true).slideDown(300).animate({
-			backgroundColor: "#03c" // этот метод не отрабатывает. скрипт подключал с xiper.net
+			backgroundColor: "#03c" 
 		}, 300);
 	}, function(){
 		$(this).find('.submenu').slideUp(400).animate({
-			backgroundColor: "#0ff" // этот метод не отрабатывает. скрипт подключал с xiper.net
-		}, 300);;
+			backgroundColor: "#0ff" 
+		}, 300)
 	});
-
 
 
 	$('.submenu li').hover(function(){
@@ -42,5 +43,3 @@ $(function() {
 	});
 
 });
-
-
