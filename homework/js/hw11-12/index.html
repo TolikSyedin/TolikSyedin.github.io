@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>hw11-12</title>
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+	<div class="wrapper">
+		<section class="slider">
+			<div class="sliderLeftControl"><a href="#"><</a></div>
+			<div class="sliderRightControl"><a href="#">></a></div>
+			
+			<div class="viewport">
+				<ul class="slidewrapper">
+					<li class="slideItem"><a href="#"><img src="img/1.jpg" alt=""></a></li>
+					<li class="slideItem"><a href="#"><img src="img/2.jpg" alt=""></a></li>
+					<li class="slideItem"><a href="#"><img src="img/3.jpg" alt=""></a></li>
+					<li class="slideItem"><a href="#"><img src="img/4.jpg" alt=""></a></li>
+					<li class="slideItem"><a href="#"><img src="img/5.jpg" alt=""></a></li>
+				</ul>
+			</div>
+			
+
+		</section>
+	</div>
+	<script type="html/template" id="html">
+
+		<div id="myPage">
+
+			<h1><%= data.name%></h1>
+
+			<div class="img"><p><img src="<%=data.img%>" alt="my_picture"></p></div>
+
+			<div class="container">
+			<p><%= data.employment %></p>
+			</div>
+
+			<div class="container">
+			<p>Хочу учить фронтенд потому что</p>
+			<ul>
+			<%for(var i = 0; i<data.reason.length; i++){%>
+			<li><%=data.reason[i]%></li>
+			<% } %>
+			</ul>
+			</div>
+
+			<div class=container>
+			<P>Мой контактный телефон
+			<span><%=data.contactNumber%></span>
+			</p>
+
+			<p>Мой профиль Вконтакте
+			<span>
+			<a href="<%=data.vkAccount%>" title="My page" target="_blank">Вконтакте.ru</a></span>
+			</p>
+			</div>
+
+			<div class="container">
+			<p>Мой фидбек:
+			<span><%=data.feedback%></span>
+			</p>
+			</div>
+			</div>
+
+	</script>
+	<script src="js/tmpl.js"></script>
+	<script   src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
+	<script src="js/slider.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

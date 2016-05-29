@@ -1,0 +1,94 @@
+body{
+	background: url(http://rs678.pbsrc.com/albums/vv148/oOezra/backgrounds/ravenna.png~c200);
+}
+
+.wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.slider {
+	position: relative;
+	width: 720px;
+	margin: 0 auto 50px;
+}
+
+.viewport {
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	width: 660px;
+	height: 350px;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+	box-sizing: border-box;
+
+
+
+
+}
+
+.slidewrapper {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+
+
+}
+.slideItem {
+	list-style: none;
+	width: 670px;
+	height: 350px;
+	background: #000;
+}
+.sliderLeftControl a, .sliderRightControl a {
+	height: 350px;
+	line-height: 350px;
+	width: 25px;
+	position: absolute;
+	top: 0;
+	left: 5px;
+	background-color: #000;
+	border-radius: 5px 0  0 5px;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	color: rgba(255,255,255,.7);
+	font-size: 30px;
+
+}	
+
+ .sliderRightControl a {
+	border-radius: 0 5px  5px 0;
+	right: 5px;
+	left: initial;
+}
+
+.slider a:hover {
+	background-color: rgba(0,0,0,.7);
+	color: rgba(255,255,255,1);
+}
+
+#myPage {
+	width: 720px;
+	margin: 0 auto;
+	text-align: center;
+	box-shadow: 0px 0px 5px 1px  rgba(191,191,191,1);
+	padding: 30px 50px 40px;
+	width: 550px;
+	background: rgba(255,255,255,.8);
+}
+.container {
+	border-bottom: 1px solid lightgrey;
+	text-align: left;
+}
+
+#myPage span{
+	margin: 10px auto;
+	display: block;
+}
+
+#myPAge p {
+	margin-left: 10px;
+}
