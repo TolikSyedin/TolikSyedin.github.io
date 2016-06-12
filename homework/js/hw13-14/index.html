@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js13-14</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
+	<script   src="https://code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
+	<script src="js/script.js"></script>
+	
+	<script type="html/template" id="html">
+
+		<div class="wrapper">
+
+			<header>
+				<h1>Тест по программированию</h1>
+			</header>
+
+			<section id="test">
+				<ul>
+					<% for(var i=0; i<data.length; i++) { %>
+					<li><%= data[i].question %>
+						<ul>
+							<% for(var k=0; k<data[i].answers.length; k++) { %>
+							<li>
+								<input type="checkbox" id="$">
+								<label for="$"><%=data[i].answers[k] %></label>
+							</li>
+							<% } %>
+						</ul>
+					
+					<% } %>	
+				</ul>
+			</section>
+
+			<section id="button">
+				<button>Проверить мои результаты</button>
+			</section>
+
+		</div>
+
+	</script>
+
+	
+</body>
+</html>
