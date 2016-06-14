@@ -6,7 +6,7 @@ var data = [
 			{
 				text: 'Вариант ответа №1',
 				id: 1,
-				correct: false
+				correct: true
 			},
 			{
 				text: 'Вариант ответа №2',
@@ -16,7 +16,7 @@ var data = [
 			{
 				text: 'Вариант ответа №3',
 				id: 3,
-				correct: false
+				correct: true
 			}
 		]
 	},
@@ -58,7 +58,7 @@ var data = [
 			{
 				text: 'Вариант ответа №9',
 				id: 9,
-				correct: true
+				correct: false
 			}
 		]
 	}
