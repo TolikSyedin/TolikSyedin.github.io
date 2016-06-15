@@ -42,7 +42,7 @@ $.ajax({
 //         var hits = data.hits;
 //         console.log(hits)
 //         for(var i = 0; i < hits.length; i++){
-            
+
 //         }
 //         return data;
 
