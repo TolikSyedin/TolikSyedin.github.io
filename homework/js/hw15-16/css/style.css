@@ -4,14 +4,10 @@
 }
 
 .wrapper {
-	margin: 200px auto;
+	margin: 25px auto;
 	width: 960px;
 }
 
-.logo {
-	width: 300px;
-	margin: 30px auto;
-}
 
 #search {
 	width: 600px;
@@ -23,11 +19,31 @@
 #inp {
 	width: 100%;
 	line-height: 30px;
+	border: 2px solid #00ccff;
+	border-radius: 3px;
 }
 
 .buttons {
 	width: 164px;
 	margin: 40px auto;
+}
+
+.viewport {
+	width: 800px;
+	margin: 0 auto;
+}
+#result {	
+	list-style: none;
+	overflow: hidden;
+}
+#result li {
+	float: left;
+	margin: 5px;
+}
+
+#result li img {
+	border: 2px solid #000;
+	border-radius: 5px;
 }
 
 button {	
