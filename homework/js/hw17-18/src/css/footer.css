@@ -1,0 +1,19 @@
+footer {
+	background: #888;
+	width: 750px;
+	margin: 0 auto;
+	text-shadow: 0 1px 1px #fff;
+	overflow: hidden;
+
+}
+
+footer p {
+	width: 250px;
+	float: left;
+	text-align: center;
+}
+
+footer span {
+	color: #fff;
+	font-style: italic;
+}
