@@ -11,12 +11,12 @@ module.exports = function(grunt) {
             separator: ';'
           },
           files: {
-            '../build/js/script.main.js':   ['js/*.js']
+            'build/js/script.main.js':   ['src/js/*.js']
           }
         },
         extras: {
           files: {
-            '../build/css/style.main.css':  ['css/*.css'],
+            'build/css/style.main.css':  ['src/css/*.css'],
           }
         }
     },
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
       target: {
         files: [{
           expand: true,
-          src:  '../build/css/style.main.css',
+          src:  'build/css/style.main.css',
           dest: '',
           ext: '.min.css'
         }]
@@ -34,26 +34,29 @@ module.exports = function(grunt) {
 
     uglify: {
       build: {
-        src: ['../build/js/script.main.js'],
-        dest: '../build/js/script.min.js'
+        src: ['build/js/script.main.js'],
+        dest: 'build/js/script.min.js'
       }
     },
 
     copy: {
       files: {
         expand: true, 
-        src: ['img/**', 'index.html',], 
-        dest: '../build/'
+        cwd: 'src/',
+        src: ['index.html', 'img/**'], 
+        dest: 'build/',
       }
 
     },
+
+
 
     watch: {
       options: {
         livereload: true
       },
       scripts: {
-        files: ['js/*.js', 'css/*.css'],
+        files: ['src/js/*.js', 'src/css/*.css'],
         tasks: ['newer:concat', 'cssmin', 'uglify']
       }
 
