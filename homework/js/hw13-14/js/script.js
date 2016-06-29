@@ -63,9 +63,6 @@ $('#checkButton').click(function() {
 		head.html('<p> Поздравляем! Вы успешно сдали тест! </p>')
 	}
 
-});
-
-
 $('#retryBtn').click(function(){
 	modal.html('');
 	$('input:checked').removeAttr('checked');
@@ -78,3 +75,15 @@ $('button.close').click(function(){
 	head.html('');
 	score = 0;
 });
+$(document).on('keyup',function(e){
+	if(e.keyCode === 27){
+	$('body').removeClass('modal-open');
+	modal.html('');
+	$('input:checked').removeAttr('checked');
+	head.html('');
+	score = 0;
+
+}});
+
+});
+
