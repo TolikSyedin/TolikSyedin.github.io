@@ -71,4 +71,10 @@ $('#retryBtn').click(function(){
 	$('input:checked').removeAttr('checked');
 	head.html('');
 	score = 0;
-})
+});
+$('button.close').click(function(){
+	modal.html('');
+	$('input:checked').removeAttr('checked');
+	head.html('');
+	score = 0;
+});
