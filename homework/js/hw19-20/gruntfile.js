@@ -1,17 +1,49 @@
 module.exports = function(grunt){
 
 grunt.initConfig({
-	pkg: grunt.file.readJSON('package.json'),
 
+	pkg: grunt.file.readJSON('package.json'),
+	
 	sass: {
 		dist: {
 			files: {
-				'build/css/main.css':'src/styles/styles.scss',
-				'build/css/hover.css': 'src/styles/imagehover.scss'
+				'src/css/main.css':'src/styles/styles.scss',
 			}	
 		}
 	},
 	
+	concat: {
+        basic: {
+          options: {
+            separator: ';'
+          },
+          files: {
+            'build/js/script.main.js':   ['src/js/*.js']
+          }
+        },
+        extras: {
+          files: {
+            'build/css/style.main.css':  ['src/css/*.css'],
+          }
+        }
+    },
+    cssmin: {
+      target: {
+        files: [{
+          expand: true,
+          src:  'build/css/style.main.css',
+          dest: '',
+          ext: '.min.css'
+        }]
+      }
+    },
+
+    uglify: {
+      build: {
+        src: ['build/js/script.main.js'],
+        dest: 'build/js/script.min.js'
+      }
+    },
 	copy: {
 		files: {
 			expand: true,
@@ -20,18 +52,22 @@ grunt.initConfig({
 			dest: 'build/'
 		}
 	},
-	
-	watch: {
-		files: ['src/styles/styles.scss','src/img/**', 'src/fonts/**', 'src/index.html'],
-		tasks: ['sass', 'copy']
 
-	}
+  clean: {
+    folder: ['.sass-cache']
+  }
+
+
 });
 
-grunt.loadNpmTasks('grunt-contrib-sass');
-grunt.loadNpmTasks('grunt-contrib-copy');
-grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');  
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
-grunt.registerTask('default', ['sass', 'copy', 'watch']);
 
+
+  grunt.registerTask('default', [ 'sass', 'concat', 'cssmin', 'uglify', 'copy', 'clean']);
 }

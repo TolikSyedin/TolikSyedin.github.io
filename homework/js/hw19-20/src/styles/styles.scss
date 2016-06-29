@@ -31,15 +31,22 @@
     font-style: normal;
 
 }
-
+$color: #f4b60d;
 $mediumFont: 'ubuntumedium';
 $lightFont: 'ubuntulight';
 $condencedFont: 'ubuntucondensed';
-/*
-@mixin background($color, $url, $x, $y, $repeat){
-	background: $color, url('$url'), $x, $y, $repeat;
+@mixin heading($fnt, $clr : none, $fsz : 25px, $pad : 0, $marg : 0) {	
+	color: $clr;
+	font-family: $fnt;
+	font-size: $fsz;
+	padding: $pad;
+	margin: $marg;
 }
-*/
+@mixin linkBg($x){
+	background-position: $x 0px;
+	&:hover{background-position: $x -20px};
+}
+
 
 .wrapper {
 	width: 1160px;
@@ -48,41 +55,36 @@ $condencedFont: 'ubuntucondensed';
 							/* HEADER */
 header {
 	overflow: hidden;
+	margin-top: 25px;
 
 	section {
 		float: left;
 		width: 200px;
-		&:after{display: block;content: '';clear: both;}
 	.logo {
 		float: left;
 	}
 	h1 {
-		font-family: $mediumFont;
-		font-size: 25px;
+		@include heading($mediumFont, #434343);
 		letter-spacing: 1.5px;
-		color: #434343;
 		line-height: 20px;		
 	}
 	h3 {
-		font-family: $lightFont;
-		font-size: 15px;
+		@include heading($lightFont, #333333, 14px);
 		font-variant: small-caps;
 		letter-spacing: 2px;
-		color: #333333;
 	}
-	
-
 	}
-}
 							/* Links */
 nav.links {
 	float: right;
 	width: 145px;
+	padding: 10px 0;
 	&:after{display: block;content: '';clear: both;}
 	ul li {
 		display: inline-block;
 
-		a {
+		a {	
+
 			display: block;
 			width: 25px;
 			height: 20px;
@@ -90,46 +92,27 @@ nav.links {
 			&:hover {background-position: 0px -20px;}
 			
 		}
-
 		.link2 {
-			background-position: -35px 0px;
-			&:hover {background-position: -35px -20px;}
+			@include linkBg(-35px);
 		}
 
 		.link3 {
-			background-position: -65px 0px;
-			&:hover {background-position: -65px -20px;}
+			@include linkBg(-65px);
 		}
 
 		.link4{
-			background-position: -100px 0px;
-			&:hover {background-position: -100px -20px;}
+			@include linkBg(-100px);
 		}
 
-
 		.link5{
-			background-position: -132px 0px;
-			&:hover {background-position: -132px -20px;}
+			@include linkBg(-132px);
 		}
 		
 	}
 }	
+}
 						/*NavBar*/
-.menuLinks {	
-	color: #fff;
-	display: block;
-	padding: 0px 39px;
-	line-height: 50px;
-	font-family: $condencedFont;
-	text-transform: uppercase;
-	text-decoration: none;
-	border-left: 1px solid #000;
-	&:hover {color: #f4b60d;}
-}
-	.selected {
-	background: #248cec;
-	border-left: 1px solid #248cec;
-}
+
 
 menu {
 	display: block;
@@ -149,21 +132,11 @@ menu {
 			li:last-child a {
 			border-right: 1px solid #000;
 			}
-/*			.menuLinks {	
-				color: #fff;
-				display: block;
-				padding: 0px 39px;
-				line-height: 50px;
-				font-family: $condencedFont;
-				text-transform: uppercase;
-				text-decoration: none;
-				border-left: 1px solid #000;
-				&:hover {color: #f4b60d;}
-			}
+
 			.selected {
 				background: #248cec;
 				border-left: 1px solid #248cec;
-			}*/
+			}
 
 		}
 
@@ -179,7 +152,7 @@ menu {
 			display: block;
 			content: url('../img/search.png'); 
 
-		};
+		}
 	}
 	
 	#inp {
@@ -195,35 +168,38 @@ menu {
 	}
 
 }
+.menuLinks {	
+	@include heading($condencedFont, #fff, 15px, 0 39px);
+	display: block;
+	line-height: 50px;
+	text-transform: uppercase;
+	border-left: 1px solid #000;
+	&:hover {color: $color;}
+}
 							/*Slider*/
 .slider {
-	height: 471px;
+	margin-top: 40px;
+	width: 100%;
+	.wrapper {
 	position: relative;
 	overflow: hidden;
-	width: 100%;
-	.sliderList {
-		li {
-			position: absolute;
-			display: inline-block;
-		}
+	height: 471px;
 	}
 }
 
-									/* Articles */
+									 /*Articles */
 .articles {
 	overflow: hidden;
+	height: 300px;
+	margin-top: 50px;
 	article {
 		width: 380px;
 		height: 200px;
 		float: left;
 		p {
-			color: #ccc;
-			font-size: 80px;
-			font-family: $mediumFont;
-			height: 150px; 
+			@include heading($mediumFont, #ccc, 80px, 0, -20px 0 0 0);
+			height: 100%; 
 			float: left;
-			margin-top: -20px;
-
 		}
 		.content {
 			width: 320px;
@@ -237,6 +213,7 @@ menu {
 					width: 35px;
 					height: 32px;
 					overflow: hidden;
+					margin-bottom: 10px;
 					background: url('../img/icons.png') 0 0 no-repeat;
 					
 				};
@@ -249,26 +226,21 @@ menu {
 			}
 
 			span {
-				font-family: arial, sans-serif;
-				font-size: 14px;
-				color: #ccc;
+				@include heading(Arial, #ccc, 14px, 10px 0 0 0);
 				display: block;
 			}
 			a {
+				@include heading($mediumFont, #000, 14px, 10px 0 0 0);
 				display: block;
-				font-family: $mediumFont;
-				font-size: 14px;
 				font-weight: 400;
-				color: #000;
-				text-decoration: none;
 				&:hover{
 					color:#00f;
 				};
-/*				span{
+				span{
 					display: inline-block;
 					color: #00f;
 					&:hover{color:#ccc;};
-				};*/
+				};
 				
 			}
 		}
@@ -276,15 +248,11 @@ menu {
 }
 
 .services {
-	position: relative;
 	min-width: 100%;
-	height: 350px;
+	height: 400px;
 	background: rgba(0,0,0,.8) 0 0 repeat;
 	h3 {
-		font-family: $mediumFont;
-		font-size: 24px;
-		color: #fff;
-		margin: 10px 15px 0 15px;
+		@include heading($mediumFont, #fff, 24px, 15px);
 	}
 	ul {
 		position: absolute;
@@ -304,12 +272,116 @@ menu {
 				}
 		}
 		.servLink {
-			@extend .menuLinks;
-			border: 0;
+			@include heading($mediumFont, #fff, 17px);
+			display: block;
 			text-align: center;
-			text-transform: none;
-			font-family: $mediumFont;
-		}	
-		
+			&:hover{color: $color;};
+		}			
 	} 
+}
+
+.blog {
+	background: #f7f7f7;
+	width: 100%;
+	height: 450px;
+	&:after{display: block;content: '';clear: both;};
+	
+
+	.news {
+		float: left;
+		h4 {
+			@include heading($mediumFont, #000, 20px, 20px, 0 0 0 15px);
+		}
+		.newsBlock{
+			width: 580px;	
+
+		}
+		.pic {
+			float: left;
+			width: 180px;
+			&:after{display: block;content: '';clear: both;};
+		}
+		article {
+			width: 400px;
+			height: 200px;
+			display: inline-block;
+			h3 {
+				margin-top: 10px;
+				a{
+				@include heading($mediumFont, #000, 17px);
+				&:hover{color: #63b4f5};
+				}
+			}
+
+			span {
+				@include heading(arial, #8a8a8a, 17px);
+				display: block;
+			}
+			.underhead {
+				margin: 5px 0 15px 0;
+				a {
+					color: #63b4f5;
+				}
+			}
+		}
+	}
+	.banners {
+		display: inline-block;
+		width: 500px;
+		float: left;
+		h4 {
+			@include heading($mediumFont, #000, 20px, 20px, 0 0 0 15px);
+		}
+		#accordion {
+			width: 500px;
+			height: 400px;
+			h3 {
+				font-family: $mediumFont;
+				font-size: 13px;
+				text-transform: uppercase;
+				span.ui-icon-plus {
+					color: #000;
+				}
+			}
+		}
+	}
+}
+.logos {
+	margin: 50px;
+}
+footer {
+	padding: 30px 0 50px;
+	background: #2a2d32;
+	overflow: hidden;
+	.listBlock {
+		float: left;
+		width: 290px;
+		h3 {
+			@include heading($mediumFont, #fff, 18px, 5px, 20px 0);
+			text-transform: uppercase;
+
+		}
+		li {
+			width: 235px;
+			padding: 5px;
+			border-top: 1px solid #393c40;
+			a {
+				@include heading(Arial, #828385, 15px);
+				&:hover{color:#257fd3;};
+			}
+		}
+		li:first-child{
+			border-top: none;
+		}
+		
+
+
+	}
+}
+
+.copyright {
+	background: #35383c;
+	img {
+		margin-top: -1px;
+	}
 }
