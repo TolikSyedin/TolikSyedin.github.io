@@ -4,17 +4,21 @@ var data = [
 		{
 			question: 'Вопрос №1',
 			answers: ['Вариант ответа №1', 'Вариант ответа №2', 'Вариант ответа №3'],
-			correctAnswer: 1
+			correctAnswer: 1,
+			name: 'question1'
 		},
 		{
 			question: 'Вопрос №2',
 			answers: ['Вариант ответа №4', 'Вариант ответа №5', 'Вариант ответа №6'],
-			correctAnswer: 5
+			correctAnswer: 5,
+			name: 'question2'
+
 		},
 		{
 			question: 'Вопрос №3',
 			answers: ['Вариант ответа №7', 'Вариант ответа №8', 'Вариант ответа №9'],
-			correctAnswer: 9
+			correctAnswer: 9,
+			name: 'question3'
 		}
 
 ]

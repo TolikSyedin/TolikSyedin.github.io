@@ -17,6 +17,7 @@
 			</header>
 
 			<section id="test">
+				<form>
 				<ul>
 
 					<% var j = 0 %>
@@ -25,7 +26,7 @@
 						<ul>
 							<% for(var k=0; k<data[i].answers.length; k++) { %>
 							<li>
-								<input type="radio" id=<%- ++j %> name=<%=i+1%>
+								<input type="radio" id=<%- ++j %> name=<%= data[i].name %>>
 								<label for=<%- j %>><%=data[i].answers[k] %></label>
 							</li>
 							<% } %>
@@ -33,6 +34,7 @@
 					
 					<% } %>	
 				</ul>
+				</form>
 			</section>
 
 			<section id="btn">

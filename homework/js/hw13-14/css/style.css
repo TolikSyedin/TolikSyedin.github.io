@@ -26,6 +26,7 @@ li {
 
 label {
 	font-weight: 400;
+	cursor: pointer;
 }
 
 #checkButton {
