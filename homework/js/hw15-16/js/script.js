@@ -1,15 +1,15 @@
 window.pixabayCallback = function(){
     console.log('callback did it!')
-}
+};
 
 $('#inp').keypress(function(event){
     if(event.which == 13) {
         event.preventDefault();
             searching();
     }
-})
+});
 
-$('#searchBtn').on('click', searching);
+$('#searchBtn').on('click', searching());
 
 
 
@@ -41,7 +41,7 @@ function searching(){
 
         },
     });
-}
+};
 
 
 function Human() {
