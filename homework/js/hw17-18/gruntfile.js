@@ -45,7 +45,7 @@ module.exports = function(grunt) {
       files: {
         expand: true, 
         cwd: 'src/',
-        src: ['index.html', 'img/**'], 
+        src: ['img/**'], 
         dest: 'build/'
       }
 
@@ -57,19 +57,32 @@ module.exports = function(grunt) {
         'build/index.html': ['src/index.html']
       }
     }
+    },
+
+    htmlmin: {
+      dist: { 
+        options: {                             
+          removeComments: true,
+          collapseWhitespace: true
+        },      
+        files: {
+          'build/index.html': 'build/index.html',     
+        }
+      }
     }
 
 });
 
  
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');  
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-processhtml');
+  grunt.loadNpmTasks('grunt-contrib-concat'); // конкатенирует CSS|JS файлы
+  grunt.loadNpmTasks('grunt-contrib-cssmin');  // минифицирует сконкатенированный CSS
+  grunt.loadNpmTasks('grunt-contrib-uglify'); // минифицирует JS файл
+  grunt.loadNpmTasks('grunt-contrib-copy'); // копирует папку img
+  grunt.loadNpmTasks('grunt-processhtml');  // редактирует html
+  grunt.loadNpmTasks('grunt-contrib-htmlmin') // минифицирует html
 
 
 
-  grunt.registerTask('default', [ 'concat', 'cssmin', 'uglify', 'copy', 'processhtml']);
+  grunt.registerTask('default', [ 'concat', 'cssmin', 'uglify', 'copy', 'processhtml', 'htmlmin']);
 
 };
