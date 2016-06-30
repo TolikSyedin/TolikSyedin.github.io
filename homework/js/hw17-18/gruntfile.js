@@ -39,6 +39,8 @@ module.exports = function(grunt) {
       }
     },
 
+
+
     copy: {
       files: {
         expand: true, 
@@ -49,18 +51,14 @@ module.exports = function(grunt) {
 
     },
 
-
-
-    watch: {
-      options: {
-        livereload: true
-      },
-      scripts: {
-        files: ['src/js/*.js', 'src/css/*.css'],
-        tasks: ['newer:concat', 'cssmin', 'uglify']
+    processhtml: {
+      dist: {
+      files: {
+        'build/index.html': ['src/index.html']
       }
-
     }
+    }
+
 });
 
  
@@ -68,12 +66,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');  
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-newer');
+  grunt.loadNpmTasks('grunt-processhtml');
 
 
 
-  grunt.registerTask('default', [ 'concat', 'cssmin', 'uglify', 'copy', 'watch']);
-  grunt.registerTask('process', ['newer']);
+  grunt.registerTask('default', [ 'concat', 'cssmin', 'uglify', 'copy', 'processhtml']);
 
 };
