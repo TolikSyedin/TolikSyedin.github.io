@@ -294,7 +294,8 @@ menu {
         margin: 0;
         display: block; }
       .blog .blog__news .blog__content .blog__content--underhead {
-        margin: 5px 0 15px 0; }
+        margin: 5px 0 15px 0;
+        color: #8a8a8a; }
         .blog .blog__news .blog__content .blog__content--underhead a {
           color: #63b4f5; }
   .blog .banners {
