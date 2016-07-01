@@ -11,12 +11,12 @@ module.exports = function(grunt) {
             separator: ';'
           },
           files: {
-            'build/js/script.main.js':   ['src/js/*.js']
+            'src/js/script.main.js':   ['src/js/*.js', '!src/js/*.main.js']
           }
         },
         extras: {
           files: {
-            'build/css/style.main.css':  ['src/css/*.css'],
+            'src/css/style.main.css':  ['src/css/*.css', '!src/css/*.main.css'],
           }
         }
     },
@@ -25,8 +25,9 @@ module.exports = function(grunt) {
       target: {
         files: [{
           expand: true,
-          src:  'build/css/style.main.css',
-          dest: '',
+          cwd: 'src/css/',
+          src:  'style.main.css',
+          dest: 'build/css/',
           ext: '.min.css'
         }]
       }
@@ -34,7 +35,7 @@ module.exports = function(grunt) {
 
     uglify: {
       build: {
-        src: ['build/js/script.main.js'],
+        src: ['src/js/script.main.js'],
         dest: 'build/js/script.min.js'
       }
     },
