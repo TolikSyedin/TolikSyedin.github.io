@@ -3,7 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>hw19-20</title>
-	<link rel="stylesheet" href="css/style.min.css">
+	<!-- build:css css/style.min.css -->
+	<!-- <link rel="stylesheet" href="css/imagehover.min.css"> -->
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/slider.css">
+	<link rel="stylesheet" href="css/main.css">
+	<!-- /build -->
 </head>
 <body>
 		<header>
@@ -44,7 +49,7 @@
 
 			<section class="slider">
 	
-			<div class="wrapper">
+
 				<div id="wowslider-container1">
 				<div class="ws_images"><ul>
 					<li><img src="img/slide1.jpg"  id="wows1_0"/></li>
@@ -55,11 +60,7 @@
 					<li><img src="img/slide6.jpg"  id="wows1_5"/></li>
 				</ul></div>
 				<div class="ws_shadow"></div>
-	</ul></div>
-	<div class="ws_shadow"></div>
-	</div>	
-				</div>	
-			</div>
+
 			</section>
 			</div>
 		</header>
@@ -97,45 +98,32 @@
 		<section class="services">
 			<div class="wrapper">
 			<h3>Our Services</h3>
-			<ul>
-				<li>
-					<figure class="imghvr-zoom-out">
-					  <img src="img/prew1.jpg" alt="example-image">
-					  <figcaption>
-					    <a href="#">+</a>
-					  </figcaption>
-					</figure>
-					<a class="servLink" href="#">Schedule Services
-					</a>
-				</li>
-				<li>
-					<figure class="imghvr-zoom-out">
-					  <img src="img/prew2.jpg" alt="example-image">
-					  <figcaption>
-					    <a href="#">+</a>
-					  </figcaption>
-					</figure>
-					  <a class="servLink" href="#">Preventive Maintence</a>
-				</li>
-				<li>
-					<figure class="imghvr-zoom-out">
-					  <img src="img/prew3.jpg" alt="example-image">
-					  <figcaption>
-					    <a href="#">+</a>
-					  </figcaption>
-					</figure>
-					  <a class="servLink" href="#">Tire & Wheel Services</a>
-				</li>
-				<li>
-					<figure class="imghvr-zoom-out">
-					  <img src="img/prew4.jpg" alt="example-image">
-					  <figcaption>
-					    <a href="#">+</a>
-					  </figcaption>
-					</figure>
-					  <a class="servLink" href="#">Repair Services</a>
-				</li>
-			</ul>
+			<div class="infoBlock">
+				<div class="pic">
+					<p class="hover"></p>
+					<img src="img/prew1.jpg">
+				</div>
+				<a href="" class="servLink">Schedule Services</a>
+			</div>
+			<div class="infoBlock">
+				<div class="pic">
+					<p class="hover"></p>
+					<img src="img/prew2.jpg"></div>
+				<a href="" class="servLink">Preventive Maintence</a>
+			</div>
+			<div class="infoBlock">
+				<div class="pic">
+					<p class="hover"></p>
+					<img src="img/prew3.jpg"></div>
+				<a href="" class="servLink">Tire & Wheel Services</a>
+			</div>
+			<div class="infoBlock">
+				<div class="pic">
+					<p class="hover"></p>
+					<img src="img/prew4.jpg"></div>
+				<a href="" class="servLink">Repair Services</a>
+			</div>
+			
 			</div>
 		</section>
 
@@ -217,7 +205,12 @@
 
 		<section class="logos">
 			<div class="wrapper">
-				<img src="img/logos.png" alt="">
+				<img src="img/logos1.png" alt="">
+				<img src="img/logos2.png" alt="">
+				<img src="img/logos3.png" alt="">
+				<img src="img/logos4.png" alt="">
+				<img src="img/logos5.png" alt="">
+				<img src="img/logos6.png" alt="">
 			</div>
 		</section>
 
@@ -270,11 +263,16 @@
 		</div>
 
 	</div>
-	
-	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+ 	
+ 	<script src="https://cdn.jsdelivr.net/lodash/4.13.1/lodash.min.js"></script>
 
-	<script src="js/script.min.js"></script>
-	
+	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+	<!-- build:js js/script.min.js -->
+	<script src="js/accordion.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/slider.js"></script>
+	<script src="js/wowSliderScript.js"></script>
+	<!-- /build -->
 	<script   src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"   integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="   crossorigin="anonymous"></script>
 	
 </body>
