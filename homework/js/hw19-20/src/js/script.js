@@ -1,6 +1,6 @@
-    $('.menuLinks').on('click', function(a){
-        $('.menuLinks').removeClass('selected');
-        $(this).addClass('menuLinks selected');
+    $('.navBar__link').on('click', function(a){
+        $('.navBar__link').removeClass('selected');
+        $(this).addClass('navBar__link selected');
     })
 
 

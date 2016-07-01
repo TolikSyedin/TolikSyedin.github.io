@@ -28,12 +28,12 @@ header {
   overflow: hidden;
   margin-top: 25px;
   /* Links */ }
-  header .section {
+  header .logo {
     float: left;
     width: 200px; }
-    header .section .logo {
+    header .logo .logo__img {
       float: left; }
-    header .section h1 {
+    header .logo .logo__h1 {
       color: #434343;
       font-family: "ubuntumedium";
       font-size: 25px;
@@ -41,7 +41,7 @@ header {
       margin: 0;
       letter-spacing: 1.5px;
       line-height: 20px; }
-    header .section h3 {
+    header .logo .logo__h3 {
       color: #333333;
       font-family: "ubuntulight";
       font-size: 14px;
@@ -66,21 +66,21 @@ header {
         background: url("../img/links.png") 0 0 no-repeat; }
         header nav.links ul li a:hover {
           background-position: 0px -20px; }
-      header nav.links ul li .link2 {
+      header nav.links ul li .links__link2 {
         background-position: -35px 0px; }
-        header nav.links ul li .link2:hover {
+        header nav.links ul li .links__link2:hover {
           background-position: -35px -20px; }
-      header nav.links ul li .link3 {
+      header nav.links ul li .links__link3 {
         background-position: -65px 0px; }
-        header nav.links ul li .link3:hover {
+        header nav.links ul li .links__link3:hover {
           background-position: -65px -20px; }
-      header nav.links ul li .link4 {
+      header nav.links ul li .links__link4 {
         background-position: -100px 0px; }
-        header nav.links ul li .link4:hover {
+        header nav.links ul li .links__link4:hover {
           background-position: -100px -20px; }
-      header nav.links ul li .link5 {
+      header nav.links ul li .links__link5 {
         background-position: -132px 0px; }
-        header nav.links ul li .link5:hover {
+        header nav.links ul li .links__link5:hover {
           background-position: -132px -20px; }
 
 /*NavBar*/
@@ -90,22 +90,22 @@ menu {
   width: 100%;
   height: 50px;
   background: rgba(0, 0, 0, 0.8); }
-  menu .navBar {
+  menu nav {
     width: 700px; }
-    menu .navBar ul {
+    menu nav .navBar {
       height: 50px; }
-      menu .navBar ul li {
+      menu nav .navBar .navBar__item {
         float: left; }
-      menu .navBar ul li:last-child a {
+      menu nav .navBar .navBarItem:last-child a {
         border-right: 1px solid #000; }
-      menu .navBar ul .selected {
+      menu nav .navBar .selected {
         background: #248cec;
         border-left: 1px solid #248cec; }
-  menu .search {
+  menu .navBar__search {
     overflow: hidden;
     position: relative;
     margin-right: 10px; }
-    menu .search:after {
+    menu .navBar__search:after {
       position: absolute;
       right: 10px;
       top: 15px;
@@ -123,7 +123,7 @@ menu {
     menu #inp:focus {
       border: 1px solid #fff; }
 
-.menuLinks {
+.navBar__link {
   color: #fff;
   font-family: "ubuntucondensed";
   font-size: 15px;
@@ -133,7 +133,7 @@ menu {
   line-height: 50px;
   text-transform: uppercase;
   border-left: 1px solid #000; }
-  .menuLinks:hover {
+  .navBar__link:hover {
     color: #f4b60d; }
 
 /*Slider*/
@@ -150,11 +150,11 @@ menu {
   overflow: hidden;
   height: 300px;
   margin-top: 50px; }
-  .articles article {
+  .articles .articles__infobox {
     width: 380px;
     height: 200px;
     float: left; }
-    .articles article p {
+    .articles .articles__infobox .articles__number {
       color: #ccc;
       font-family: "ubuntumedium";
       font-size: 80px;
@@ -162,13 +162,13 @@ menu {
       margin: -20px 0 0 0;
       height: 100%;
       float: left; }
-    .articles article .content {
+    .articles .articles__infobox .articles__content {
       width: 320px;
       height: 300px; }
-      .articles article .content h3 {
+      .articles .articles__infobox .articles__content .articles__head {
         font-family: "ubuntumedium";
         display: block; }
-        .articles article .content h3:before {
+        .articles .articles__infobox .articles__content .articles__head:before {
           display: block;
           content: '';
           width: 35px;
@@ -176,18 +176,18 @@ menu {
           overflow: hidden;
           margin-bottom: 10px;
           background: url("../img/icons.png") 0 0 no-repeat; }
-      .articles article .content #icon2:before {
+      .articles .articles__infobox .articles__content #icon2:before {
         background-position: -37px 0px; }
-      .articles article .content #icon3:before {
+      .articles .articles__infobox .articles__content #icon3:before {
         background-position: -70px 0px; }
-      .articles article .content span {
+      .articles .articles__infobox .articles__content .articles__text {
         color: #ccc;
         font-family: Arial;
         font-size: 14px;
         padding: 10px 0 0 0;
         margin: 0;
         display: block; }
-      .articles article .content a {
+      .articles .articles__infobox .articles__content .articles__link {
         color: #000;
         font-family: "ubuntumedium";
         font-size: 14px;
@@ -195,16 +195,17 @@ menu {
         margin: 0;
         display: block;
         font-weight: 400; }
-        .articles article .content a:hover {
+        .articles .articles__infobox .articles__content .articles__link:hover {
           color: #00f; }
-        .articles article .content a:hover span {
+        .articles .articles__infobox .articles__content .articles__link:hover span {
           color: #ccc; }
-        .articles article .content a span {
+        .articles .articles__infobox .articles__content .articles__link span {
           display: inline-block;
           color: #00f; }
 
 .services {
   height: 400px;
+  min-width: 1160px;
   background: rgba(0, 0, 0, 0.8) 0 0 repeat; }
   .services h3 {
     color: #fff;
@@ -212,26 +213,26 @@ menu {
     font-size: 24px;
     padding: 15px;
     margin: 0; }
-  .services .infoBlock {
+  .services .services__infoBlock {
     position: relative;
     display: inline-block;
     width: 260px;
     height: 290px;
     margin: 13px; }
-    .services .infoBlock:hover .servLink {
+    .services .services__infoBlock:hover .services__link {
       color: #f4b60d; }
-    .services .infoBlock:hover .hover {
+    .services .services__infoBlock:hover .services__hover {
       cursor: pointer;
       background-color: rgba(50, 150, 250, 0.8);
       background-image: url("../img/plus.png");
       background-repeat: no-repeat;
       background-position: 50% 50%;
       transition: background-color 0.5s, background-image 1s cubic-bezier(0.46, 0.02, 0.19, 1.58); }
-    .services .infoBlock .hover {
+    .services .services__infoBlock .services__hover {
       width: 260px;
       height: 260px;
       position: absolute; }
-    .services .infoBlock .servLink {
+    .services .services__infoBlock .services__link {
       color: #fff;
       font-family: "ubuntumedium";
       font-size: 17px;
@@ -242,53 +243,52 @@ menu {
 
 .blog {
   background: #f7f7f7;
-  width: 100%;
   height: 450px; }
   .blog:after {
     display: block;
     content: '';
     clear: both; }
-  .blog .news {
+  .blog .blog__news {
     float: left; }
-    .blog .news h4 {
+    .blog .blog__news h4 {
       color: #000;
       font-family: "ubuntumedium";
       font-size: 20px;
       padding: 20px;
       margin: 0 0 0 15px; }
-    .blog .news .newsBlock {
+    .blog .blog__news .blog__newsblock {
       width: 580px; }
-    .blog .news .pic {
+    .blog .blog__news .blog__pic {
       float: left;
       width: 180px; }
-      .blog .news .pic:after {
+      .blog .blog__news .blog__pic:after {
         display: block;
         content: '';
         clear: both; }
-    .blog .news article {
+    .blog .blog__news .blog__content {
       width: 400px;
       height: 200px;
       display: inline-block; }
-      .blog .news article h3 {
+      .blog .blog__news .blog__content .blog__content--header {
         margin-top: 10px; }
-        .blog .news article h3 a {
+        .blog .blog__news .blog__content .blog__content--header a {
           color: #000;
           font-family: "ubuntumedium";
           font-size: 17px;
           padding: 0;
           margin: 0; }
-          .blog .news article h3 a:hover {
+          .blog .blog__news .blog__content .blog__content--header a:hover {
             color: #63b4f5; }
-      .blog .news article span {
+      .blog .blog__news .blog__content .blog__content--text {
         color: #8a8a8a;
         font-family: arial;
         font-size: 17px;
         padding: 0;
         margin: 0;
         display: block; }
-      .blog .news article .underhead {
+      .blog .blog__news .blog__content .blog__content--underhead {
         margin: 5px 0 15px 0; }
-        .blog .news article .underhead a {
+        .blog .blog__news .blog__content .blog__content--underhead a {
           color: #63b4f5; }
   .blog .banners {
     display: inline-block;
@@ -321,54 +321,60 @@ menu {
 footer {
   padding: 30px 0 50px;
   background: #2a2d32;
-  overflow: hidden; }
-  footer .listBlock {
+  min-width: 1160px; }
+  footer:after {
+    content: '';
+    display: block;
+    clear: both; }
+  footer .listblock {
+    overflow: hidden;
     float: left;
     width: 290px; }
-    footer .listBlock h3 {
+    footer .listblock .listblock__head {
       color: #fff;
       font-family: "ubuntumedium";
       font-size: 18px;
       padding: 5px;
       margin: 20px 0;
       text-transform: uppercase; }
-    footer .listBlock li {
+    footer .listblock .listblock__item {
       width: 235px;
       padding: 5px;
       border-top: 1px solid #393c40; }
-      footer .listBlock li a {
+      footer .listblock .listblock__item .listblock__link {
         color: #828385;
         font-family: Arial;
         font-size: 15px;
         padding: 0;
         margin: 0; }
-        footer .listBlock li a:hover {
+        footer .listblock .listblock__item .listblock__link:hover {
           color: #257fd3; }
-    footer .listBlock li:first-child {
+    footer .listblock li:first-child {
       border-top: none; }
 
 .copyright {
   background: #35383c;
   height: 50px;
   overflow: hidden;
-  line-height: 50px; }
-  .copyright li {
+  line-height: 50px;
+  min-width: 1160px; }
+  .copyright .copyright__item {
     display: inline-block;
     margin-right: 30px; }
-    .copyright li img {
+    .copyright .copyright__item .copyright__img {
       display: inline;
       opacity: 0.4;
       vertical-align: middle; }
-    .copyright li a, .copyright li span {
+    .copyright .copyright__item .copyright__link, .copyright .copyright__item span {
       color: #5b5d61;
       font-family: Arial;
       font-size: 15px;
       padding: 0 10px;
       margin: 0 5px;
       cursor: pointer; }
-    .copyright li span {
+    .copyright .copyright__item span {
       cursor: initial; }
-  .copyright li:last-child {
+  .copyright .copyright__link:last-child {
     float: right; }
 
 /*# sourceMappingURL=main.css.map */

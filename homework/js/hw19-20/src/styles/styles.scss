@@ -47,7 +47,6 @@ $condencedFont: 'ubuntucondensed';
 	&:hover{background-position: $x -20px};
 }
 
-
 .wrapper {
 	width: 1160px;
 	margin: 0 auto;
@@ -57,18 +56,18 @@ header {
 	overflow: hidden;
 	margin-top: 25px;
 
-	.section {
-		float: left;
-		width: 200px;
 	.logo {
 		float: left;
+		width: 200px;
+	.logo__img{
+		float: left;
 	}
-	h1 {
+	.logo__h1 {
 		@include heading($mediumFont, #434343);
 		letter-spacing: 1.5px;
 		line-height: 20px;		
 	}
-	h3 {
+	.logo__h3 {
 		@include heading($lightFont, #333333, 14px);
 		font-variant: small-caps;
 		letter-spacing: 2px;
@@ -92,19 +91,19 @@ nav.links {
 			&:hover {background-position: 0px -20px;}
 			
 		}
-		.link2 {
+		.links__link2 {
 			@include linkBg(-35px);
 		}
 
-		.link3 {
+		.links__link3 {
 			@include linkBg(-65px);
 		}
 
-		.link4{
+		.links__link4{
 			@include linkBg(-100px);
 		}
 
-		.link5{
+		.links__link5{
 			@include linkBg(-132px);
 		}
 		
@@ -120,16 +119,16 @@ menu {
 	width: 100%;
 	height: 50px;
 	background: rgba(0,0,0,.8);
-	.navBar {
+	nav {
 	width: 700px;
-		ul {
+		.navBar {
 			height: 50px;
 
-			li {
+			.navBar__item {
 			float: left;
 			}
 
-			li:last-child a {
+			.navBarItem:last-child a {
 			border-right: 1px solid #000;
 			}
 
@@ -141,7 +140,7 @@ menu {
 		}
 
 	}
-	.search {
+	.navBar__search {
 		overflow: hidden;
 		position: relative;
 		margin-right: 10px;	
@@ -168,7 +167,7 @@ menu {
 	}
 
 }
-.menuLinks {	
+.navBar__link {	
 	@include heading($condencedFont, #fff, 15px, 0 39px);
 	display: block;
 	line-height: 50px;
@@ -192,19 +191,19 @@ menu {
 	overflow: hidden;
 	height: 300px;
 	margin-top: 50px;
-	article {
+	.articles__infobox {
 		width: 380px;
 		height: 200px;
 		float: left;
-		p {
+		.articles__number {
 			@include heading($mediumFont, #ccc, 80px, 0, -20px 0 0 0);
 			height: 100%; 
 			float: left;
 		}
-		.content {
+		.articles__content {
 			width: 320px;
 			height: 300px;
-			h3 {
+			.articles__head {
 				font-family: $mediumFont;
 				display: block;
 				&:before{
@@ -225,11 +224,11 @@ menu {
 				background-position: -70px 0px
 			}
 
-			span {
+			.articles__text {
 				@include heading(Arial, #ccc, 14px, 10px 0 0 0);
 				display: block;
 			}
-			a {
+			.articles__link {
 				@include heading($mediumFont, #000, 14px, 10px 0 0 0);
 				display: block;
 				font-weight: 400;
@@ -250,18 +249,19 @@ menu {
 
 .services {
 	height: 400px;
+	min-width: 1160px;
 	background: rgba(0,0,0,.8) 0 0 repeat;
 	h3 {
 		@include heading($mediumFont, #fff, 24px, 15px);
 	}
-	.infoBlock {
+	.services__infoBlock {
 		position: relative;
 		display: inline-block;
 		width: 260px;
 		height: 290px;
 		margin: 13px;
-		&:hover .servLink{color:$color;};
-		&:hover .hover{
+		&:hover .services__link{color:$color;};
+		&:hover .services__hover{
 			cursor: pointer;
 			background-color:  rgba(50,150,250,.8);
 			background-image: url('../img/plus.png');
@@ -269,13 +269,13 @@ menu {
 			background-position: 50% 50%;
 			transition: background-color .5s, background-image 1s cubic-bezier(0.46, 0.02, 0.19, 1.58);
 		};
-		.hover{
+		.services__hover{
 			width: 260px;
 			height: 260px;
 			position: absolute;
 
 		}
-		.servLink {
+		.services__link {
 			@include heading($mediumFont, #fff, 17px, 0, 0);
 			display: block;
 			text-align: center;
@@ -285,30 +285,29 @@ menu {
 }
 .blog {
 	background: #f7f7f7;
-	width: 100%;
 	height: 450px;
 	&:after{display: block;content: '';clear: both;};
 	
 
-	.news {
+	.blog__news {
 		float: left;
 		h4 {
 			@include heading($mediumFont, #000, 20px, 20px, 0 0 0 15px);
 		}
-		.newsBlock{
+		.blog__newsblock{
 			width: 580px;	
 
 		}
-		.pic {
+		.blog__pic {
 			float: left;
 			width: 180px;
 			&:after{display: block;content: '';clear: both;};
 		}
-		article {
+		.blog__content {
 			width: 400px;
 			height: 200px;
 			display: inline-block;
-			h3 {
+			.blog__content--header {
 				margin-top: 10px;
 				a{
 				@include heading($mediumFont, #000, 17px);
@@ -316,11 +315,11 @@ menu {
 				}
 			}
 
-			span {
+			.blog__content--text {
 				@include heading(arial, #8a8a8a, 17px);
 				display: block;
 			}
-			.underhead {
+			.blog__content--underhead {
 				margin: 5px 0 15px 0;
 				a {
 					color: #63b4f5;
@@ -358,20 +357,22 @@ menu {
 footer {
 	padding: 30px 0 50px;
 	background: #2a2d32;
-	overflow: hidden;
-	.listBlock {
+	min-width: 1160px;
+	&:after{content: '';display: block;clear: both;};
+	.listblock {
+		overflow: hidden;
 		float: left;
 		width: 290px;
-		h3 {
+		.listblock__head {
 			@include heading($mediumFont, #fff, 18px, 5px, 20px 0);
 			text-transform: uppercase;
 			} 	
 		
-		li {
+		.listblock__item {
 			width: 235px;
 			padding: 5px;
 			border-top: 1px solid #393c40;
-			a {
+			.listblock__link {
 				@include heading(Arial, #828385, 15px);
 				&:hover{color:#257fd3;};
 			}
@@ -389,22 +390,22 @@ footer {
 	height: 50px;
 	overflow: hidden;
 	line-height: 50px;
-
-	li {
+	min-width: 1160px;
+	.copyright__item {
 		display: inline-block;
 		margin-right: 30px;
-		img {
+		.copyright__img {
 			display: inline;
 			opacity: 0.4;
 			vertical-align: middle; 
 		}
-		a, span{
+		.copyright__link, span{
 			@include heading(Arial, #5b5d61, 15px, 0 10px, 0 5px);
 			cursor: pointer;
 		}
 		span {cursor: initial;}
 	}	
-	li:last-child {
+	.copyright__link:last-child {
 		float: right;
 	}
 }
