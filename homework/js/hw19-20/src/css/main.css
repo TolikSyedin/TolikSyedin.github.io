@@ -165,10 +165,10 @@ menu {
     .articles article .content {
       width: 320px;
       height: 300px; }
-      .articles article .content h1 {
+      .articles article .content h3 {
         font-family: "ubuntumedium";
         display: block; }
-        .articles article .content h1:before {
+        .articles article .content h3:before {
           display: block;
           content: '';
           width: 35px;
