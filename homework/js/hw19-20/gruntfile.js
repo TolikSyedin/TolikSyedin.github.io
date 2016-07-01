@@ -76,8 +76,8 @@ grunt.initConfig({
 
   watch: {
     scripts:{
-      files: ['src/styles/*', 'src/css/*', 'src/js/*', 'src/index.html',],
-      tasks: ['sass', 'concat', 'cssmin', 'uglify', 'processhtml', 'htmlmin', 'clean']
+      files: ['src/styles/*', 'src/css/*', 'src/js/*', 'src/index.html', 'src/img/*'],
+      tasks: ['sass', 'concat', 'cssmin', 'uglify', 'processhtml', 'htmlmin', 'copy', 'clean']
       
     }
   }

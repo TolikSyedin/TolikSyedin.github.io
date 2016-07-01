@@ -57,7 +57,7 @@ header {
 	overflow: hidden;
 	margin-top: 25px;
 
-	section {
+	.section {
 		float: left;
 		width: 200px;
 	.logo {
@@ -236,10 +236,11 @@ menu {
 				&:hover{
 					color:#00f;
 				};
+				&:hover span {color:#ccc;};
+
 				span{
 					display: inline-block;
 					color: #00f;
-					&:hover{color:#ccc;};
 				};
 				
 			}
@@ -262,9 +263,11 @@ menu {
 		&:hover .servLink{color:$color;};
 		&:hover .hover{
 			cursor: pointer;
-			background: rgba(50,150,255,.85);
-			background-image: url("../img/plus.png") 0 0 no-repeat;
-
+			background-color:  rgba(50,150,250,.8);
+			background-image: url('../img/plus.png');
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			transition: background-color .5s, background-image 1s cubic-bezier(0.46, 0.02, 0.19, 1.58);
 		};
 		.hover{
 			width: 260px;
@@ -345,6 +348,12 @@ menu {
 }
 .logos {
 	margin: 50px;
+	img{
+		display: inline-block;
+		margin: 0 25px;
+		opacity: 1;
+		&:hover{opacity: 0.5; transition: opacity 1s;};
+	}
 }
 footer {
 	padding: 30px 0 50px;
@@ -356,8 +365,8 @@ footer {
 		h3 {
 			@include heading($mediumFont, #fff, 18px, 5px, 20px 0);
 			text-transform: uppercase;
-
-		}
+			} 	
+		
 		li {
 			width: 235px;
 			padding: 5px;
@@ -370,14 +379,32 @@ footer {
 		li:first-child{
 			border-top: none;
 		}
+	}
 	
 }
 
 
 .copyright {
 	background: #35383c;
-	img {
-		margin-top: -1px;
+	height: 50px;
+	overflow: hidden;
+	line-height: 50px;
+
+	li {
+		display: inline-block;
+		margin-right: 30px;
+		img {
+			display: inline;
+			opacity: 0.4;
+			vertical-align: middle; 
+		}
+		a, span{
+			@include heading(Arial, #5b5d61, 15px, 0 10px, 0 5px);
+			cursor: pointer;
+		}
+		span {cursor: initial;}
+	}	
+	li:last-child {
+		float: right;
 	}
-}
 }
