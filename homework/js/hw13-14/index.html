@@ -19,28 +19,26 @@
 			<div id="test">
 				<form>
 				<ol>
-
-					<% var j = 0 %>
 					<% for(var i=0; i<data.length; i++) { %>
 					<li><%= data[i].question %>
 						<ul>
 							<% for(var k=0; k<data[i].answers.length; k++) { %>
 							<li>
-								<input type="radio" id=<%- ++j %> name=<%= data[i].name %>>
-								<label for=<%- j %>><%=data[i].answers[k] %></label>
+								<input type="radio" id=<%= data[i].id[k] %> name=<%= data[i].name %>>
+								<label for=<%= data[i].id[k] %>><%=data[i].answers[k] %></label>
 							</li>
 							<% } %>
 						</ul>
 					
 					<% } %>	
 				</ol>
-				</form>
-			</div>
 			<div id="btn">
 
 				<button type="button" id="checkButton" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
 				  Проверить мои результаты
 				</button>
+			</div>
+				</form>
 			</div>
 
 
