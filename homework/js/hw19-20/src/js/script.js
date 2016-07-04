@@ -291,7 +291,7 @@ var sortByAlphabet = function (array) {
     .chain(array)
     .flatten()
     .uniq()
-    .sortBy()
+    .sortBy(_.method('toLowerCase'))    
     .value();
 }
 
