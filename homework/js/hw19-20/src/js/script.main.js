@@ -64,9 +64,9 @@ $(function() {
 	        mouseout: clear
 	      });
 	    }
-	  };;    $('.navBar__link').on('click', function(a){
-        $('.navBar__link').removeClass('selected');
-        $(this).addClass('navBar__link selected');
+	  };;    $('.navbar__link').on('click', function(a){
+        $('.navbar__link').removeClass('navbar__link_active');
+        $(this).addClass('navbar__link navbar__link_active');
     })
 
 
@@ -357,7 +357,7 @@ var sortByAlphabet = function (array) {
     .chain(array)
     .flatten()
     .uniq()
-    .sortBy()
+    .sortBy(_.method('toLowerCase'))    
     .value();
 }
 

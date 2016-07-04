@@ -74,27 +74,26 @@
         background: url("../img/links.png") 0 0 no-repeat; }
         .header-menu .socials .socials__item .socials__link:hover {
           background-position: 0px -20px; }
-      .header-menu .socials .socials__item .twitter {
+      .header-menu .socials .socials__item .socials__link_twitter {
         background-position: -35px 0px; }
-        .header-menu .socials .socials__item .twitter:hover {
+        .header-menu .socials .socials__item .socials__link_twitter:hover {
           background-position: -35px -20px; }
-      .header-menu .socials .socials__item .rss {
+      .header-menu .socials .socials__item .socials__link_rss {
         background-position: -65px 0px; }
-        .header-menu .socials .socials__item .rss:hover {
+        .header-menu .socials .socials__item .socials__link_rss:hover {
           background-position: -65px -20px; }
-      .header-menu .socials .socials__item .linkedin {
+      .header-menu .socials .socials__item .socials__link_linkedin {
         background-position: -100px 0px; }
-        .header-menu .socials .socials__item .linkedin:hover {
+        .header-menu .socials .socials__item .socials__link_linkedin:hover {
           background-position: -100px -20px; }
-      .header-menu .socials .socials__item .skype {
+      .header-menu .socials .socials__item .socials__link_skype {
         background-position: -132px 0px; }
-        .header-menu .socials .socials__item .skype:hover {
+        .header-menu .socials .socials__item .socials__link_skype:hover {
           background-position: -132px -20px; }
 
 /*navbar*/
 .main-menu {
-  width: 100%;
-  height: 50px;
+  width: 1160px;
   background: rgba(0, 0, 0, 0.8);
   overflow: hidden; }
   .main-menu .navbar {
@@ -107,12 +106,21 @@
     .main-menu .navbar .navbar__list {
       height: 50px; }
       .main-menu .navbar .navbar__list .navbar__item {
-        display: inline-block; }
-      .main-menu .navbar .navbar__list .navbar__item:last-child a {
+        float: left; }
+      .main-menu .navbar .navbar__list .navbar__link {
+        color: #fff;
+        font-family: "ubuntucondensed";
+        font-size: 15px;
+        padding: 0 39px;
+        margin: 0;
+        display: block;
+        line-height: 50px;
+        text-transform: uppercase;
         border-right: 1px solid #000; }
-      .main-menu .navbar .navbar__list .selected {
-        background: #248cec;
-        border-left: 1px solid #248cec; }
+        .main-menu .navbar .navbar__list .navbar__link:hover {
+          color: #f4b60d; }
+      .main-menu .navbar .navbar__list .navbar__link_active {
+        background: #248cec; }
   .main-menu .navbar__search {
     overflow: hidden;
     position: relative;
@@ -135,34 +143,19 @@
     .main-menu .navbar__input:focus {
       border: 1px solid #fff; }
 
-.navbar__link {
-  color: #fff;
-  font-family: "ubuntucondensed";
-  font-size: 15px;
-  padding: 0 39px;
-  margin: 0;
-  display: block;
-  line-height: 50px;
-  text-transform: uppercase;
-  border-left: 1px solid #000; }
-  .navbar__link:hover {
-    color: #f4b60d; }
-
 /*Slider*/
 .slider {
   margin-top: 40px;
   width: 100%; }
   .slider .wrapper {
     position: relative;
-    overflow: hidden;
-    min-height: 471px; }
+    overflow: hidden; }
 
 /*Articles */
 .articles {
   min-width: 1160px;
   overflow: hidden;
-  min-height: 300px;
-  margin-top: 50px; }
+  margin: 50px 0; }
   .articles .articles__infobox {
     width: 380px;
     height: 200px;
@@ -176,8 +169,7 @@
       height: 100%;
       float: left; }
     .articles .articles__infobox .articles__content {
-      width: 320px;
-      height: 300px; }
+      width: 320px; }
       .articles .articles__infobox .articles__content .articles__head {
         font-family: "ubuntumedium";
         display: block; }
@@ -218,7 +210,6 @@
 
 .services {
   min-width: 1160px;
-  min-height: 400px;
   background: rgba(0, 0, 0, 0.8) 0 0 repeat; }
   .services .service__header {
     color: #fff;
@@ -236,11 +227,8 @@
       color: #f4b60d; }
     .services .services__infoblock:hover .services__hover {
       cursor: pointer;
-      background-color: rgba(50, 150, 250, 0.8);
-      background-image: url("../img/plus.png");
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      transition: background-color 0.5s, background-image 1s cubic-bezier(0.46, 0.02, 0.19, 1.58); }
+      background: url("../img/plus.png") rgba(50, 150, 250, 0.8) center center no-repeat;
+      transition: background-color 0.5s cubic-bezier(0.46, 0.02, 0.19, 1.58); }
     .services .services__infoblock .services__hover {
       width: 260px;
       height: 260px;
@@ -256,22 +244,22 @@
 
 .blog {
   background: #f7f7f7;
-  min-height: 450px;
   min-width: 1160px; }
   .blog:after {
     display: block;
     content: '';
     clear: both; }
+  .blog .blog__title {
+    color: #000;
+    font-family: "ubuntumedium";
+    font-size: 20px;
+    padding: 20px;
+    margin: 0 0 0 15px; }
   .blog .blog__news {
     float: left; }
-    .blog .blog__news .banners__header {
-      color: #000;
-      font-family: "ubuntumedium";
-      font-size: 20px;
-      padding: 20px;
-      margin: 0 0 0 15px; }
     .blog .blog__news .blog__newsblock {
-      width: 580px; }
+      width: 580px;
+      margin-bottom: 20px; }
     .blog .blog__news .blog__pic {
       float: left;
       width: 180px; }
@@ -329,7 +317,7 @@
     margin: 0 25px; }
     .logos .logos__img:hover {
       opacity: 0.5;
-      transition: opacity 1s; }
+      transition: opacity 1s cubic-bezier(0, 3, 1, 1.5); }
 
 .footer-list {
   padding: 30px 0 50px;
@@ -367,7 +355,6 @@
 
 .copyright {
   background: #35383c;
-  height: 50px;
   overflow: hidden;
   line-height: 50px;
   min-width: 1160px; }
