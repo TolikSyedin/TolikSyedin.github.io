@@ -1,5 +1,5 @@
 $(function() {
-	    $( "#accordion" ).accordion({
+	    $( ".banners__accordion" ).accordion({
 	      event: "click hoverintent",
     	  header: "h3",
     	  heightStyle: "content",

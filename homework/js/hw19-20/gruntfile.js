@@ -33,7 +33,7 @@ grunt.initConfig({
         expand: true,
         cwd: 'src/css/',
         src:  'style.main.css',
-        dest: 'build/css',
+        dest: 'build/css/',
         ext: '.min.css'
       }]
     }
