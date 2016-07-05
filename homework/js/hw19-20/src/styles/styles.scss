@@ -54,7 +54,7 @@ $condencedFont: 'ubuntucondensed';
 	margin: 0 auto;
 }
 							/* HEADER */
-.header-menu {
+.header-block {
 	@include mw;
 	overflow: hidden;
 	margin-top: 25px;
@@ -114,7 +114,7 @@ $condencedFont: 'ubuntucondensed';
 						/*navbar*/
 
 
-.main-menu {
+.main-block {
 	width: 1160px;
 	background: rgba(0,0,0,.8);
 	overflow: hidden;
@@ -135,7 +135,7 @@ $condencedFont: 'ubuntucondensed';
 				border-right: 1px solid #000;
 				&:hover {color: $color;}
 			}
-			.navbar__link_active {
+			.navbar__link--active {
 				background: #248cec;
 			}
 
@@ -151,6 +151,7 @@ $condencedFont: 'ubuntucondensed';
 			right: 10px;
 			top: 15px;
 			display: block;
+			opacity: .4;
 			content: url('../img/search.png'); 
 
 		}
@@ -195,7 +196,7 @@ $condencedFont: 'ubuntucondensed';
 		}
 		.articles__content {
 			width: 320px;
-			.articles__head {
+			.articles__title {
 				font-family: $mediumFont;
 				display: block;
 				&:before{
@@ -209,10 +210,10 @@ $condencedFont: 'ubuntucondensed';
 					
 				};
 			}
-			.techno:before {
+			.articles__title--techno:before {
 				background-position: -36px 0px;
 			}
-			.support:before {
+			.articles__title--support:before {
 				background-position: -70px 0px
 			}
 
@@ -242,7 +243,7 @@ $condencedFont: 'ubuntucondensed';
 .services {
 	@include mw;
 	background: rgba(0,0,0,.8) 0 0 repeat;
-	.service__header {
+	.service__title {
 		@include heading($mediumFont, #fff, 24px, 15px);
 	}
 	.services__infoblock {
@@ -292,8 +293,9 @@ $condencedFont: 'ubuntucondensed';
 		.blog__content {
 			width: 400px;
 			height: 200px;
+			
 			display: inline-block;
-			.blog__content--title {
+			.blog__content-title {
 				margin-top: 10px;
 				a{
 				@include heading($mediumFont, #000, 17px);
@@ -301,16 +303,16 @@ $condencedFont: 'ubuntucondensed';
 				}
 			}
 
-			.blog__content--text {
-				@include heading(arial, #8a8a8a, 17px);
-				display: block;
-			}
-			.blog__content--subtitle {
+			.blog__content-subtitle {
 				margin: 5px 0 15px 0;
 				color: #8a8a8a;
 				a {
 					color: #63b4f5;
 				}
+			}
+			.blog__content-text {
+				@include heading(arial, #8a8a8a, 17px);
+				display: block;
 			}
 		}
 	}
@@ -336,7 +338,7 @@ $condencedFont: 'ubuntucondensed';
 	.logos__img {
 		display: inline-block;
 		margin: 0 25px;
-		&:hover{opacity: 0.5; transition: opacity 1s cubic-bezier(0,3,1,1.5);};
+		&:hover{cursor: pointer; opacity: 0.65; transition: opacity .6s cubic-bezier(0,3,1,1.5);};
 	}
 }
 .footer-list {
@@ -374,12 +376,11 @@ $condencedFont: 'ubuntucondensed';
 	line-height: 50px;
 	min-width: 1160px;
 	.copyright__item {
-		display: inline-block;
 		margin-right: 30px;
+		display: inline-block;
 		.copyright__img {
-			display: inline;
-			opacity: 0.4;
-			vertical-align: middle; 
+			vertical-align: middle;
+			opacity: .4;
 		}
 		.copyright__link {
 			@include heading(Arial, #5b5d61, 15px, 0 10px, 0 5px);
@@ -388,7 +389,7 @@ $condencedFont: 'ubuntucondensed';
 			@include heading(Arial, #5b5d61, 15px, 0 10px, 0 5px);
 		}
 	}	
-	.copyright__link:last-child {
+	.copyright__item:last-child {
 		float: right;
 	}
 }

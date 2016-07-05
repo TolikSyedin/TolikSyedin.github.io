@@ -31,25 +31,25 @@
   margin: 0 auto; }
 
 /* HEADER */
-.header-menu {
+.header-block {
   min-width: 1160px;
   overflow: hidden;
   margin-top: 25px;
   /* Links */ }
-  .header-menu .logo {
+  .header-block .logo {
     float: left;
     width: 200px; }
-    .header-menu .logo .logo__img {
+    .header-block .logo .logo__img {
       float: left;
       margin-right: 5px; }
-    .header-menu .logo .logo__title {
+    .header-block .logo .logo__title {
       color: #434343;
       font-family: "ubuntumedium";
       font-size: 25px;
       padding: 0;
       margin: 0;
       line-height: 20px; }
-    .header-menu .logo .logo__subtitle {
+    .header-block .logo .logo__subtitle {
       color: #333333;
       font-family: "ubuntulight";
       font-size: 14px;
@@ -57,57 +57,57 @@
       margin: 0;
       font-variant: small-caps;
       letter-spacing: 3px; }
-  .header-menu .socials {
+  .header-block .socials {
     float: right;
     width: 145px;
     padding: 10px 0; }
-    .header-menu .socials:after {
+    .header-block .socials:after {
       display: block;
       content: '';
       clear: both; }
-    .header-menu .socials .socials__item {
+    .header-block .socials .socials__item {
       display: inline-block; }
-      .header-menu .socials .socials__item .socials__link {
+      .header-block .socials .socials__item .socials__link {
         display: block;
         width: 25px;
         height: 20px;
         background: url("../img/links.png") 0 0 no-repeat; }
-        .header-menu .socials .socials__item .socials__link:hover {
+        .header-block .socials .socials__item .socials__link:hover {
           background-position: 0px -20px; }
-      .header-menu .socials .socials__item .socials__link_twitter {
+      .header-block .socials .socials__item .socials__link_twitter {
         background-position: -35px 0px; }
-        .header-menu .socials .socials__item .socials__link_twitter:hover {
+        .header-block .socials .socials__item .socials__link_twitter:hover {
           background-position: -35px -20px; }
-      .header-menu .socials .socials__item .socials__link_rss {
+      .header-block .socials .socials__item .socials__link_rss {
         background-position: -65px 0px; }
-        .header-menu .socials .socials__item .socials__link_rss:hover {
+        .header-block .socials .socials__item .socials__link_rss:hover {
           background-position: -65px -20px; }
-      .header-menu .socials .socials__item .socials__link_linkedin {
+      .header-block .socials .socials__item .socials__link_linkedin {
         background-position: -100px 0px; }
-        .header-menu .socials .socials__item .socials__link_linkedin:hover {
+        .header-block .socials .socials__item .socials__link_linkedin:hover {
           background-position: -100px -20px; }
-      .header-menu .socials .socials__item .socials__link_skype {
+      .header-block .socials .socials__item .socials__link_skype {
         background-position: -132px 0px; }
-        .header-menu .socials .socials__item .socials__link_skype:hover {
+        .header-block .socials .socials__item .socials__link_skype:hover {
           background-position: -132px -20px; }
 
 /*navbar*/
-.main-menu {
+.main-block {
   width: 1160px;
   background: rgba(0, 0, 0, 0.8);
   overflow: hidden; }
-  .main-menu .navbar {
+  .main-block .navbar {
     width: 700px;
     float: left; }
-    .main-menu .navbar:after {
+    .main-block .navbar:after {
       display: block;
       content: '';
       clear: both; }
-    .main-menu .navbar .navbar__list {
+    .main-block .navbar .navbar__list {
       height: 50px; }
-      .main-menu .navbar .navbar__list .navbar__item {
+      .main-block .navbar .navbar__list .navbar__item {
         float: left; }
-      .main-menu .navbar .navbar__list .navbar__link {
+      .main-block .navbar .navbar__list .navbar__link {
         color: #fff;
         font-family: "ubuntucondensed";
         font-size: 15px;
@@ -117,21 +117,22 @@
         line-height: 50px;
         text-transform: uppercase;
         border-right: 1px solid #000; }
-        .main-menu .navbar .navbar__list .navbar__link:hover {
+        .main-block .navbar .navbar__list .navbar__link:hover {
           color: #f4b60d; }
-      .main-menu .navbar .navbar__list .navbar__link_active {
+      .main-block .navbar .navbar__list .navbar__link--active {
         background: #248cec; }
-  .main-menu .navbar__search {
+  .main-block .navbar__search {
     overflow: hidden;
     position: relative;
     margin-right: 10px; }
-    .main-menu .navbar__search:after {
+    .main-block .navbar__search:after {
       position: absolute;
       right: 10px;
       top: 15px;
       display: block;
+      opacity: .4;
       content: url("../img/search.png"); }
-  .main-menu .navbar__input {
+  .main-block .navbar__input {
     color: #fff;
     padding: 0px 30px 0px  7px;
     float: right;
@@ -140,7 +141,7 @@
     line-height: 38px;
     border: 1px solid #000;
     margin: 5px 0px; }
-    .main-menu .navbar__input:focus {
+    .main-block .navbar__input:focus {
       border: 1px solid #fff; }
 
 /*Slider*/
@@ -170,10 +171,10 @@
       float: left; }
     .articles .articles__infobox .articles__content {
       width: 320px; }
-      .articles .articles__infobox .articles__content .articles__head {
+      .articles .articles__infobox .articles__content .articles__title {
         font-family: "ubuntumedium";
         display: block; }
-        .articles .articles__infobox .articles__content .articles__head:before {
+        .articles .articles__infobox .articles__content .articles__title:before {
           display: block;
           content: '';
           width: 35px;
@@ -181,9 +182,9 @@
           overflow: hidden;
           margin-bottom: 10px;
           background: url("../img/icons.png") 0 0 no-repeat; }
-      .articles .articles__infobox .articles__content .techno:before {
+      .articles .articles__infobox .articles__content .articles__title--techno:before {
         background-position: -36px 0px; }
-      .articles .articles__infobox .articles__content .support:before {
+      .articles .articles__infobox .articles__content .articles__title--support:before {
         background-position: -70px 0px; }
       .articles .articles__infobox .articles__content .articles__text {
         color: #ccc;
@@ -211,7 +212,7 @@
 .services {
   min-width: 1160px;
   background: rgba(0, 0, 0, 0.8) 0 0 repeat; }
-  .services .service__header {
+  .services .service__title {
     color: #fff;
     font-family: "ubuntumedium";
     font-size: 24px;
@@ -271,28 +272,28 @@
       width: 400px;
       height: 200px;
       display: inline-block; }
-      .blog .blog__news .blog__content .blog__content--title {
+      .blog .blog__news .blog__content .blog__content-title {
         margin-top: 10px; }
-        .blog .blog__news .blog__content .blog__content--title a {
+        .blog .blog__news .blog__content .blog__content-title a {
           color: #000;
           font-family: "ubuntumedium";
           font-size: 17px;
           padding: 0;
           margin: 0; }
-          .blog .blog__news .blog__content .blog__content--title a:hover {
+          .blog .blog__news .blog__content .blog__content-title a:hover {
             color: #63b4f5; }
-      .blog .blog__news .blog__content .blog__content--text {
+      .blog .blog__news .blog__content .blog__content-subtitle {
+        margin: 5px 0 15px 0;
+        color: #8a8a8a; }
+        .blog .blog__news .blog__content .blog__content-subtitle a {
+          color: #63b4f5; }
+      .blog .blog__news .blog__content .blog__content-text {
         color: #8a8a8a;
         font-family: arial;
         font-size: 17px;
         padding: 0;
         margin: 0;
         display: block; }
-      .blog .blog__news .blog__content .blog__content--subtitle {
-        margin: 5px 0 15px 0;
-        color: #8a8a8a; }
-        .blog .blog__news .blog__content .blog__content--subtitle a {
-          color: #63b4f5; }
   .blog .banners {
     width: 500px;
     float: left; }
@@ -316,8 +317,9 @@
     display: inline-block;
     margin: 0 25px; }
     .logos .logos__img:hover {
-      opacity: 0.5;
-      transition: opacity 1s cubic-bezier(0, 3, 1, 1.5); }
+      cursor: pointer;
+      opacity: 0.65;
+      transition: opacity 0.6s cubic-bezier(0, 3, 1, 1.5); }
 
 .footer-list {
   padding: 30px 0 50px;
@@ -359,12 +361,11 @@
   line-height: 50px;
   min-width: 1160px; }
   .copyright .copyright__item {
-    display: inline-block;
-    margin-right: 30px; }
+    margin-right: 30px;
+    display: inline-block; }
     .copyright .copyright__item .copyright__img {
-      display: inline;
-      opacity: 0.4;
-      vertical-align: middle; }
+      vertical-align: middle;
+      opacity: .4; }
     .copyright .copyright__item .copyright__link {
       color: #5b5d61;
       font-family: Arial;
@@ -377,7 +378,7 @@
       font-size: 15px;
       padding: 0 10px;
       margin: 0 5px; }
-  .copyright .copyright__link:last-child {
+  .copyright .copyright__item:last-child {
     float: right; }
 
 /*# sourceMappingURL=main.css.map */

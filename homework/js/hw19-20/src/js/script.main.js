@@ -65,8 +65,8 @@ $(function() {
 	      });
 	    }
 	  };;    $('.navbar__link').on('click', function(a){
-        $('.navbar__link').removeClass('navbar__link_active');
-        $(this).addClass('navbar__link navbar__link_active');
+        $('.navbar__link').removeClass('navbar__link--active');
+        $(this).addClass('navbar__link navbar__link--active');
     })
 
 
