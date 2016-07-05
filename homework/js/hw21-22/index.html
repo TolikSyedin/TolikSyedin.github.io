@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js13-14</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<script type="html/template" id="html">
+
+		
+		<div class="wrapper">
+
+			<header>
+				<h1>Тест по программированию</h1>
+			</header>
+
+			<div id="test">
+				<form>
+				<ol>
+					<% for(var i=0; i<data.length; i++) { %>
+					<li><%= data[i].question %>
+						<ul>
+							<% for(var k=0; k<data[i].answers.length; k++) { %>
+							<li>
+								<input type="radio" id=<%= data[i].id[k] %> name=<%= data[i].name %>>
+								<label for=<%= data[i].id[k] %>><%=data[i].answers[k] %></label>
+							</li>
+							<% } %>
+						</ul>
+					
+					<% } %>	
+				</ol>
+			<div id="btn">
+
+				<button type="button" id="checkButton" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+				  Проверить мои результаты
+				</button>
+			</div>
+				</form>
+			</div>
+
+
+
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				  <div class="modal-dialog" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header"> Результаты прохождения теста
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				        <h4 class="modal-title" id="myModalLabel">smth</h4>
+				      </div>
+				      <div class="modal-body" id="resultModal">
+				        
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" id="retryBtn" class="btn btn-default" data-dismiss="modal">Пройти ещё раз!</button>
+
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+
+
+	</script>
+	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
+	<script src="js/dist/converted.js"></script>
+
+</body>
+</html>
