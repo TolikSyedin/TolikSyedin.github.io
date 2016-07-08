@@ -1,0 +1,79 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: Tahoma, sans-serif;
+}
+
+body{
+	background: rgba(0,0,0,.7);
+
+}
+.wrapper {
+	width: 500px;
+	margin: 0 auto;
+	padding-top: 50px;
+}
+h1 {
+	text-align: center;
+	text-shadow: 1px 1px 4px #fff;
+	color: rgba(0,0,0,.8)
+
+}
+/*	-	-	- Inputs */
+input[type="text"] {
+	background: linear-gradient(to left bottom, #fff 15%, #000);
+	padding-left: 13px;
+	margin-bottom: 4px;
+	line-height: 40px;
+	width: 440px;
+	border: 3px solid #000;
+	border-radius: 5px;
+	color: #fff;
+}
+
+
+
+/* 	-	-	-	Icons  */
+.item-confirm {
+	display: none;
+}
+.add-icon{
+	width: 35px;
+	vertical-align: middle;
+	fill: #0affa0;
+
+}
+.add-icon:hover {
+	transform: scale(1.1);
+	transition: transform 0.3s cubic-bezier(0,-2, 1,-1);
+}
+
+.delete-icon {
+	width: 35px;
+	fill: rgba(0,0,0,0.3);
+	stroke: #000;
+	stroke-width: 2px;
+	vertical-align: middle;
+	transform: rotate(-90deg);
+
+}
+.delete-icon:hover{
+	fill: #f00;
+	stroke: #0f0;
+	stroke-width: 2px;
+	transform: scale(1.1);
+	transition: transform 0.3s cubic-bezier(0.01, 0.18, 0, 2.84);
+
+}
+.confirm-icon {
+	width: 35px;
+	vertical-align: middle;
+	fill: #acf;
+}
+.confirm-icon:hover {
+	fill: #0ff;
+	transform: scale(1.1);
+	transition: transform 0.3s cubic-bezier(0,-2, 1,-1);
+}
+	
