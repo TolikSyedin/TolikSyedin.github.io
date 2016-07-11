@@ -12,16 +12,14 @@ define('controller',
 function Controller (view, model) {
 	var self = this,
 		value1,
-		value2;
+		value2,
+		item;
 
 	view.elements.addBtn.on('click', addItem);
 	view.elements.mainInput.on('keypress', function(e){if(e.keyCode===13){addItem()}});
 	view.elements.listContainer.on('click', '.item-delete', removeItem);
 	view.elements.listContainer.on('focus', '.input-item', editItem);
-	view.elements.listContainer.on('keydown', '.input-item', function(e){if(e.keyCode===13){confirmItem()}}); // < --- жалуется на скрипт jQuery... 
-
-	// В функции написал console.log(item) чтобы продебажить. по клику выводит консоль выводит инпут, что собственно является верным, но при нажатии энтера показывает глобальный window. Почемуу не знаю. --->
-
+	view.elements.listContainer.on('keypress', '.input-item', function(e){if(e.keyCode===13){confirmItem()}});
 	view.elements.listContainer.on('focusout', '.input-item', confirmItem);
 	view.elements.listContainer.on('click', '.item-confirm', confirmItem);
 
@@ -39,21 +37,22 @@ function Controller (view, model) {
 
 	};
 	function editItem() {
-		var item = $(this);
+		item = $(this);
 		value1 = item.val();
 		var btn = item.next();
 		view.setConfirmBtn(btn)
 	};
 
 	function confirmItem() {
-		var item = $(this);
-		console.log(item)
 		value2 = item.val();
 		var dataValue = item.next().attr('data-value', value2);
 		var btn = item.next().next();
 		view.setRemoveBtn(btn);
 		model.editItem(value1, value2);
+		document.activeElement.blur();
+
 	};
+
 
 
 };

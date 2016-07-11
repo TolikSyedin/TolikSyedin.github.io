@@ -19,8 +19,6 @@ function View (model) {
 			mainInput: $('.main-input'),
 			addBtn: $('.item-add'),
 			listContainer: $('.item-list')
-
-
 			
 		};
 		self.renderList(model.data);
