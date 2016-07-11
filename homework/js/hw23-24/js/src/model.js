@@ -43,7 +43,6 @@ function Model (data){
 		} else {
 			var index = self.data.indexOf(val1);
 			self.data.splice(index, 1, val2);
-			console.log('new data = ',self.data);
 			return self.data;
 		};
 

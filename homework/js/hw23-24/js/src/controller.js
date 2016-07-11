@@ -19,7 +19,7 @@ function Controller (view, model) {
 	view.elements.mainInput.on('keypress', function(e){if(e.keyCode===13){addItem()}});
 	view.elements.listContainer.on('click', '.item-delete', removeItem);
 	view.elements.listContainer.on('focus', '.input-item', editItem);
-	view.elements.listContainer.on('keypress', '.input-item', function(e){if(e.keyCode===13){confirmItem()}});
+	view.elements.listContainer.on('keypress', '.input-item', function(e){if(e.keyCode===13){confirmItem();}});
 	view.elements.listContainer.on('focusout', '.input-item', confirmItem);
 	view.elements.listContainer.on('click', '.item-confirm', confirmItem);
 
