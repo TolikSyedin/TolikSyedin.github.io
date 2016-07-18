@@ -36,6 +36,7 @@ $mobile: 320px;
 	overflow: hidden;
 	@include respond-to ($desctop){
 		max-width: $desctop;
+		width: 100%;
 	};
 	@include respond-to ($tablet){
 		max-width: $tablet;
@@ -49,26 +50,19 @@ $mobile: 320px;
 	background: url('../img/logo.jpg') center center no-repeat;
 	background-size: cover;
 	@include respond-to ($desctop){
-		min-width: $desctop;
-		width: 100%;
+		min-width: $tablet
 	}
 	@include respond-to ($tablet){
-		min-width: $tablet;
-		width: 100%;
-	}
-	@include respond-to($mobile){
 		min-width: $mobile;
-		width: 100%;
 	}
+
 }
 .head__logo{
 	float: left;
 	margin: 6px 0 0 10px;
 	letter-spacing: 1px;
 	@include clearfix;
-	@include respond-to(&tablet){
-		padding-left: 30px;
-	}
+
 }
 .head__logo-link{
 	@include font(20px, $montserratBold, #fff);
@@ -241,9 +235,10 @@ $mobile: 320px;
 	overflow: hidden;
 	padding-top: 5px;
 	margin-bottom: 75px;
-	@media screen and (max-width: $desctop){
+	/*@include respond-to ($desctop) {
 		min-width: $tablet;
-	}
+	};*/
+
 }
 .holiday__title{
 	@extend .sliders__title;
@@ -336,9 +331,7 @@ $mobile: 320px;
 	padding-top: 30px;
 	border-top: 4px solid $red;
 	overflow: hidden;
-	@media screen and (max-width: $desctop){
-		min-width: $tablet;
-	}
+
 }
 .footer__block {
 	width: 150px;
