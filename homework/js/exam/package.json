@@ -11,9 +11,12 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
-    "gulp-watch": "^4.3.8"
+    "gulp-rename": "^1.2.2",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-concat": "^2.6.0",
+    "gulp-uglifyjs": "^0.6.2",
+    "gulp-html-replace": "^1.6.1",
   }
 }

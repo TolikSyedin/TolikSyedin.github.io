@@ -88,15 +88,11 @@ $mobile: 320px;
 	padding: 7px 15px;
 }
 .head__login-link--sign {
-	position:relative;
 	border: 2px solid #fff;
 	border-radius: 20px;
-	behavior: url(css/PIE.htc);
 }
 .head__login-link--find{
-	position:relative;
 	border-radius: 22px;
-	behavior: url(css/PIE.htc);
 	background: $red;	
 	padding: 11px 23px;	
 	@include respond-to ($semitablet){padding: 11px 55px;}	
@@ -143,8 +139,6 @@ $mobile: 320px;
 }
 .sliders__innerblock {
 	box-sizing: border-box;
-	border-radius: 10px;
-	behavior: url(css/PIE.htc);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -152,7 +146,7 @@ $mobile: 320px;
 	height: 400px;
 	z-index: 1;
 	background: linear-gradient(transparent, rgba(0,0,0,.6));
-	behavior: url(css/PIE.htc);
+	border-radius: 10px;
 
 	@include respond-to($desctop){width: 100%;}		
 	@include respond-to ($semitablet) {height: 300px;}
@@ -185,7 +179,6 @@ $mobile: 320px;
 }
 .sliders__innerblock-img {
 	border-radius: 10px;
-	behavior: url(css/PIE.htc);
 	@include respond-to ($desctop) {height: 400px;}
 	@include respond-to ($semitablet) {height: 300px;}
 }
@@ -278,7 +271,6 @@ $mobile: 320px;
 }
 .holiday__grid-img {
 	border-radius: 15px;
-	behavior: url(css/PIE.htc);
 	width: 100%;
 	height: 100%;
 }
@@ -325,7 +317,6 @@ $mobile: 320px;
 	margin-right: 6px;
 	border: 1px solid #ccc;
 	border-radius: 5px;
-	behavior: url(css/PIE.htc);
 	padding-left: 15px;
 	margin-bottom: 15px;
 	@include respond-to ($semitablet){

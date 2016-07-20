@@ -95,15 +95,11 @@
   padding: 7px 15px; }
 
 .head__login-link--sign {
-  position: relative;
   border: 2px solid #fff;
-  border-radius: 20px;
-  behavior: url(css/PIE.htc); }
+  border-radius: 20px; }
 
 .head__login-link--find, .sliders__innerblock-link, .partners__link, .search__button {
-  position: relative;
   border-radius: 22px;
-  behavior: url(css/PIE.htc);
   background: #ff4e50;
   padding: 11px 23px; }
   @media screen and (max-width: 480px) {
@@ -163,20 +159,15 @@
       height: 300px; } }
 
 .sliders__innerblock {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 10px;
-  behavior: url(css/PIE.htc);
+  box-sizing: border-box;
   position: absolute;
   top: 0;
   left: 0;
   width: 300px;
   height: 400px;
   z-index: 1;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.6)));
-  background: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.6));
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
-  behavior: url(css/PIE.htc); }
+  border-radius: 10px; }
   @media screen and (max-width: 960px) {
     .sliders__innerblock {
       width: 100%; } }
@@ -219,8 +210,7 @@
   color: #ccc; }
 
 .sliders__innerblock-img {
-  border-radius: 10px;
-  behavior: url(css/PIE.htc); }
+  border-radius: 10px; }
   @media screen and (max-width: 960px) {
     .sliders__innerblock-img {
       height: 400px; } }
@@ -333,7 +323,6 @@
 
 .holiday__grid-img {
   border-radius: 15px;
-  behavior: url(css/PIE.htc);
   width: 100%;
   height: 100%; }
 
@@ -379,7 +368,6 @@
   margin-right: 6px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  behavior: url(css/PIE.htc);
   padding-left: 15px;
   margin-bottom: 15px; }
   @media screen and (max-width: 480px) {
