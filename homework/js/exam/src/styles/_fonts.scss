@@ -1,41 +1,24 @@
 @font-face {
     font-family: 'montserrat-bold';
-    src: url('../fonts/Montserrat-Bold.ttf');
+    src: url('../fonts/montserrat-bold.eot');
+    src: url('../fonts/montserrat-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat-bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
 @font-face {
     font-family: 'montserrat-regular';
-    src: url('../fonts/Montserrat-regular.ttf');
+    src: url('../fonts/montserrat-regular.eot');
+    src: url('../fonts/montserrat-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat-regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
-}
-@font-face {
-    font-family: 'roboto-black';
-    src: url('../fonts/Roboto-black.ttf');
-    font-weight: normal;
-    font-style: normal;
-
-}@font-face {
-    font-family: 'roboto-bold';
-    src: url('../fonts/Roboto-bold.ttf');
-    font-weight: normal;
-    font-style: normal;
-
 }
 @font-face {
     font-family: 'roboto-light';
-    src: url('../fonts/Roboto-Light.ttf');
+    src: url('../fonts/roboto-light.eot');
+    src: url('../fonts/roboto-light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-light.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
-}
-@font-face {
-    font-family: 'roboto-italic';
-    src: url('../fonts/Roboto-italic.ttf');
-    font-weight: normal;
-    font-style: normal;
-
 }
