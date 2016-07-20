@@ -16,7 +16,7 @@ $semitablet: 480px;
 $mobile: 320px;
 @mixin clearfix {&:after{display: block;content: '';display: block;}};
 @mixin font($px, $font, $color){
-	font: $px $font;
+	font: $px $font, sans-serif;
 	color: $color;
 }
 @mixin respond-to ($media) {

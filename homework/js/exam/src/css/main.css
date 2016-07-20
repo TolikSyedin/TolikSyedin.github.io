@@ -63,7 +63,7 @@
       float: none; } }
 
 .head__logo-link {
-  font: 20px "montserrat-bold";
+  font: 20px "montserrat-bold", sans-serif;
   color: #fff; }
 
 .head__logo-link--footer {
@@ -89,7 +89,7 @@
       float: none; } }
 
 .head__login-link, .partners__name, .footer__title, .partners__link, .search__button {
-  font: 14px "montserrat-bold";
+  font: 14px "montserrat-bold", sans-serif;
   color: #fff;
   display: inline-block;
   padding: 7px 15px; }
@@ -118,7 +118,7 @@
   .head__main .head__main-title {
     text-transform: uppercase;
     margin-bottom: 20px;
-    font: 52px "montserrat-bold";
+    font: 52px "montserrat-bold", sans-serif;
     color: #fff; }
     @media screen and (max-width: 480px) {
       .head__main .head__main-title {
@@ -131,7 +131,7 @@
       width: 320px; } }
   .head__main .head__main-subtitle {
     margin-bottom: 33px;
-    font: 24px "roboto-light";
+    font: 24px "roboto-light", sans-serif;
     color: #fff; }
     @media screen and (max-width: 480px) {
       .head__main .head__main-subtitle {
@@ -185,7 +185,7 @@
       height: 300px; } }
 
 .sliders__innerblock-link {
-  font: 9px "montserrat-regular";
+  font: 9px "montserrat-regular", sans-serif;
   color: #fff;
   padding: 3px 12px 4px;
   margin: 230px 0 17px 20px;
@@ -208,14 +208,14 @@
 .sliders__innerblock-title {
   margin: 0 0 11px 20px;
   letter-spacing: .6px;
-  font: 23px "montserrat-bold";
+  font: 23px "montserrat-bold", sans-serif;
   color: #fff; }
 
 .sliders__innerblock-subtitle, .partners__text, .search__subtitle, .footer__item {
   width: 90%;
   margin: 0 20px;
   line-height: 4px;
-  font: 14px "roboto-light";
+  font: 14px "roboto-light", sans-serif;
   color: #ccc; }
 
 .sliders__innerblock-img {
@@ -338,7 +338,7 @@
   height: 100%; }
 
 .holiday__grid-text {
-  font: 16px "montserrat-bold";
+  font: 16px "montserrat-bold", sans-serif;
   color: #fff;
   position: absolute;
   width: 100%;
@@ -450,7 +450,7 @@
   margin-left: -1px; }
 
 .footer__design {
-  font: 9px "montserrat-bold";
+  font: 9px "montserrat-bold", sans-serif;
   color: #ccc;
   text-transform: uppercase;
   font-weight: 100;
