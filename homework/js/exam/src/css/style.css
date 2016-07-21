@@ -334,14 +334,10 @@
   top: 150px;
   text-align: center; }
 
-.holiday__grid-item--error {
-  float: left;
-  width: 100%;
-  height: 250px; }
-  .holiday__grid-item--error .holiday__grid-img {
-    display: block;
-    width: 350px;
-    margin: 0 auto; }
+.holiday__grid-img {
+  display: block;
+  width: 350px;
+  margin: 0 auto; }
 
 .search {
   margin-bottom: 84px; }
