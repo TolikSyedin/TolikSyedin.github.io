@@ -210,7 +210,8 @@
   color: #ccc; }
 
 .sliders__innerblock-img {
-  border-radius: 10px; }
+  border-radius: 10px;
+  margin-right: 10px; }
   @media screen and (max-width: 960px) {
     .sliders__innerblock-img {
       height: 400px; } }
@@ -442,3 +443,8 @@
   font-weight: 100;
   letter-spacing: 1.7px;
   margin: 0px 0 7px 32px; }
+
+.footer__img{
+	width: 110px;
+	height: 24px;
+}

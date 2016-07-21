@@ -179,6 +179,7 @@ $mobile: 320px;
 }
 .sliders__innerblock-img {
 	border-radius: 10px;
+	margin-right: 10px;
 	@include respond-to ($desctop) {height: 400px;}
 	@include respond-to ($semitablet) {height: 300px;}
 }
