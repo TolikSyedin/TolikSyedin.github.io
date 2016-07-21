@@ -281,10 +281,13 @@ $mobile: 320px;
     top: 150px;
     text-align: center;
 }
-.holiday__grid-img {
-	display: block; 
-	width: 350px; 
-	margin: 0 auto;	
+.holiday__grid-item--error {
+	height: 250px;
+	.holiday__grid-img {
+		display: block; 
+		width: 350px; 
+		margin: 0 auto;	
+	}
 }
 
 .search{
