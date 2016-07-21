@@ -109,7 +109,7 @@
 .head__main {
   width: 500px;
   margin: 0 auto;
-  padding: 140px 0 234px 0;
+  padding: 141px 0 234px 0;
   text-align: center; }
   .head__main .head__main-title {
     text-transform: uppercase;
@@ -126,7 +126,7 @@
     .head__main {
       width: 320px; } }
   .head__main .head__main-subtitle {
-    margin-bottom: 33px;
+    margin-bottom: 34px;
     font: 24px "roboto-light", sans-serif;
     color: #fff; }
     @media screen and (max-width: 480px) {
@@ -134,7 +134,7 @@
         font-size: 18px; } }
 
 .sliders {
-  padding-top: 95px; }
+  padding-top: 94px; }
 
 .sliders__title, .partners__title, .holiday__title, .search__title {
   font: 22px "montserrat-bold";
@@ -178,7 +178,7 @@
 .sliders__innerblock-link {
   font: 9px "montserrat-regular", sans-serif;
   color: #fff;
-  padding: 3px 12px 4px;
+  padding: 5px 10px 4px 12px;
   margin: 230px 0 17px 20px;
   display: inline-block;
   letter-spacing: 3px;
@@ -191,7 +191,7 @@
       margin-top: 135px; } }
 
 .sliders__innerblock-link--step2 {
-  margin: 260px 0 17px 20px; }
+  margin: 260px 0 16px 20px; }
   @media screen and (max-width: 480px) {
     .sliders__innerblock-link--step2 {
       margin-top: 150px; } }
@@ -257,7 +257,7 @@
   margin: 0 auto; }
 
 .partners__name, .footer__title {
-  margin: 6px 0 5px -2px;
+  margin: 7px 3px 5px 0px;
   display: block;
   color: #000; }
 
@@ -275,9 +275,9 @@
       width: 80%; } }
 
 .partners__link {
-  padding: 11px 29px 9px 27px;
+  padding: 11px 29px 8px 27px;
   margin-left: 5px;
-  margin-top: 35px;
+  margin-top: 32px;
   border: 2px solid #ff4e50;
   color: #ff4e50;
   background: #fff; }
@@ -289,7 +289,7 @@
 
 .holiday {
   overflow: hidden;
-  padding-top: 5px;
+  padding-top: 6px;
   margin-bottom: 75px; }
 
 .holiday__title {

@@ -100,7 +100,7 @@ $mobile: 320px;
 .head__main{
 	width: 500px;
 	margin: 0 auto;
-	padding: 140px 0 234px 0;
+	padding: 141px 0 234px 0;
 	text-align: center;
 	.head__main-title{
 		text-transform: uppercase;
@@ -111,14 +111,14 @@ $mobile: 320px;
 	@include respond-to ($tablet){padding: 40px 0;}
 	@include respond-to ($semitablet){width: 320px;}
 	.head__main-subtitle{
-		margin-bottom: 33px;
+		margin-bottom: 34px;
 		@include font(24px, $robotoLight, #fff);
 		@include respond-to ($semitablet) {font-size: 18px;}
 	}		
 }
 
 .sliders{
-	padding-top: 95px;
+	padding-top: 94px;
 }
 .sliders__title{
 	font: 22px $montserratBold;
@@ -154,7 +154,7 @@ $mobile: 320px;
 .sliders__innerblock-link{
 	@extend .head__login-link--find;
 	@include font(9px, $montserratRegular, #fff);
-	padding: 3px 12px 4px;
+	padding: 5px 10px 4px 12px;
 	margin: 230px 0 17px 20px;
     display: inline-block;
 	letter-spacing: 3px;
@@ -163,7 +163,7 @@ $mobile: 320px;
 	@include respond-to ($semitablet) {margin-top: 135px;}
 }
 .sliders__innerblock-link--step2{
-	margin: 260px 0 17px 20px;
+	margin: 260px 0 16px 20px;
 	@include respond-to ($semitablet) {margin-top: 150px;}
 }
 .sliders__innerblock-title{
@@ -212,7 +212,7 @@ $mobile: 320px;
 }
 .partners__name {
 	@extend .head__login-link;
-	margin: 6px 0 5px -2px;
+	margin: 7px 3px 5px 0px;
 	display: block;
 	color: #000;
 }
@@ -231,12 +231,12 @@ $mobile: 320px;
 .partners__link{
 	@extend .head__login-link;
 	@extend .head__login-link--find;
-	padding: 11px 29px 9px 27px;
-	margin-left: 5px;
-	margin-top: 35px;
-	border: 2px solid $red;
-	color: $red;
-	background: #fff;
+    padding: 11px 29px 8px 27px;
+    margin-left: 5px;
+    margin-top: 32px;
+    border: 2px solid #ff4e50;
+    color: #ff4e50;
+    background: #fff;
 	@include respond-to ($semitablet){
 		margin-left: 0;
 		width: 80%;
@@ -246,7 +246,7 @@ $mobile: 320px;
 
 .holiday{
 	overflow: hidden;
-	padding-top: 5px;
+	padding-top: 6px;
 	margin-bottom: 75px;
 }
 .holiday__title{

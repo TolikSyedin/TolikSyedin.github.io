@@ -17,6 +17,6 @@
     "gulp-cssmin": "^0.1.7",
     "gulp-concat": "^2.6.0",
     "gulp-uglifyjs": "^0.6.2",
-    "gulp-html-replace": "^1.6.1",
+    "gulp-html-replace": "^1.6.1"
   }
 }
