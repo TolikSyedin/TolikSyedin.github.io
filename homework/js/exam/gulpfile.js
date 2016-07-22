@@ -53,8 +53,6 @@ gulp.task('htmledit', function(){
     	.pipe(gulp.dest('build/'));
 });
 
-
-
 gulp.task('copy', ['copyfiles']);
 gulp.task('style', ['styles']);
 gulp.task('script', ['scripts']);

@@ -88,23 +88,33 @@
       width: 180px;
       float: none; } }
 
-.head__login-link, .partners__name, .footer__title, .partners__link, .search__button {
+.head__login-link, .head__login-btn, .partners__btn, .partners__name, .footer__title {
   font: 14px "montserrat-bold", sans-serif;
   color: #fff;
   display: inline-block;
   padding: 7px 15px; }
 
-.head__login-link--sign {
+.head__login-btn, .partners__btn {
   border: 2px solid #fff;
-  border-radius: 20px; }
+  background: transparent;
+  border-radius: 20px;
+  transition: all .4s; }
+  .head__login-btn:hover, .partners__btn:hover {
+    border: 2px solid #ff4e50;
+    transform: rotateX(360deg); }
 
-.head__login-link--find, .sliders__innerblock-link, .partners__link, .search__button {
+.head__login-btn--find, .sliders__innerblock-btn, .search__btn {
+  border: 2px solid #ff4e50;
   border-radius: 22px;
   background: #ff4e50;
-  padding: 11px 23px; }
+  padding: 9px 20px;
+  transition: transform .3s; }
+  .head__login-btn--find:hover, .sliders__innerblock-btn:hover, .search__btn:hover {
+    transform: scale(1.07); }
   @media screen and (max-width: 480px) {
-    .head__login-link--find, .sliders__innerblock-link, .partners__link, .search__button {
-      padding: 11px 55px; } }
+    .head__login-btn--find, .sliders__innerblock-btn, .search__btn {
+      text-align: center;
+      width: 100%; } }
 
 .head__main {
   width: 500px;
@@ -124,7 +134,7 @@
       padding: 40px 0; } }
   @media screen and (max-width: 480px) {
     .head__main {
-      width: 320px; } }
+      width: 32	0px; } }
   .head__main .head__main-subtitle {
     margin-bottom: 34px;
     font: 24px "roboto-light", sans-serif;
@@ -175,25 +185,26 @@
     .sliders__innerblock {
       height: 300px; } }
 
-.sliders__innerblock-link {
+.sliders__innerblock-btn {
   font: 9px "montserrat-regular", sans-serif;
   color: #fff;
-  padding: 5px 10px 4px 12px;
-  margin: 230px 0 17px 20px;
+  padding: 4px 6px 2px 12px;
+  margin: 230px 0 14px 20px;
   display: inline-block;
   letter-spacing: 3px;
   text-transform: uppercase; }
   @media screen and (max-width: 768px) {
-    .sliders__innerblock-link {
+    .sliders__innerblock-btn {
       margin-top: 210px; } }
   @media screen and (max-width: 480px) {
-    .sliders__innerblock-link {
-      margin-top: 135px; } }
+    .sliders__innerblock-btn {
+      margin-top: 135px;
+      width: initial; } }
 
-.sliders__innerblock-link--step2 {
+.sliders__innerblock-btn--step2 {
   margin: 260px 0 16px 20px; }
   @media screen and (max-width: 480px) {
-    .sliders__innerblock-link--step2 {
+    .sliders__innerblock-btn--step2 {
       margin-top: 150px; } }
 
 .sliders__innerblock-title {
@@ -218,6 +229,14 @@
   @media screen and (max-width: 480px) {
     .sliders__innerblock-img {
       height: 300px; } }
+
+.sliders__controls {
+  display: block;
+  font: 60px serif, sans-serif;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 56px; }
+  .sliders__controls:hover {
+    color: #fff; }
 
 .partners {
   padding-top: 91px;
@@ -275,7 +294,7 @@
     .partners__search {
       width: 80%; } }
 
-.partners__link {
+.partners__btn {
   padding: 11px 29px 8px 27px;
   margin-left: 5px;
   margin-top: 32px;
@@ -283,9 +302,9 @@
   color: #ff4e50;
   background: #fff; }
   @media screen and (max-width: 480px) {
-    .partners__link {
+    .partners__btn {
       margin-left: 0;
-      width: 80%;
+      width: 100%;
       text-align: center; } }
 
 .holiday {
@@ -363,7 +382,7 @@
 .search__input {
   line-height: 39px;
   height: 39px;
-  width: 223px;
+  width: 220px;
   margin-right: 6px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -374,12 +393,13 @@
       width: 95%;
       text-align: center; } }
 
-@media screen and (max-width: 480px) {
-  .search__button {
-    width: 64%;
-    display: block;
-    margin: 0 auto;
-    text-align: center; } }
+.search__btn {
+  font: 14px "montserrat-bold", sans-serif;
+  color: #fff; }
+  @media screen and (max-width: 480px) {
+    .search__btn {
+      width: 100%;
+      text-align: center; } }
 
 .footer {
   padding: 30px 0;

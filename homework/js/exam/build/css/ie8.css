@@ -1,10 +1,10 @@
-.head__login-link--sign, 
-.head__login-link--find, 
-.sliders__innerblock-link,
-.partners__link,
+.head__login-btn, 
+.head__login-btn--find, 
+.sliders__innerblock-btn,
+.partners__btn,
 .holiday__grid-img, 
 .search__input,
-.serach__button,
+.search__btn,
 .sliders__innerblock-img{
 	position: relative;
 	behavior: url('css/pie.htc');

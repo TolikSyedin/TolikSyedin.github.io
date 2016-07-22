@@ -13,21 +13,17 @@ $red: #ff4e50;
 $desctop: 960px;
 $tablet: 768px;
 $semitablet: 480px;
-$mobile: 320px;
 @mixin clearfix {&:after{display: block;content: '';display: block;}};
 @mixin font($px, $font, $color){
 	font: $px $font, sans-serif;
 	color: $color;
 }
 @mixin respond-to ($media) {
-	@if $media == $mobile {
-		@media screen and (max-width: $mobile) {@content;}
+	@if $media == $semitablet {
+		@media screen and (max-width: $semitablet) {@content;}
 	}
 	@else if $media == $tablet {
 		@media screen and (max-width: $tablet) {@content;}
-	}
-	@else if $media == $semitablet {
-		@media screen and (max-width: $semitablet) {@content;}
 	}
 	@else if $media == $desctop {
 		@media screen and (max-width: $desctop) {@content;}
@@ -84,18 +80,25 @@ $mobile: 320px;
 .head__login-link{
 	@include font(14px, $montserratBold, #fff);
 	display: inline-block;
-
 	padding: 7px 15px;
 }
-.head__login-link--sign {
+.head__login-btn {
+	@extend .head__login-link;
 	border: 2px solid #fff;
+	background: transparent;
 	border-radius: 20px;
+	transition: all .4s;
+	&:hover{border: 2px solid $red;transform: rotateX(360deg);};
 }
-.head__login-link--find{
+
+.head__login-btn--find{
+	border: 2px solid $red;
 	border-radius: 22px;
 	background: $red;	
-	padding: 11px 23px;	
-	@include respond-to ($semitablet){padding: 11px 55px;}	
+	padding: 9px 20px;
+	transition: transform .3s;
+	&:hover{transform: scale(1.07);};
+	@include respond-to ($semitablet){text-align: center;width: 100%;}	
 }
 .head__main{
 	width: 500px;
@@ -109,7 +112,7 @@ $mobile: 320px;
 		@include respond-to ($semitablet){font-size: 30px;}
 	}
 	@include respond-to ($tablet){padding: 40px 0;}
-	@include respond-to ($semitablet){width: 320px;}
+	@include respond-to ($semitablet){width: 32	0px;}
 	.head__main-subtitle{
 		margin-bottom: 34px;
 		@include font(24px, $robotoLight, #fff);
@@ -151,18 +154,18 @@ $mobile: 320px;
 	@include respond-to($desctop){width: 100%;}		
 	@include respond-to ($semitablet) {height: 300px;}
 }
-.sliders__innerblock-link{
-	@extend .head__login-link--find;
+.sliders__innerblock-btn{
+	@extend .head__login-btn--find;
 	@include font(9px, $montserratRegular, #fff);
-	padding: 5px 10px 4px 12px;
-	margin: 230px 0 17px 20px;
+	padding: 4px 6px 2px 12px;
+	margin: 230px 0 14px 20px;
     display: inline-block;
 	letter-spacing: 3px;
 	text-transform: uppercase;		
 	@include respond-to($tablet){margin-top: 210px;}	
-	@include respond-to ($semitablet) {margin-top: 135px;}
+	@include respond-to ($semitablet) {margin-top: 135px;width: initial;}
 }
-.sliders__innerblock-link--step2{
+.sliders__innerblock-btn--step2{
 	margin: 260px 0 16px 20px;
 	@include respond-to ($semitablet) {margin-top: 150px;}
 }
@@ -182,6 +185,12 @@ $mobile: 320px;
 	margin-right: 10px;
 	@include respond-to ($desctop) {height: 400px;}
 	@include respond-to ($semitablet) {height: 300px;}
+}
+.sliders__controls {
+	display: block;
+	@include font(60px, serif, rgba(255,255,255,.4))
+	line-height: 56px;
+	&:hover{color:#fff;};
 }
 
 .partners{
@@ -229,9 +238,8 @@ $mobile: 320px;
 	display: block;
 	@include respond-to ($semitablet){width: 80%;}
 }
-.partners__link{
-	@extend .head__login-link;
-	@extend .head__login-link--find;
+.partners__btn{
+	@extend .head__login-btn;
     padding: 11px 29px 8px 27px;
     margin-left: 5px;
     margin-top: 32px;
@@ -239,8 +247,9 @@ $mobile: 320px;
     color: #ff4e50;
     background: #fff;
 	@include respond-to ($semitablet){
+
 		margin-left: 0;
-		width: 80%;
+		width: 100%;
 		text-align: center;
 	}
 }
@@ -312,7 +321,7 @@ $mobile: 320px;
 .search__input {
 	line-height: 39px;
 	height: 39px;
-	width: 223px;
+	width: 220px;
 	margin-right: 6px;
 	border: 1px solid #ccc;
 	border-radius: 5px;
@@ -323,13 +332,11 @@ $mobile: 320px;
 		text-align: center;
 	}
 }
-.search__button{
-	@extend .head__login-link;
-	@extend .head__login-link--find;
+.search__btn{
+	@extend .head__login-btn--find;
+	@include font(14px, $montserratBold, #fff);
 	@include respond-to ($semitablet){
-		width: 64%;
-		display: block;
-		margin: 0 auto;
+		width: 100%;
 		text-align: center;
 	}
 }

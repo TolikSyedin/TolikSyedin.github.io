@@ -235,9 +235,9 @@
     .owl-controls{ 
       top: 40px;
     }
-  .owl-carousel.owl-loaded {
-    display: block;
-  }
+    .owl-carousel.owl-loaded {
+      display: block;
+    }
 }
 @media screen and (max-width: 480px) {
   .owl-controls {

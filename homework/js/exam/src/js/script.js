@@ -5,7 +5,7 @@ owl.owlCarousel({
     loop: true,
     items:1,
     nav:true,
-    navText: ['<img src="img/leftarrow.png" alt=""></div>','<img src="img/rightarrow.png" alt="">'],
+    navText: ['<span class="sliders__controls">&lt;</span>','<span class="sliders__controls">&gt;</span>'],
 });
 
 var grid = $('.holiday__grid');
