@@ -59,7 +59,7 @@ function search(){
 
 search();
 
-$('.search__button').on('click', search);
+$('.search__btn').on('click', search);
 $('.search__input').on('keydown', function(e){
 	if (e.keyCode == 13){search();};
 });
