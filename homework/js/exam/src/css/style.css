@@ -101,7 +101,6 @@
   transition: all 0.4s, cubic-bezier(1, -1.21, 0, 2.63); }
   .head__login-btn:hover, .partners__btn:hover {
     border: 2px solid #ff4e50;
-    -webkit-transform: rotateX(360deg);
     transform: rotateX(360deg); }
 
 .head__login-btn--find, .sliders__innerblock-btn, .search__btn {
