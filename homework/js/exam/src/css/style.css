@@ -189,7 +189,7 @@
   font: 9px "montserrat-regular", sans-serif;
   color: #fff;
   padding: 4px 6px 2px 12px;
-  margin: 230px 0 14px 20px;
+  margin: 225px 0 14px 20px;
   display: inline-block;
   letter-spacing: 3px;
   text-transform: uppercase; }
@@ -208,7 +208,7 @@
       margin-top: 150px; } }
 
 .sliders__innerblock-title {
-  margin: 0 0 11px 20px;
+  margin: 0 0 7px 20px;
   letter-spacing: .6px;
   font: 23px "montserrat-bold", sans-serif;
   color: #fff; }
