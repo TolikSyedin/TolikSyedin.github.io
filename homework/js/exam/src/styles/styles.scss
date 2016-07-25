@@ -81,15 +81,14 @@ $semitablet: 480px;
 	@include font(14px, $montserratBold, #fff);
 	display: inline-block;
 	padding: 7px 15px;
-	border: 2px solid transparent;
-	border-radius: 20px;
-	transition:all .4s,cubic-bezier(1, -1.21, 0, 2.63);
-	&:hover{border: 2px solid $red;transform: rotateX(360deg); };
-
 }
 .head__login-btn {
 	@extend .head__login-link;
+	border-radius: 20px;
+	border: 2px solid #fff;
 	background: transparent;
+	transition:all .4s,cubic-bezier(1, -1.21, 0, 2.63);
+	&:hover{border: 2px solid $red;-webkit-transform: rotateX(360deg);transform: rotateX(360deg); };
 }
 
 .head__login-btn--find{
