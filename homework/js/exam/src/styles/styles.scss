@@ -83,7 +83,7 @@ $semitablet: 480px;
 	padding: 7px 15px;
 	border: 2px solid transparent;
 	border-radius: 20px;
-	transition: all .4s, cubic-bezier(0,1.11,.78,1.33);;
+	transition:all .4s,cubic-bezier(1, -1.21, 0, 2.63);
 	&:hover{border: 2px solid $red;transform: rotateX(360deg); };
 
 }
