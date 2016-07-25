@@ -112,7 +112,7 @@ $semitablet: 480px;
 		@include respond-to ($semitablet){font-size: 30px;}
 	}
 	@include respond-to ($tablet){padding: 40px 0;}
-	@include respond-to ($semitablet){width: 32	0px;}
+	@include respond-to ($semitablet){width: 320px;}
 	.head__main-subtitle{
 		margin-bottom: 34px;
 		@include font(24px, $robotoLight, #fff);

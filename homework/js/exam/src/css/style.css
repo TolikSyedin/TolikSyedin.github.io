@@ -134,7 +134,7 @@
       padding: 40px 0; } }
   @media screen and (max-width: 480px) {
     .head__main {
-      width: 32	0px; } }
+      width: 320px; } }
   .head__main .head__main-subtitle {
     margin-bottom: 34px;
     font: 24px "roboto-light", sans-serif;
