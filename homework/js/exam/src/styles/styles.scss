@@ -81,14 +81,15 @@ $semitablet: 480px;
 	@include font(14px, $montserratBold, #fff);
 	display: inline-block;
 	padding: 7px 15px;
+	border: 2px solid transparent;
+	border-radius: 20px;
+	transition: all .4s, cubic-bezier(0,1.11,.78,1.33);;
+	&:hover{border: 2px solid $red;transform: rotateX(360deg); };
+
 }
 .head__login-btn {
 	@extend .head__login-link;
-	border: 2px solid #fff;
 	background: transparent;
-	border-radius: 20px;
-	transition: all .4s;
-	&:hover{border: 2px solid $red;transform: rotateX(360deg);};
 }
 
 .head__login-btn--find{
@@ -243,11 +244,9 @@ $semitablet: 480px;
     padding: 11px 29px 8px 27px;
     margin-left: 5px;
     margin-top: 32px;
-    border: 2px solid #ff4e50;
-    color: #ff4e50;
-    background: #fff;
+    border: 2px solid $red;
+    color: $red;
 	@include respond-to ($semitablet){
-
 		margin-left: 0;
 		width: 100%;
 		text-align: center;
