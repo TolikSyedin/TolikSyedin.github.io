@@ -183,10 +183,13 @@
   .about__photo .about__photo1 {
     position: absolute;
     top: -40px;
-    right: 0px;
-    width: 580px; }
-    .about__photo .about__photo1 .about__img {
-      width: 118%; }
+    right: -215px; }
+    @media screen and (max-width: 1300px) {
+      .about__photo .about__photo1 {
+        right: 0px;
+        width: 580px; }
+        .about__photo .about__photo1 .about__img {
+          width: 118%; } }
   .about__photo .about__photo2 {
     position: absolute;
     right: 360px;
@@ -378,9 +381,7 @@
   width: 200px;
   height: 380px;
   margin-right: 28px;
-  border-radius: 10px;
-  background: url("../img/carpathian.jpg");
-  background-size: cover; }
+  border-radius: 10px; }
 
 .travel__innerblock {
   position: absolute; }
