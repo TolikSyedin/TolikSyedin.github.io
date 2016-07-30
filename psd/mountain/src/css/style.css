@@ -184,7 +184,7 @@
     position: absolute;
     top: -40px;
     right: -215px; }
-    @media screen and (max-width: 1300px) {
+    @media screen and (max-width: 1500px) {
       .about__photo .about__photo1 {
         right: 0px;
         width: 580px; }
