@@ -1,32 +1,47 @@
+@font-face {
+    font-family: 'montserrat';
+    src: url('../fonts/montserrat.eot');
+    src: url('../fonts/montserrat.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
 * {
 	margin: 0;
 	padding: 0;
 	text-decoration: none;
 	list-style: none;
-}	
+	font-family: 'montserrat';
+	letter-spacing: -1px;
 
+}	
 body{
-	background: rgba(200,200,250,.8) url('../img/bg4.jpeg');
+	background: rgba(200,200,250,.8) url('../img/body.jpg');
 	background-size: cover;
 }
 .left{float: left;}
 .right{float: right;}
 .clearfix:after{display: block;content: '';clear: both;}
 .selector {
-	text-align: left;
-	color:#0f0;
-	font: 22px Tahoma, sans-serif;
+	color:#000;
+	font-weight: 500;	
 }
 .selector:after, .selector--end:after{
 	margin-left: 10px;
 	content: '{';
-	color: #3a99ff;
+	color: #1885fa;
 	display: inline-block;
 	font-size: 22px;
-	font-family: Tahoma;
 }
-.selector--end:after{content: '}';margin-bottom: 40px;}
-.align{margin: 10px 0 20px 300px;text-decoration: underline;}
+.selector--end:after{
+	content: '}';
+	margin-bottom: 40px;
+}
+.align{
+	margin: 10px 0 20px 211px;
+	text-decoration: underline;
+}
 .wrapper {
 	width: 960px;
 	margin: 0 auto;
@@ -34,54 +49,46 @@ body{
 }
 .header{
 	padding: 40px;
-	background: url('../img/bg3.jpeg') center 90% no-repeat, rgba(0,0,0,.6);
+	background: url('../img/header.jpeg') center 70% no-repeat, rgba(0,0,0,.6);
 	background-blend-mode: multiply;
 	background-size: cover;
-	border-bottom: 1px solid #0ff;
-
 }
+
 .photo__img{
-	border: 2px solid #000;
+	margin-top: 15px;
+	border: 2px solid #fff;
 	height: 270px;
 	width: 270px;
 	border-radius: 50%;
 }
 .objective{
 	width: 500px;
+	color:#fff;
 }
 .objective__title {
-	color: #ddd;
-	font: 55px Tahoma, sans-serif;
+	font: 55px montserrat;
 }
 .objective__subtitle{
 	margin: 20px 0;
 	padding: 10px 0;
-	color: rgba(250,250,250,.8);
-	border-top: 2px solid #fff;
-	font-size: 17px;
-	font-style: oblique;
+	font-size: 16px;
+	font-weight: 100;
+	letter-spacing: 0.2px;
 	width: 230px;
+	border-top: 2px solid #fff;
 }
-
-.article__text{
-	color: #0ff;
-	padding-left: 25px;
-	font: 16px/20px Tahoma, sans-serif;
+.article__title{
+	color:#fff;
 }
 .info{
-	background: rgba(200,220,220,.5);	
-
+	background: rgba(200,220,220,.7);	
 }
-
-.contacts {
+.contacts, .desc__wrap {
 	width: 310px;
-	min-height: 500px;
 	padding: 20px;
 }
-
-.contacts__content, .bio__content, .desc__content{
+.article__text, .contacts__content, .bio__content, .desc__content{
 	padding: 10px 0 0 25px;
-
 }
 .contacts__svg{
 	margin-bottom: 5px;
@@ -89,59 +96,44 @@ body{
 	height: 35px;
 	width: 35px;
 	opacity: .7;
-	transition: opacity .2s;
-
+	transition: opacity .3s;
 }
 .contacts__link {
 	color: rgba(0,0,0,.8);
-	font: 18px Arial;
-	transition: all .2s;
+	font-size: 18px;
+	transition: all .3s;
 }
 .contacts__link:hover {
-	text-shadow: 0 1px 1px rgba(0,0,0,.6);
 	color:#000;
 }
 .contacts__link:hover .contacts__svg{
 	opacity: 1;
 }
-.contacts__text, .desc__item{
-	font: 18px Tahoma;	
-	color: rgba(0,0,0,.7);
+.contacts__text, .desc__text{
+	font-size: 18px;	
+	color: rgba(0,0,0,.6);
 }
 .contacts__partial{
 	display: inline-block;
 	height: 30px;
 	width: 120px;
-	text-align: left;
 	color: #000;
-	text-shadow: 0 1px 1px rgba(0,0,0,.6);
-
-
 }
 .desc{
-	background: rgba(200,220,220,.6);	
-	background: rgba(250,250, 250, .7);
-	
+	background: rgba(250,250, 250, .6);	
 }
 .desc__wrap{
-	padding: 20px;
 	width: 570px;
 }
-
 .desc__partial {
-	text-align: left;
 	display: inline-block;
-	font: 18px Tahoma;
+	font-size: 16px;
 	color: #000;
 	width: 210px;
-	text-shadow: 0 1px 1px rgba(0,0,0,.6), 0 -1px 1px rgba(250,250,250,.9);
-}
-.desc__item{
-	color:#000;
-	text-shadow: 0 1px 2px rgba(200,200,200,1);
 
 }
-
 .desc__item:first-child{
 	padding-bottom: 10px;
 }
+/*<!-- 									<path d="M256,0C114.609,0,0,114.609,0,256c0,141.391,114.609,256,256,256c141.391,0,256-114.609,256-256   C512,114.609,397.391,0,256,0z M256,472c-119.297,0-216-96.703-216-216S136.703,40,256,40s216,96.703,216,216S375.297,472,256,472z   " fill="#000000"/>
+									<path d="M327.125,383.969c5.703,0.016,56.875-37.828,56.875-42.656s-57.266-40.905-62.219-40.905s-21.578,19.938-26.062,22.155   c-4.5,2.22-32.5,1.422-63.703-29.78c-31.219-31.188-41.875-67.109-41.875-72.75c0-5.641,26.031-23.062,26.75-27.156   c0.719-4.094-34.313-64.876-40-64.876S128,180.5,128,184.875s3.953,60.656,75.219,131.906S321.422,383.938,327.125,383.969z" fill="#000000"/>*/
