@@ -38,8 +38,8 @@ body{
 	content: '}';
 	margin-bottom: 40px;
 }
-.align{
-	margin: 10px 0 20px 211px;
+.align {
+	margin: 0 0 10px 190px;
 	text-decoration: underline;
 }
 .wrapper {
@@ -97,6 +97,7 @@ body{
 	width: 35px;
 	opacity: .7;
 	transition: opacity .3s;
+	fill: #fefefe;
 }
 .contacts__link {
 	color: rgba(0,0,0,.8);
@@ -113,6 +114,7 @@ body{
 	font-size: 18px;	
 	color: rgba(0,0,0,.7);
 }
+
 .contacts__partial, .desc__partial{
 	display: inline-block;
 	height: 30px;
@@ -127,10 +129,13 @@ body{
 }
  .desc__partial {
 	font-size: 16px;
-	width: 210px;
+	width: 190px;
 
 
 }
-.desc__item:first-child{
-	padding-bottom: 10px;
+.desc__additional {
+	vertical-align: top;
+	font: 16px/22px 'montserrat';
+	display: inline-block;
+	width: 350px;
 }
