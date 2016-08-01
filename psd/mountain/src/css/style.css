@@ -256,6 +256,7 @@
 .adv__subtitle {
   margin-bottom: 25px;
   font: 17px "opensans-bold";
+  text-transform: uppercase;
   letter-spacing: 2.2px; }
 
 .adv__subtitle-partial {
