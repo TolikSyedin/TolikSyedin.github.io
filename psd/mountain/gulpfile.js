@@ -18,7 +18,11 @@ var config = {
     mode                : {
         view            : {         // Activate the «view» mode 
             bust        : false,
+            render      : {
+                css     : true,
+            }
         },
+            symbol      : true,
     }
 };
 
