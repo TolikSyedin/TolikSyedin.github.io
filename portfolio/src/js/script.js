@@ -54,16 +54,18 @@ $(document).ready(function(){
 		}
 	}
 
-	function parallax(){
-
-		var topOffset = documentEl.scrollTop();
-		
-		yPos = -(Math.floor(topOffset/8));
-		
-		parallaxContainer.css({
-			'transition':'all .1s linear',
-			'backgroundPosition': '0 ' + yPos + 'px'});
+	function parallax(e){
+		// console.log(documentEl.scrollTop())
+		// if (documentEl.scrollTop() % 2){
+			var topOffset = documentEl.scrollTop();
+			yPos = -(Math.floor(topOffset/8));
+			parallaxContainer.css({
+				'backgroundPosition': '0 ' + yPos + 'px'});
+		// }		
 	}
+
+		
+		
 
 
 	documentEl.scroll(parallax);

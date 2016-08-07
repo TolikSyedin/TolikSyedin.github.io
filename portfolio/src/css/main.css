@@ -11,7 +11,7 @@
   font-style: normal; }
 
 .parallaxContainer {
-  background: rgba(0, 0, 0, 0.3) url("../img/head1.jpg") center center repeat;
+  background: rgba(0, 0, 0, 0.3) url("../img/head.jpg") center center repeat;
   /*background: rgba(0,0,0,.3) url('https://c8.staticflickr.com/4/3387/3454754071_7ea1702d88_z.jpg') center center no-repeat;*/
   /*background: linear-gradient (to bottom #000, #333);*/
   background-blend-mode: multiply;
