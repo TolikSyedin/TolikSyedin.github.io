@@ -80,7 +80,7 @@ $lb: rgba(42,250,255,1);
 }
 .header__list--navigate{
 	opacity: .6;
-	z-index: 999;
+	z-index: 998;
 	position: fixed;
 	width: 50px;
 	height: 50px;
@@ -329,41 +329,22 @@ $lb: rgba(42,250,255,1);
 	&:hover .svg__icon{fill:$lb;};
 
 }
+body{position: relative;}
 
 .parallaxContainer{
 	position: fixed;
-	height: 800px;	
+	height: 100%;
 	width: 100%;
 	transform: translate3d(0, 0, 0);
 
 	
 }
-#header, #about, #contacts, #portfolio{
-	position: relative;
-	-webkit-transform: translate3d(0,0,0);
+#about, #contacts, #portfolio{
+	position: absolute;
+	transform: translate3d(0px,0px,0px);
+	left: 0;
+	right: 0;
 }
-/*.parallaxContainer{
-	width: 100%;
-	height: 1875px;
-	top: 0;
-	bottom: 0;
-	transform: translate3d(0px, 0px, 0px);
-}
-#header{
-	left: 0%;
-	right: 0%;
-	top: 0;
-	transform: translate3d(0px, 0px, 0px);
-}
-#portfolio{
-	top: 643px;
-	transform: translate3d(0px, 0px, 0px);
-}
-#about{
-	top: 1334px;
-	transform: translate3d(0px, 0px, 0px);
-}
-#contacts{
-	top: 1800px;
-	transform: translate3d(0px, 0px, 0px);
-}*/
+#portfolio{top: 654px;};
+#about{top: 1350px;};
+#contacts{top: 2170px;};

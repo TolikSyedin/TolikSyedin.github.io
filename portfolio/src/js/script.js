@@ -65,7 +65,7 @@ $(document).ready(function(){
 				'backgroundPosition':  coords});		
 	}
 
-		
+	
 		
     // parallaxContainer.each(function(){
     // 	var $window = $(window);
