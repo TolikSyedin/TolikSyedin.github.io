@@ -2,6 +2,7 @@ $(document).ready(function(){
 	var parallaxContainer = $('.parallaxContainer');
 	var documentEl = $(document);
 	var body = $('html, body');
+	var wind = $(window);
 
 	// $.stellar()
 	function goToHome() {
@@ -46,6 +47,8 @@ $(document).ready(function(){
 	function navigation(){
 		var topOffset = documentEl.scrollTop();
 		var headerList = $('.header__list');
+
+
 		if(topOffset > 500){
 			headerList.addClass('header__list--navigate');
 		} else {
@@ -54,22 +57,32 @@ $(document).ready(function(){
 		}
 	}
 
-	function parallax(e){
-		// console.log(documentEl.scrollTop())
-		// if (documentEl.scrollTop() % 2){
+	function parallax(){
 			var topOffset = documentEl.scrollTop();
 			yPos = -(Math.floor(topOffset/8));
+			var coords = '0 ' + yPos + 'px'
 			parallaxContainer.css({
-				'backgroundPosition': '0 ' + yPos + 'px'});
-		// }		
+				'backgroundPosition':  coords});		
 	}
 
 		
 		
+    // parallaxContainer.each(function(){
+    // 	var $window = $(window);
+    //     var $bgobj = $(this); // создаем объект
+    //     $(window).scroll(function() {
+    //         var yPos = -($window.scrollTop() / $bgobj.data('speed')); // вычисляем коэффициент 
+    //         // Присваиваем значение background-position
+    //         var coords = 'center '+ yPos + 'px';
+    //         // Создаем эффект Parallax Scrolling
+    //         $bgobj.css({ backgroundPosition: coords });
+    //     });
+    // });
 
 
-	documentEl.scroll(parallax);
-	documentEl.scroll(navigation);
+
+	wind.scroll(parallax);
+	wind.scroll(navigation);
 	$('#home-link').click(goToHome);
 	$('.header__btn').click(goToPortfolio);
     $('#portfolio-link').click(goToPortfolio);    
