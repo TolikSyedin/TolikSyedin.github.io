@@ -32,26 +32,17 @@ $lb: rgba(42,250,255,1);
 
 .right{float: right;}
 
-.parallaxContainer{
-	background: rgba(0,0,0,.3) url('../img/head1.jpg')  center center repeat;
-	/*background: rgba(0,0,0,.3) url('https://c8.staticflickr.com/4/3387/3454754071_7ea1702d88_z.jpg') center center no-repeat;*/
-	/*background: linear-gradient (to bottom #000, #333);*/
-	background-blend-mode: multiply;
-	background-attachment: fixed;
-	background-size: cover;
-	background-position: 0px 0px; 
-
-};
 .wrapper{
 	padding: 20px;
 	width: 1100px;
 	margin: 0 auto;
-}
+};
 
 #header {
 	color:#fff;
 	position: relative;
-}
+};
+
 .header__topline{
 	position: absolute;
 	width: 100%;
@@ -151,7 +142,7 @@ $lb: rgba(42,250,255,1);
 	border: 1px solid transparent;
 	background-size: 55px 55px;
 	cursor: pointer;
-	/*animation: slideDown 2s ease-in-out infinite;*/
+	animation: slideDown 2s ease-in-out infinite;
 };
 
 
@@ -160,6 +151,7 @@ $lb: rgba(42,250,255,1);
 							/*PORTFOLIO*/
 
 #portfolio	{
+	position: relative;
 	padding-bottom: 100px;
 	opacity: .98;
 	background: rgba(0,170,255,.4);
@@ -177,7 +169,7 @@ $lb: rgba(42,250,255,1);
 
 .portfolio__subtitle{
 	text-transform: uppercase;
-}
+};
 
 .portfolio__item{
 	position: relative;
@@ -186,34 +178,35 @@ $lb: rgba(42,250,255,1);
 	height: 400px;
 	border-radius: 40px;
 	padding: 0 260px;
-	 transition: padding-left .7s ease-in-out; 
+	transition: padding-left .7s ease-in-out; 
 	&:hover {padding: 0 540px 0 0;};
 	&:hover .svg{opacity:1};
 	&:hover .portfolio__desc{display: block;animation: sideFlow .4s linear 1;};
 
 }
 .portfolio__innerblock{
-	position: relative;
+	position: absolute;
 	border: 1px solid rgba(0,0,0,.8);
 	border-radius: 40px;
-	position: absolute;
 	width: 598px;
 	height: 398px;
 	transition: background .8s;
 	background-blend-mode: multiply;
 	z-index: 999;
+	transform: translate3d(0px,0px,0px);
+
 }
+	#fCapa_1{position: absolute;z-index: 0;}
 .portfolio__innerblock--urlaubs{@include innerBg(urlaubs);}
-.portfolio__innerblock--pingbuller{@include innerBg(pingbuller);}
+.portfolio__innerblock--pingbuller{@include innerBg(pingbuller);.portfolio__icons{left: 40px;top: 50px;}}
 .portfolio__innerblock--mountains{@include innerBg(mountain);}
 .portfolio__innerblock--build{@include innerBg(build);}
 
 	
 .portfolio__icons{
 	position: absolute;
-	z-index: 0;
+	z-index: 1;
 	padding: 100px;
-	.svg {z-index: 0;}
 }
 
 .portfolio__desc{
@@ -241,6 +234,7 @@ $lb: rgba(42,250,255,1);
 
 
 #about {
+	position: relative;
 	color: #fff;
 	font-family: $ubuntu;
 	min-height: 800px;
@@ -283,6 +277,7 @@ $lb: rgba(42,250,255,1);
 	50%{transform: translate(0px, 20px) scale(0.7);opacity:.3;}
 }
 #contacts{
+	position: relative;
 	min-height: 80px;
 	text-align: center;
 	color: #000;
@@ -329,22 +324,24 @@ $lb: rgba(42,250,255,1);
 	&:hover .svg__icon{fill:$lb;};
 
 }
-body{position: relative;}
-
 .parallaxContainer{
-	position: fixed;
-	height: 100%;
-	width: 100%;
-	transform: translate3d(0, 0, 0);
+    position: fixed;
+	visibility: visible;
+    z-index: -100;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    transform: translate3d(0px, 0px, 0px);
+    height: 2231px;
+    width: 1349px;
+}
 
-	
+.parallaxImg {
+    transform: translate3d(0px, 0px, 0px);
+    position: absolute;
+    top: -100px;
+    left: 0px;
+    height: 843px;
+    width: 1349px;
+    max-width: none;
 }
-#about, #contacts, #portfolio{
-	position: absolute;
-	transform: translate3d(0px,0px,0px);
-	left: 0;
-	right: 0;
-}
-#portfolio{top: 654px;};
-#about{top: 1350px;};
-#contacts{top: 2170px;};
