@@ -298,18 +298,16 @@ $lb: rgba(42,250,255,1);
     z-index: -100;
     top: 0px;
     left: 0px;
+    right: 0px;
     overflow: hidden;
     transform: translate3d(0px, 0px, 0px);
     height: 2231px;
-    width: 1349px;
+    width: 100%;
 }
 
 .parallaxImg {
     position: absolute;
-    left: 0px;
-    right: 0px;
-    height: 843px;
-    width: 1349px;
+    width: 100%;
     max-width: none;
 }
 
