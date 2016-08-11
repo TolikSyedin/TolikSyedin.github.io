@@ -51,8 +51,8 @@ $lb: rgba(42,250,255,1);
 	position: absolute;
 	width: 100%;
 	height: 70px;
-	-webkit-animation: dropdown 2s ease-in-out;
-	animation: dropdown 2s ease-in-out;
+	-webkit-animation: dropdown 2s ease-in-out infinite;
+	animation: dropdown 2s ease-in-out infinite;
 }
 
 
