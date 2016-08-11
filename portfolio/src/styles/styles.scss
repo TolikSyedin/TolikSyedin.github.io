@@ -206,7 +206,7 @@ $lb: rgba(42,250,255,1);
 
 .portfolio__innerblock{
 	position: absolute;
-	border: 1px solid rgba(0,0,0,.8);
+	border: 1px solid rgba(66, 155, 184,.8);
 	border-radius: 40px;
 	width: 598px;
 	height: 398px;
@@ -313,13 +313,12 @@ $lb: rgba(42,250,255,1);
 }
 
 .about__photo{
+	display: block;
 	margin: 25px auto;
 	width: 220px;
 	height: 220px;
-	border: 1px solid #fff;
 	border-radius: 50%;
-	box-shadow: 0px 0px 15px 1px rgba(250,250,250,.7)
-
+	/*box-shadow: 0px 10px 9px 1px rgba(250,250,250,.7);*/
 }
 
 .about__text{	
