@@ -14,6 +14,26 @@
     font-style: normal;
 
 }
+$mobile: 320px;
+$semitablet: 460px;
+$tablet: 768px;
+$desctop: 1140px;
+
+@mixin respond-to ($media) {
+	@if $media == $mobile {
+		@media screen and (max-width: $semitablet) {@content;}
+	}
+	@else if $media == $tablet {
+		@media screen and (max-width: $tablet) {@content;}
+	}
+	@else if $media == $semitablet {
+		@media screen and (max-width: $semitablet) {@content;}
+	}
+	@else if $media == $desctop {
+		@media screen and (max-width: $desctop) {@content;}
+	}
+}
+}
 
 $ubuntu: 'ubuntumedium';
 $lato: 'Lato';
