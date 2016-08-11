@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
 	sass = require('gulp-sass'),
-	rename = require('gulp-rename');
+	rename = require('gulp-rename'),
+    autoprefixer = require('gulp-autoprefixer'),
 	sprite = require("gulp-svg-sprite");
 
 var config = {
@@ -10,7 +11,7 @@ var config = {
             maxHeight   : 50
         },
         spacing         : {         // Add padding 
-            padding     : 5,
+            padding     : 0,
         },
     },
     mode                :{
@@ -22,7 +23,7 @@ var config = {
 };
 
 gulp.task('sprite', function(){
-    gulp.src('src/svg/top/*.svg')
+    gulp.src('src/svg/socials/*.svg')
     .pipe(sprite(config))
 	.pipe(gulp.dest('src/svg/sprite/'));
 });
@@ -36,6 +37,15 @@ gulp.task('sass', function(){
 
 gulp.task('watch', function(){
 	gulp.watch('src/styles/styles.scss', ['sass']);
+})
+
+gulp.task('prefix', function(){
+    gulp.src('src/css/main.css')
+    .pipe(autoprefixer({
+         browsers: ['last 2 versions'],
+         cascade: false
+    }))
+    .pipe(gulp.dest('src/css/main'))
 })
 
 gulp.task('default', ['sass', 'watch']);
