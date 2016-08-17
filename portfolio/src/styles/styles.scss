@@ -169,17 +169,16 @@ $fullscreen: 1350px;
 	position: relative;
 	font: 22px/120px $lato;
 }
-.header__btn{
+.header__svg--btn{
+	fill: #fff;
+	background: transparent;
 	outline: none;
 	position: absolute;
-	content:'';
-	width: 55px;
-	height: 55px;
-	background: url('../svg/arrow.svg');
-	left: 50%;
-	right: 50%;
+	left: 48%;
+	right: 48%;
+	height: 60px;
+	width: 60px;
 	border: 1px solid transparent;
-	background-size: 55px 55px;
 	cursor: pointer;
 	animation: slideDown 2s ease-in-out infinite;
 };

@@ -9,25 +9,13 @@ var gulp = require('gulp'),
     concatCss = require('gulp-concat-css');
 
 var config = {
-    shape                   : {
-        dimensions          : {         // Set maximum dimensions 
-            maxWidth    : 50,
-            maxHeight   : 50
-        },
-        spacing         : {         // Add padding 
-            padding     : 0,
-        },
-    },
     mode                :{
-        view            : {         // Activate the «view» mode
-            bust        : false,
-        },
         symbol          : true      // Activate the «symbol» mode
     }
 };
 
 gulp.task('sprite', function(){
-    return gulp.src('src/svg/socials/*.svg')
+    return gulp.src('src/svg/testgroup/*.svg')
     .pipe(sprite(config))
 	.pipe(gulp.dest('src/svg/sprite/'));
 });
@@ -40,7 +28,7 @@ gulp.task('sass', function(){
 })
 
 gulp.task('watch', function(){
-	return gulp.watch('src/styles/styles.scss', ['sass']);
+	return gulp.watch('src/styles/styles.scss', ['sass', 'concat:Css', 'uglify:Css']);
 })
 
 gulp.task('concat:Js', function() {
@@ -56,7 +44,7 @@ gulp.task('concat:Css', function () {
 });
 
 
-gulp.task('uglifyJs', function (cb) {
+gulp.task('uglify:Js', function (cb) {
   pump([
         gulp.src('build/js/*.js'),
         uglify(),
@@ -66,7 +54,7 @@ gulp.task('uglifyJs', function (cb) {
   );
 });
 
-gulp.task('uglifyCss', function () {
+gulp.task('uglify:Css', function () {
   gulp.src('build/css/main.css')
     .pipe(uglifycss({
       "maxLineLen": 80,
@@ -76,4 +64,4 @@ gulp.task('uglifyCss', function () {
 });
 
 
-gulp.task('default', ['sass', 'concat:Css','concat:Js', 'uglifyCss', 'uglifyJs',]);
+gulp.task('default', ['sass', 'concat:Css','concat:Js', 'uglify:Css', 'uglify:Js']);
