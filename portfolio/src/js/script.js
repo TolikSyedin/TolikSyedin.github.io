@@ -15,7 +15,7 @@ $(document).ready(function(){
 	function goToHome() {
     	body.stop(true).animate({
     		scrollTop:0
-    	}, 500, function() {
+    	}, 800, function() {
 	    	callback(); // Callback is required for iOS
 		});
     	return false;
@@ -23,7 +23,7 @@ $(document).ready(function(){
     function goToPortfolio() {
     	body.stop(true).animate({
     		scrollTop:$('#portfolio').offset().top
-    	}, 500, function() {
+    	}, 800, function() {
 	    	callback(); // Callback is required for iOS
 		});
     	return false;
@@ -31,7 +31,7 @@ $(document).ready(function(){
     function goToAbout() { 
     	body.stop(true).animate({
     		scrollTop:$('#about').offset().top
-    	}, 500, function() {
+    	}, 800, function() {
 	    	callback(); // Callback is required for iOS
 		});
     	return false;
@@ -40,7 +40,7 @@ $(document).ready(function(){
     function goToContacts() {
     	body.stop(true).animate({
     		scrollTop:$('#contacts').offset().top
-    	}, 500, function() {
+    	}, 800, function() {
 	    	callback(); // Callback is required for iOS
 		});
     	return false;
@@ -88,7 +88,7 @@ $(document).ready(function(){
 	
 		}
 
-		parallaxImg.css('top', (Math.floor(documentEl.scrollTop()*.1*-1) + 'px'));
+		parallaxImg.css('top', (Math.floor(documentEl.scrollTop()*.09*-1) + 'px'));
 	});
 
 });

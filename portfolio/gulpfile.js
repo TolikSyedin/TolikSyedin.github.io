@@ -1,8 +1,12 @@
 var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	rename = require('gulp-rename'),
-    autoprefixer = require('gulp-autoprefixer'),
-	sprite = require("gulp-svg-sprite");
+    concat = require('gulp-concat'),
+	sprite = require("gulp-svg-sprite"),
+    uglify = require('gulp-uglify'),
+    pump = require('pump'),
+    uglifycss = require('gulp-uglifycss'),
+    concatCss = require('gulp-concat-css');
 
 var config = {
     shape                   : {
@@ -23,29 +27,53 @@ var config = {
 };
 
 gulp.task('sprite', function(){
-    gulp.src('src/svg/socials/*.svg')
+    return gulp.src('src/svg/socials/*.svg')
     .pipe(sprite(config))
 	.pipe(gulp.dest('src/svg/sprite/'));
 });
 
 gulp.task('sass', function(){
-	gulp.src('src/styles/styles.scss')
+	return gulp.src('src/styles/styles.scss')
 	.pipe(sass())
 	.pipe(rename('main.css'))
 	.pipe(gulp.dest('src/css/'));
 })
 
 gulp.task('watch', function(){
-	gulp.watch('src/styles/styles.scss', ['sass']);
+	return gulp.watch('src/styles/styles.scss', ['sass']);
 })
 
-gulp.task('prefix', function(){
-    gulp.src('src/css/main.css')
-    .pipe(autoprefixer({
-         browsers: ['last 2 versions'],
-         cascade: false
+gulp.task('concat:Js', function() {
+  return gulp.src('src/js/*.js')
+    .pipe(concat('main.js'))
+    .pipe(gulp.dest('build/js/'));
+});
+
+
+gulp.task('uglifyJs', function (cb) {
+  pump([
+        gulp.src('build/js/*.js'),
+        uglify(),
+        gulp.dest('build/js')
+    ],
+    cb
+  );
+});
+
+gulp.task('concat:Css', function () {
+  return gulp.src(['src/css/normalize.css', 'src/css/owl.carousel.css', 'src/css/main.css'])
+    .pipe(concatCss("main.css"))
+    .pipe(gulp.dest('build/css/'));
+});
+
+gulp.task('uglifyCss', function () {
+  gulp.src('build/css/main.css')
+    .pipe(uglifycss({
+      "maxLineLen": 80,
+      "uglyComments": true
     }))
-    .pipe(gulp.dest('src/css/main'))
-})
+    .pipe(gulp.dest('build/css/'));
+});
+
 
 gulp.task('default', ['sass', 'watch']);
