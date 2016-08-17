@@ -49,6 +49,12 @@ gulp.task('concat:Js', function() {
     .pipe(gulp.dest('build/js/'));
 });
 
+gulp.task('concat:Css', function () {
+  return gulp.src(['src/css/normalize.css', 'src/css/owl.carousel.css', 'src/css/main.css'])
+    .pipe(concatCss("main.css"))
+    .pipe(gulp.dest('build/css/'));
+});
+
 
 gulp.task('uglifyJs', function (cb) {
   pump([
@@ -58,12 +64,6 @@ gulp.task('uglifyJs', function (cb) {
     ],
     cb
   );
-});
-
-gulp.task('concat:Css', function () {
-  return gulp.src(['src/css/normalize.css', 'src/css/owl.carousel.css', 'src/css/main.css'])
-    .pipe(concatCss("main.css"))
-    .pipe(gulp.dest('build/css/'));
 });
 
 gulp.task('uglifyCss', function () {
@@ -76,4 +76,4 @@ gulp.task('uglifyCss', function () {
 });
 
 
-gulp.task('default', ['sass', 'watch']);
+gulp.task('default', ['sass', 'concat:Css','concat:Js', 'uglifyCss', 'uglifyJs',]);
