@@ -150,14 +150,6 @@ $fullscreen: 1350px;
 	&:hover .header__svg{fill:$lb;opacity:1;cursor: pointer;}
 	
 } 
-.header__svg{
-	fill: #fff;
-	height: 35px;
-	width: 35px;
-	vertical-align: middle;
-	margin-right: 10px;
-	transition: all .3s;
-}
 .header__main{
 	text-align: center;
 	padding: 17% 0;
@@ -168,6 +160,15 @@ $fullscreen: 1350px;
 .header__wrap{
 	position: relative;
 	font: 22px/120px $lato;
+}
+
+.header__svg{
+	fill: #fff;
+	height: 35px;
+	width: 35px;
+	vertical-align: middle;
+	margin-right: 10px;
+	transition: all .3s;
 }
 .header__svg--btn{
 	fill: #fff;
