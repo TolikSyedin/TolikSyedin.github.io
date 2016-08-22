@@ -541,7 +541,7 @@ $fullscreen: 1350px;
 body{
 	@include respond-to ($tablet){
 		background: url('../img/head.jpg') top center no-repeat;
-		background-size: cover;
+		background-size: contain;
 		background-attachment: fixed;
 	}
 }
