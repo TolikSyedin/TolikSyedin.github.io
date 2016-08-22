@@ -1,12 +1,13 @@
 var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	rename = require('gulp-rename'),
-    concat = require('gulp-concat'),
+  concat = require('gulp-concat'),
 	sprite = require("gulp-svg-sprite"),
-    uglify = require('gulp-uglify'),
-    pump = require('pump'),
-    uglifycss = require('gulp-uglifycss'),
-    concatCss = require('gulp-concat-css');
+  uglify = require('gulp-uglify'),
+  pump = require('pump'),
+  uglifycss = require('gulp-uglifycss'),
+  gulps = require('gulp-series'),
+  concatCss = require('gulp-concat-css');
 
 var config = {
     mode                :{
@@ -20,6 +21,31 @@ gulp.task('sprite', function(){
 	.pipe(gulp.dest('src/svg/sprite/'));
 });
 
+gulps.registerTasks({
+    'sass': function(){
+    return gulp.src('src/styles/styles.scss')
+    .pipe(sass())
+    .pipe(rename('main.css'))
+    .pipe(gulp.dest('src/css/'));
+  },
+    'concat:Css': function () {
+    return gulp.src(['src/css/normalize.css', 'src/css/owl.carousel.css', 'src/css/main.css'])
+    .pipe(concatCss("main.css"))
+    .pipe(gulp.dest('build/css/'));
+  },
+    'uglify:Css': function () {
+    return gulp.src('build/css/main.css')
+    .pipe(uglifycss({
+      "maxLineLen": 80,
+      "uglyComments": true
+    }))
+    .pipe(gulp.dest('build/css/'));
+    }
+});
+
+gulps.registerSeries("css", ['sass', 'concat:Css', 'uglify:Css']);
+
+
 gulp.task('sass', function(){
 	return gulp.src('src/styles/styles.scss')
 	.pipe(sass())
@@ -28,7 +54,7 @@ gulp.task('sass', function(){
 })
 
 gulp.task('watch', function(){
-	return gulp.watch('src/styles/styles.scss', ['sass', 'concat:Css', 'uglify:Css']);
+	return gulp.watch('src/styles/styles.scss', ['css']);
 })
 
 gulp.task('concat:Js', function() {

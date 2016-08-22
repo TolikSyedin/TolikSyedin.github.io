@@ -71,9 +71,13 @@ $(document).ready(function(){
 		nav: true,
 		navText: [prev,next],
 		margin: 400,
-		autoplay: true,
+		autoplay: false,
 		autoplayHoverPause: true,
-		mouseDrag: false
+		mouseDrag: false,
+		responsive: {
+			0: {nav: false},
+			768: {nav: true}
+		}
 	});
 
 
