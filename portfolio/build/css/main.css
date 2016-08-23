@@ -1110,7 +1110,7 @@ optgroup {
   }
 
   .portfolio__item:hover .portfolio__desc .portfolio__link {
-    bottom: 10px;
+    bottom: 5px;
   }
 }
 

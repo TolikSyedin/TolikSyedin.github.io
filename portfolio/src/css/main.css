@@ -279,7 +279,7 @@
         line-height: 25px;
         top: 10px; }
         .portfolio__item:hover .portfolio__desc .portfolio__link {
-          bottom: 10px; } }
+          bottom: 5px; } }
   @media screen and (max-width: 1140px) {
     .portfolio__item {
       padding: 0; } }
