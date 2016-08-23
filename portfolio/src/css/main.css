@@ -90,7 +90,7 @@
 
 @media screen and (max-width: 960px) {
   .header__nav {
-    position: fixed;
+    position: absolute;
     z-index: 999;
     top: 35px;
     right: 25px;
