@@ -699,15 +699,17 @@ optgroup {
 }
 
 @font-face {
-  font-family: 'ubuntumedium';
-  src: url("../fonts/ubuntu-m-webfont.woff2") format("woff2"), url("../fonts/ubuntu-m-webfont.woff") format("woff");
+  font-family: 'ubuntu';
+  src: url("ubuntu-webfont.eot");
+  src: url("ubuntu-webfont.eot?#iefix") format("embedded-opentype"), url("ubuntu-webfont.woff2") format("woff2"), url("ubuntu-webfont.woff") format("woff"), url("ubuntu-webfont.ttf") format("truetype"), url("ubuntu-webfont.svg#webfontregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'lato';
-  src: url("../fonts/lato-regular.woff2") format("woff2"), url("../fonts/lato-regular.woff") format("woff");
+  src: url("lato-regular-webfont.eot");
+  src: url("lato-regular-webfont.eot?#iefix") format("embedded-opentype"), url("lato-regular-webfont.woff2") format("woff2"), url("lato-regular-webfont.woff") format("woff"), url("lato-regular-webfont.ttf") format("truetype"), url("lato-regular-webfont.svg#webfontregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -889,7 +891,7 @@ optgroup {
 .header__link {
   position: relative;
   display: block;
-  font: 20px/70px "ubuntumedium";
+  font: 20px/70px "ubuntu";
   color: #fff;
 }
 
@@ -1024,7 +1026,7 @@ optgroup {
 .contacts__title {
   text-transform: uppercase;
   margin: 60px auto;
-  font-family: "ubuntumedium";
+  font-family: "ubuntu";
 }
 
 @media screen and (max-width: 1140px) {
@@ -1265,7 +1267,7 @@ optgroup {
 #about {
   position: relative;
   color: #fff;
-  font-family: "ubuntumedium";
+  font-family: "ubuntu";
   min-height: 800px;
 }
 
