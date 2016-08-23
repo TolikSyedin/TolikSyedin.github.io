@@ -540,13 +540,8 @@
   width: 100%; }
   @media screen and (max-width: 768px) {
     .parallaxContainer {
-      display: none; } }
-
-@media screen and (max-width: 768px) {
-  body {
-    background: url("../img/head.jpg") top center no-repeat;
-    background-size: cover;
-    background-attachment: fixed; } }
+      background: url("../img/head.jpg") top center no-repeat;
+      background-size: cover; } }
 
 .parallaxImg {
   position: absolute;
@@ -563,6 +558,9 @@
       width: 130%;
       height: 170%;
       margin-left: -20%; } }
+  @media screen and (max-width: 768px) {
+    .parallaxImg {
+      display: none; } }
 
 /* OWL CONTROLS */
 .owl-prev {
