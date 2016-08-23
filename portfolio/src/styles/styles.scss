@@ -153,8 +153,9 @@ $fullscreen: 1350px;
 		position: relative;
 		.header__svg--menu{
 			position: absolute;
+			z-index: 998;
 			right: -10px;
-			display: inline-block;
+			display: block;
 			opacity: 1;
 			transition: opacity .3s ease-in;
 		};
