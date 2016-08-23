@@ -825,59 +825,46 @@ optgroup {
 
 @media screen and (max-width: 960px) {
   .header__nav {
+    height: 50px;
+    width: 50px;
     position: relative;
-    z-index: 999;
-    top: 35px;
-    right: 25px;
-    width: 40px;
-    height: 40px;
-    transition: width .5s ease-in-out;
+    right: 0;
+    top: 20px;
   }
 
-  .header__nav .header__list {
-    position: relative;
-  }
-
-  .header__nav .header__list .header__svg--menu {
-    position: absolute;
-    z-index: 998;
-    right: -10px;
+  .header__nav .header__svg--menu {
     display: block;
-    opacity: 1;
-    transition: opacity .3s ease-in;
   }
 
-  .header__nav .header__item,
-  .header__nav .header__link {
+  .header__nav .header__list--hidden {
+    position: fixed;
+    top: -10px;
+    right: -400px;
+    transition: right 1s ease-in-out;
     display: none;
   }
 
-  .header__nav:hover {
-    width: 180px;
-  }
-
-  .header__nav:hover .header__svg--menu {
-    opacity: 0;
-  }
-
-  .header__nav:hover .header__item {
+  .header__nav .header__item {
     display: block;
     height: 45px;
   }
 
-  .header__nav:hover .header__item .header__link {
-    display: block;
+  .header__nav .header__link {
     line-height: 45px;
   }
 
-  .header__nav:hover .header__item .header__link:after {
+  .header__nav .header__link:after {
     display: none;
   }
-}
 
-@media screen and (max-width: 320px) {
-  .header__nav {
-    right: 5px;
+  .header__nav:hover .header__svg--menu {
+    transform: rotateX(360deg);
+    opacity: 0;
+  }
+
+  .header__nav:hover .header__list--hidden {
+    display: block;
+    right: 0px;
   }
 }
 
