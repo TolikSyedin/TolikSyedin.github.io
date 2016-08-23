@@ -591,8 +591,6 @@ $fullscreen: 1350px;
 	@include respond-to ($tablet){
 		z-index: 0;
 		.parallaxMobile{
-			position: absolute;
-			z-index: 333;
 			min-height: 100%;
 			min-width: 100%;
 			background: url('../img/head.jpg') top center no-repeat;
