@@ -700,16 +700,16 @@ optgroup {
 
 @font-face {
   font-family: 'ubuntu';
-  src: url("ubuntu-webfont.eot");
-  src: url("ubuntu-webfont.eot?#iefix") format("embedded-opentype"), url("ubuntu-webfont.woff2") format("woff2"), url("ubuntu-webfont.woff") format("woff"), url("ubuntu-webfont.ttf") format("truetype"), url("ubuntu-webfont.svg#webfontregular") format("svg");
+  src: url("../fonts/ubuntu-webfont.eot");
+  src: url("../fonts/ubuntu-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ubuntu-webfont.woff2") format("woff2"), url("../fonts/ubuntu-webfont.woff") format("woff"), url("../fonts/ubuntu-webfont.ttf") format("truetype"), url("../fonts/ubuntu-webfont.svg#webfontregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'lato';
-  src: url("lato-regular-webfont.eot");
-  src: url("lato-regular-webfont.eot?#iefix") format("embedded-opentype"), url("lato-regular-webfont.woff2") format("woff2"), url("lato-regular-webfont.woff") format("woff"), url("lato-regular-webfont.ttf") format("truetype"), url("lato-regular-webfont.svg#webfontregular") format("svg");
+  src: url("../fonts/lato-regular-webfont.eot");
+  src: url("../fonts/lato-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-regular-webfont.woff2") format("woff2"), url("../fonts/lato-regular-webfont.woff") format("woff"), url("../fonts/lato-regular-webfont.ttf") format("truetype"), url("../fonts/lato-regular-webfont.svg#webfontregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
