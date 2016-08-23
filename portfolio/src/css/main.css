@@ -540,8 +540,8 @@
   width: 100%; }
   @media screen and (max-width: 768px) {
     .parallaxContainer .parallaxMobile {
-      height: 100%;
-      width: 100%;
+      min-height: 100%;
+      min-width: 100%;
       background: url("../img/head.jpg") top center no-repeat;
       background-size: cover; } }
 
