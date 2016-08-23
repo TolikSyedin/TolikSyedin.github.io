@@ -145,14 +145,15 @@ $fullscreen: 1350px;
 	position: fixed;
 	z-index: 999;
 	top: 35px;
-	right: 10px;
-	width: 50px;
+	right: 25px;
+	width: 40px;
+	height: 40px;
 	transition: width .5s ease-in-out;
 	.header__list{
 		position: relative;
 		.header__svg--menu{
 			position: absolute;
-			right: 15px;
+			right: -10px;
 			display: inline-block;
 			opacity: 1;
 			transition: opacity .3s ease-in;
@@ -177,7 +178,7 @@ $fullscreen: 1350px;
 		}
 	};
 	@include respond-to ($mobile){
-		right: -15px;
+		right: 5px;
 	}
 
 	
