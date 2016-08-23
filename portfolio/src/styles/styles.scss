@@ -140,7 +140,7 @@ $fullscreen: 1350px;
 	}
 	@include respond-to ($desctop960){display: none;}
 }
-.header__nav{
+.header__list{
 	@include respond-to ($desctop960){
 	position: fixed;
 	z-index: 999;
