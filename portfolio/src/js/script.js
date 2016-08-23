@@ -16,7 +16,7 @@ $(document).ready(function(){
     	body.stop(true).animate({
     		scrollTop:0
     	}, 800, function() {
-	    	callback(); // Callback is required for iOS
+	    	callback('home'); // Callback is required for iOS
 		});
     	return false;
 	}
@@ -24,7 +24,7 @@ $(document).ready(function(){
     	body.stop(true).animate({
     		scrollTop:$('#portfolio').offset().top
     	}, 800, function() {
-	    	callback(); // Callback is required for iOS
+	    	callback('portfolio'); // Callback is required for iOS
 		});
     	return false;
     }
@@ -32,7 +32,7 @@ $(document).ready(function(){
     	body.stop(true).animate({
     		scrollTop:$('#about').offset().top
     	}, 800, function() {
-	    	callback(); // Callback is required for iOS
+	    	callback('about'); // Callback is required for iOS
 		});
     	return false;
     }
@@ -41,13 +41,13 @@ $(document).ready(function(){
     	body.stop(true).animate({
     		scrollTop:$('#contacts').offset().top
     	}, 800, function() {
-	    	callback(); // Callback is required for iOS
+	    	callback('contacts'); // Callback is required for iOS
 		});
     	return false;
   	};
 
-	function callback() {
-		console.log('menu movement callback')
+	function callback(e) {
+		console.log('menu movement callback from ' + e)
 	};
 
 
