@@ -580,39 +580,43 @@ $fullscreen: 1350px;
 
 .parallaxContainer{
     position: fixed;
+    overflow: hidden;
     z-index: -100;
     top: 0px;
     left: 0px;
     right: 0px;
-    overflow: hidden;
     transform: translate3d(0px, 0px, 0px);
     height: 100%;
     width: 100%;
-    @include respond-to($desctop){
-    	width: 125%;
-    	margin-left: -15%;
-    }
-    @include respond-to ($desctop960){
-		width: 130%;
-		height: 120%;
-		margin-left: -20%;
-    }
 	@include respond-to ($tablet){
-		width: 180%;
-		height: 140%;
-		margin-left: -45%;
+		display: none;
     }
 }
 
+body {
+	@include respond-to ($tablet) {
+	background: url('../img/head.jpg') top center no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	}
+}
 
 .parallaxImg {
-	overflow: hidden;
     position: absolute;
     width: 100%;
     left: 0;
     right: 0;
-    height: 140%;
-
+    @include respond-to($desctop){
+    	width: 125%;
+    	height: 120%;
+    	margin-left: -15%;
+    }
+    @include respond-to ($desctop960){
+		width: 130%;
+		height: 170%;
+		margin-left: -20%;
+		
+    }
 }
 
 				 /* OWL CONTROLS */
