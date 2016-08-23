@@ -589,8 +589,12 @@ $fullscreen: 1350px;
     height: 100%;
     width: 100%;
 	@include respond-to ($tablet){
-		background: url('../img/head.jpg') top center no-repeat;
-		background-size: cover;
+		.parallaxMobile{
+			height: 100%;
+			width: 100%;
+			background: url('../img/head.jpg') top center no-repeat;
+			background-size: cover;
+		}
     }
 }
 
