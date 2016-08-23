@@ -101,7 +101,9 @@
     .header__item--innermenu .header__list--hiddenmenu {
       position: fixed;
       top: 30px;
-      right: -200px;
+      /*right: -200px;*/
+      right: 10px;
+      display: none;
       transition: all .5s ease-in-out; }
     .header__item--innermenu .header__item {
       display: block;
@@ -114,7 +116,8 @@
       transform: rotateX(360deg);
       opacity: 0; }
     .header__item--innermenu:hover .header__list--hiddenmenu {
-      right: 10px; } }
+      /*right: 10px;*/
+      display: block; } }
 
 .header__item {
   text-align: center;

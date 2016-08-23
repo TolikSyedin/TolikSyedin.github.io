@@ -154,7 +154,9 @@ $fullscreen: 1350px;
 		.header__list--hiddenmenu{
 			position: fixed;
 			top: 30px;
-			right: -200px;
+			/*right: -200px;*/
+			right: 10px;
+			display: none;
 			transition: all .5s ease-in-out;
 			
 		}
@@ -163,7 +165,8 @@ $fullscreen: 1350px;
 		&:hover{
 			.header__svg--menu{transform:rotateX(360deg);opacity:0;}
 			.header__list--hiddenmenu{
-				right: 10px;
+				/*right: 10px;*/
+				display: block;
 
 			}
 		};
