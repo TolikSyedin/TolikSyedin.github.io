@@ -840,9 +840,7 @@ optgroup {
   .header__item--innermenu .header__list--hiddenmenu {
     position: fixed;
     top: 30px;
-    /*right: -200px;*/
-    right: 10px;
-    display: none;
+    right: -200px;
     transition: all .5s ease-in-out;
   }
 
@@ -865,8 +863,7 @@ optgroup {
   }
 
   .header__item--innermenu:hover .header__list--hiddenmenu {
-    /*right: 10px;*/
-    display: block;
+    right: 10px;
   }
 }
 

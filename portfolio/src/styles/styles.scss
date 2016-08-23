@@ -154,9 +154,7 @@ $fullscreen: 1350px;
 		.header__list--hiddenmenu{
 			position: fixed;
 			top: 30px;
-			/*right: -200px;*/
-			right: 10px;
-			display: none;
+			right: -200px;
 			transition: all .5s ease-in-out;
 			
 		}
@@ -165,8 +163,7 @@ $fullscreen: 1350px;
 		&:hover{
 			.header__svg--menu{transform:rotateX(360deg);opacity:0;}
 			.header__list--hiddenmenu{
-				/*right: 10px;*/
-				display: block;
+				right: 10px;
 
 			}
 		};
@@ -593,6 +590,8 @@ $fullscreen: 1350px;
     width: 100%;
 	@include respond-to ($tablet){
 		.parallaxMobile{
+			position: absolute;
+			z-index: 333;
 			min-height: 100%;
 			min-width: 100%;
 			background: url('../img/head.jpg') top center no-repeat;
