@@ -89,33 +89,32 @@
       display: none; } }
 
 @media screen and (max-width: 960px) {
-  .header__nav {
+  .header__item--innermenu {
+    display: block;
     height: 50px;
     width: 50px;
     position: relative;
     right: 0;
     top: 20px; }
-    .header__nav .header__svg--menu {
+    .header__item--innermenu .header__svg--menu {
       display: block; }
-    .header__nav .header__list--hidden {
+    .header__item--innermenu .header__list--hiddenmenu {
       position: fixed;
-      top: -10px;
-      right: -400px;
-      transition: right 1s ease-in-out;
-      display: none; }
-    .header__nav .header__item {
+      top: 30px;
+      right: -200px;
+      transition: all .5s ease-in-out; }
+    .header__item--innermenu .header__item {
       display: block;
       height: 45px; }
-    .header__nav .header__link {
+    .header__item--innermenu .header__link {
       line-height: 45px; }
-      .header__nav .header__link:after {
+      .header__item--innermenu .header__link:after {
         display: none; }
-    .header__nav:hover .header__svg--menu {
+    .header__item--innermenu:hover .header__svg--menu {
       transform: rotateX(360deg);
       opacity: 0; }
-    .header__nav:hover .header__list--hidden {
-      display: block;
-      right: 0px; } }
+    .header__item--innermenu:hover .header__list--hiddenmenu {
+      right: 10px; } }
 
 .header__item {
   text-align: center;
@@ -265,8 +264,22 @@
       .portfolio__item:hover .portfolio__desc {
         padding: 20px;
         width: 80%;
-        top: 20%;
-        left: 7%; } }
+        line-height: 30px;
+        left: 7%;
+        top: 10%; }
+        .portfolio__item:hover .portfolio__desc .portfolio__link {
+          position: absolute;
+          bottom: 0px;
+          left: 0%;
+          width: inherit;
+          right: 0%; } }
+    @media screen and (max-width: 460px) {
+      .portfolio__item:hover .portfolio__desc {
+        padding: 10px;
+        line-height: 25px;
+        top: 10px; }
+        .portfolio__item:hover .portfolio__desc .portfolio__link {
+          bottom: 10px; } }
   @media screen and (max-width: 1140px) {
     .portfolio__item {
       padding: 0; } }
@@ -357,10 +370,11 @@
 .portfolio__desc {
   position: absolute;
   display: none;
+  font: 25px/45px "Lato";
   left: 500px;
   height: 280px;
   width: 445px;
-  padding: 90px 50px 30px 150px; }
+  padding: 40px 50px 80px 150px; }
   @media screen and (max-width: 1350px) {
     .portfolio__desc {
       width: 380px;
@@ -368,6 +382,9 @@
   @media screen and (max-width: 1140px) {
     .portfolio__desc {
       left: -35px; } }
+  @media screen and (max-width: 460px) {
+    .portfolio__desc {
+      font: 20px; } }
 
 .portfolio__link {
   display: block;

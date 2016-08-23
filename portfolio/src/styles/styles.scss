@@ -141,28 +141,30 @@ $fullscreen: 1350px;
 	@include respond-to ($desctop960){display: none;}
 }
 
-.header__nav {
+.header__item--innermenu {
 	@include respond-to ($desctop960) {
+		display: block;
 		height: 50px;
 		width: 50px;
 		position: relative;
 		right: 0;
 		top: 20px;
 		.header__svg--menu{display: block;}
-		.header__list--hidden{
+
+		.header__list--hiddenmenu{
 			position: fixed;
-			top: -10px;
-			right: -400px;
-			transition: right 1s ease-in-out;
-			display: none;
+			top: 30px;
+			right: -200px;
+			transition: all .5s ease-in-out;
+			
 		}
 		.header__item{display: block;height: 45px;}
 		.header__link{line-height: 45px;&:after{display: none;};}
 		&:hover{
 			.header__svg--menu{transform:rotateX(360deg);opacity:0;}
-			.header__list--hidden{
-				display: block;
-				right: 0px;
+			.header__list--hiddenmenu{
+				right: 10px;
+
 			}
 		};
 	}
@@ -304,6 +306,7 @@ $fullscreen: 1350px;
 	};
 	&:hover .portfolio__svg{opacity:1};
 	&:hover .portfolio__desc{
+
 		display: block;
 		animation: sideFlow .4s linear 1;
 		@include respond-to ($desctop){
@@ -312,9 +315,25 @@ $fullscreen: 1350px;
 		@include respond-to ($tablet){
 			padding: 20px;
 			width: 80%;
-			top: 20%;
+			line-height: 30px;
 			left: 7%;
+			top: 10%;
+			.portfolio__link{
+				position: absolute;
+				bottom: 0px;
+				left: 0%;
+			    width: inherit;
+			    right: 0%;
+			}
 			
+		}
+		@include respond-to ($semitablet){
+			padding: 10px;
+			line-height: 25px;
+			top: 10px;
+			.portfolio__link{
+				bottom: 10px;
+			}
 		}
 
 	};
@@ -360,6 +379,7 @@ $fullscreen: 1350px;
 		height: 100%;
 		max-height: 300px;
 	}
+
 }
 
 .portfolio__innerblock--urlaubs{@include innerBg(urlaubs);}
@@ -385,10 +405,11 @@ $fullscreen: 1350px;
 .portfolio__desc{
 	position: absolute;
 	display: none;
+	font: 25px/45px $lato;
 	left: 500px;
 	height: 280px;
 	width: 445px;
-	padding: 90px 50px 30px 150px;
+	padding: 40px 50px 80px 150px;
 	@include respond-to($fullscreen){ 
 		width: 380px;
 		left: 480px;
@@ -397,6 +418,10 @@ $fullscreen: 1350px;
 	@include respond-to($desctop){
 		left: -35px;
 	}
+	@include respond-to ($semitablet){
+		font: 20px;
+	}
+
 }
 .portfolio__link{
 	display: block;
