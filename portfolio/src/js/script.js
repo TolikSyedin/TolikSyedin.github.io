@@ -70,6 +70,7 @@ $(document).ready(function(){
 		responsive: {
 			0: {
 				nav: false,
+
 			},
 			768: {
 				nav: true,
