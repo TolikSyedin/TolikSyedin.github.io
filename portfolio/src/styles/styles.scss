@@ -589,6 +589,7 @@ $fullscreen: 1350px;
     height: 100%;
     width: 100%;
 	@include respond-to ($tablet){
+		z-index: 0;
 		.parallaxMobile{
 			position: absolute;
 			z-index: 333;

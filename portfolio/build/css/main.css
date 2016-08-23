@@ -1479,7 +1479,13 @@ optgroup {
 }
 
 @media screen and (max-width: 768px) {
+  .parallaxContainer {
+    z-index: 0;
+  }
+
   .parallaxContainer .parallaxMobile {
+    position: absolute;
+    z-index: 333;
     min-height: 100%;
     min-width: 100%;
     background: url("../img/head.jpg") top center no-repeat;
