@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: 'lato';
-  src: url("../fonts/lato.woff2") format("woff2");
+  src: url("../fonts/lato-regular.woff2") format("woff2"), url("../fonts/lato-regular.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
@@ -32,13 +32,10 @@
   width: 1140px;
   box-sizing: border-box;
   margin: 0 auto; }
-  @media screen and (max-width: 1350px) {
-    .wrapper {
-      max-width: 1350px;
-      width: 100%; } }
   @media screen and (max-width: 1140px) {
     .wrapper {
-      max-width: 1140px; } }
+      max-width: 1140px;
+      width: 100%; } }
   @media screen and (max-width: 960px) {
     .wrapper {
       max-width: 960px; } }
@@ -62,11 +59,9 @@
 
 .header__logo {
   font: 25px/70px "Lato"; }
-  @media screen and (max-width: 960px) {
-    .header__logo {
-      float: none;
-      margin: 0 auto;
-      width: 160px; } }
+  @media screen and (max-width: 320px) {
+    .header__logo .header__svg, .header__logo .controls__svg {
+      margin-right: 0px; } }
 
 .header__list--navigate {
   opacity: .6;
@@ -94,10 +89,11 @@
 @media screen and (max-width: 960px) {
   .header__nav {
     position: fixed;
-    top: 40px;
-    right: 0px;
+    z-index: 999;
+    top: 35px;
+    right: 10px;
     width: 50px;
-    transition: all .5s ease-in-out; }
+    transition: width .5s ease-in-out; }
     .header__nav .header__list {
       position: relative; }
       .header__nav .header__list .header__svg--menu {
@@ -120,6 +116,10 @@
           line-height: 45px; }
           .header__nav:hover .header__item .header__link:after {
             display: none; } }
+
+@media screen and (max-width: 320px) {
+  .header__nav {
+    right: -15px; } }
 
 .header__item {
   text-align: center;
@@ -164,10 +164,19 @@
 
 .header__text, .header__title {
   animation: textRoll 1.2s linear; }
+  @media screen and (max-width: 460px) {
+    .header__text, .header__title {
+      margin-bottom: 40px; } }
 
 .header__wrap {
   position: relative;
   font: 22px/120px "Lato"; }
+  @media screen and (max-width: 768px) {
+    .header__wrap {
+      line-height: 70px; } }
+  @media screen and (max-width: 460px) {
+    .header__wrap {
+      line-height: 40px; } }
 
 .header__svg, .controls__svg {
   fill: #fff;
@@ -192,6 +201,12 @@
   border: 1px solid transparent;
   cursor: pointer;
   animation: slideDown 2s ease-in-out infinite; }
+  @media screen and (max-width: 768px) {
+    .header__svg--btn {
+      left: 46%; } }
+  @media screen and (max-width: 460px) {
+    .header__svg--btn {
+      left: 43%; } }
 
 /*PORTFOLIO*/
 #portfolio {
@@ -263,6 +278,10 @@
     .portfolio__item {
       width: 100%;
       max-width: 768px; } }
+  @media screen and (max-width: 460px) {
+    .portfolio__item {
+      height: 100%;
+      min-height: 300px; } }
 
 .portfolio__item--urlaubs:hover .portfolio__innerblock {
   background: rgba(0, 0, 0, 0.85) url("../img/urlaubs.jpg") center center no-repeat;
@@ -301,6 +320,10 @@
     .portfolio__innerblock {
       width: 100%;
       max-width: 768px; } }
+  @media screen and (max-width: 460px) {
+    .portfolio__innerblock {
+      height: 100%;
+      max-height: 300px; } }
 
 .portfolio__innerblock--urlaubs {
   background: rgba(0, 0, 0, 0.1) url("../img/urlaubs.jpg") center center no-repeat;
@@ -387,7 +410,7 @@
   text-align: center; }
 
 .about__skillbar {
-  width: 500px;
+  width: 600px;
   font: 20px/60px "Lato"; }
   @media screen and (max-width: 960px) {
     .about__skillbar {
@@ -396,6 +419,11 @@
 .about__skillname {
   float: left;
   width: 140px; }
+  @media screen and (max-width: 960px) {
+    .about__skillname {
+      float: none;
+      margin: 0 auto;
+      text-align: center; } }
 
 .about__skillbar-wrap {
   display: inline-block;
@@ -406,11 +434,10 @@
   padding: 3px; }
   @media screen and (max-width: 1140px) {
     .about__skillbar-wrap {
-      width: 60%; } }
+      width: 50%; } }
   @media screen and (max-width: 960px) {
     .about__skillbar-wrap {
-      width: 70%;
-      margin-left: 30px; } }
+      width: 100%; } }
 
 .about__meter {
   border-radius: 20px;
@@ -439,7 +466,15 @@
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); }
   @media screen and (max-width: 960px) {
     .about__photo {
-      margin: 0 auto; } }
+      margin: 15px;
+      float: left; } }
+  @media screen and (max-width: 768px) {
+    .about__photo {
+      margin: 20px; } }
+  @media screen and (max-width: 460px) {
+    .about__photo {
+      float: none;
+      margin: 10px auto; } }
 
 .about__text {
   text-indent: 20px;
@@ -459,6 +494,11 @@
     transform: scale(1.15); }
     .contacts__link:nth-child(3) .contacts__svg:hover {
       transform: scale(1.25); }
+  @media screen and (max-width: 460px) {
+    .contacts__link {
+      width: 80px;
+      height: 80px;
+      text-align: center; } }
 
 .contacts__svg {
   width: 70px;
@@ -469,6 +509,11 @@
   .contacts__svg:hover {
     fill: #2afaff;
     transform: scale(1.1); }
+  @media screen and (max-width: 460px) {
+    .contacts__svg {
+      width: 45px;
+      height: 45px;
+      margin: 0; } }
 
 .parallaxContainer {
   position: fixed;
@@ -491,13 +536,9 @@
       margin-left: -20%; } }
   @media screen and (max-width: 768px) {
     .parallaxContainer {
-      display: none; } }
-
-@media screen and (max-width: 768px) {
-  body {
-    background: url("../img/head.jpg") top center no-repeat;
-    background-size: contain;
-    background-attachment: fixed; } }
+      width: 180%;
+      height: 140%;
+      margin-left: -45%; } }
 
 .parallaxImg {
   overflow: hidden;

@@ -16,7 +16,9 @@
 }
 @font-face {
     font-family: 'lato';
-    src: url('../fonts/lato.woff2') format('woff2');
+    src: url('../fonts/lato-regular.woff2') format('woff2'),
+         url('../fonts/lato-regular.woff') format('woff');
+
     font-weight: normal;
     font-style: normal;
 
@@ -75,12 +77,10 @@ $fullscreen: 1350px;
 	width: 1140px;
 	box-sizing: border-box;
 	margin: 0 auto;
-	@include respond-to ($fullscreen){
-		max-width: $fullscreen;
-		width: 100%;
-	}
+
 	@include respond-to($desctop){
 		max-width: $desctop; 
+		width: 100%;
 	}
 	@include respond-to ($desctop960){
 		max-width: $desctop960;
@@ -109,10 +109,8 @@ $fullscreen: 1350px;
 
 .header__logo{
 	font: 25px/70px $lato;
-	@include respond-to ($desctop960){
-		float: none;
-		margin: 0 auto;
-		width: 160px;
+	@include respond-to ($mobile){
+		.header__svg {margin-right: 0px;}
 	}
 }
 
@@ -138,10 +136,11 @@ $fullscreen: 1350px;
 .header__nav{
 	@include respond-to ($desctop960){
 	position: fixed;
-	top: 40px;
-	right: 0px;
+	z-index: 999;
+	top: 35px;
+	right: 10px;
 	width: 50px;
-	transition: all .5s ease-in-out;
+	transition: width .5s ease-in-out;
 	.header__list{
 		position: relative;
 		.header__svg--menu{
@@ -170,6 +169,9 @@ $fullscreen: 1350px;
 				}
 		}
 	};
+	@include respond-to ($mobile){
+		right: -15px;
+	}
 
 	
 }
@@ -209,13 +211,23 @@ $fullscreen: 1350px;
 	@include respond-to ($desctop960) {
 		padding: 220px 0;
 	}
+		
 }
 .header__text, .header__title{
 	animation: textRoll 1.2s linear;
+	@include respond-to ($semitablet){
+		margin-bottom: 40px;
+	}
 }
 .header__wrap{
 	position: relative;
 	font: 22px/120px $lato;
+	@include respond-to ($tablet){
+		line-height: 70px;
+	}
+	@include respond-to ($semitablet){
+		line-height: 40px;
+	}
 }
 .header__svg{
 	fill: #fff;
@@ -240,6 +252,8 @@ $fullscreen: 1350px;
 	border: 1px solid transparent;
 	cursor: pointer;
 	animation: slideDown 2s ease-in-out infinite;
+	@include respond-to ($tablet) {left: 46%;}
+	@include respond-to ($semitablet){left: 43%;}
 };
 
 
@@ -309,6 +323,7 @@ $fullscreen: 1350px;
 			left: 7%;
 			
 		}
+
 	};
 
 	@include respond-to ($desctop) {
@@ -318,6 +333,10 @@ $fullscreen: 1350px;
 		width:100%;
 		max-width: $tablet;
 
+	}
+	@include respond-to ($semitablet) {
+		height: 100%;
+		min-height: 300px;
 	}
 
 }
@@ -343,6 +362,10 @@ $fullscreen: 1350px;
 	@include respond-to ($tablet){
 		width: 100%;
 		max-width: $tablet;
+	}
+	@include respond-to ($semitablet){
+		height: 100%;
+		max-height: 300px;
 	}
 }
 
@@ -424,7 +447,7 @@ $fullscreen: 1350px;
 }
 
 .about__skillbar{
-	width: 500px;
+	width: 600px;
 	font: 20px/60px $lato;
 	@include respond-to ($desctop960){
 		width: 100%;
@@ -433,6 +456,11 @@ $fullscreen: 1350px;
 .about__skillname{
 	float: left;
 	width: 140px;
+	@include respond-to ($desctop960){
+		float: none;
+		margin: 0 auto;
+		text-align: center;
+	}
 }
 .about__skillbar-wrap{
 	display: inline-block;
@@ -442,11 +470,10 @@ $fullscreen: 1350px;
 	border-radius: 20px;
 	padding: 3px;
 	@include respond-to ($desctop){
-		width: 60%;
+		width: 50%;
 	}
 	@include respond-to ($desctop960){
-		width: 70%;
-		margin-left: 30px;
+		width: 100%;
 	}
 }
 
@@ -476,8 +503,17 @@ $fullscreen: 1350px;
 	height: 220px;
 	box-shadow: 0 0 10px rgba(255,255,255,.7);
 	@include respond-to ($desctop960){
-		margin: 0 auto;
+		margin: 15px;
+		float: left;
 	}
+	@include respond-to ($tablet) {
+		margin: 20px;
+	}
+	@include respond-to ($semitablet) {
+		float: none;
+		margin: 10px auto;
+	}
+
 }
 
 .about__text{	
@@ -503,6 +539,11 @@ $fullscreen: 1350px;
 		transform: scale(1.15);
 		&:hover{transform: scale(1.25)};
 	};
+	@include respond-to ($semitablet) {
+		width: 80px;
+		height: 80px;
+		text-align: center;
+	}
 };
 .contacts__svg{
 	width: 70px;
@@ -511,6 +552,11 @@ $fullscreen: 1350px;
 	margin: 50px;
 	transition: all .4s ease-in-out;
 	&:hover{fill: $lb;transform: scale(1.1)};
+	@include respond-to ($semitablet){
+		width: 45px;
+		height: 45px;
+		margin: 0;
+	}
 
 }
 
@@ -534,17 +580,12 @@ $fullscreen: 1350px;
 		margin-left: -20%;
     }
 	@include respond-to ($tablet){
-		display: none;
+		width: 180%;
+		height: 140%;
+		margin-left: -45%;
     }
 }
 
-body{
-	@include respond-to ($tablet){
-		background: url('../img/head.jpg') top center no-repeat;
-		background-size: contain;
-		background-attachment: fixed;
-	}
-}
 
 .parallaxImg {
 	overflow: hidden;
