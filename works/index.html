@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test for FiroNet</title>
+	<style>
+
+		body{	
+			background: #ddd;
+		}
+		.wrapper{
+			width: 1140px;
+			margin: 0 auto;
+
+		}
+		.text{
+			text-indent: 15px;
+		}
+		input {
+			width: 350px;
+			height: 30px;
+		}
+		#btn {
+			height: 35px;
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<p class="text">
+			Имеется поле input, в котором через запятую введены данные в формате:<br>
+
+			<День недели>: < время работы>. Пример: "Пн: 8:00, Вт: 15:00, Вт: 16:00, Ср: 17:30";<br>
+
+			Напишите JS функцию, которая на вход принимает данную строку и форматирует ее таким образом, чтобы все подряд идущие минуты в предлелах одного дня заменялись на тире, а дни отделялись точкой с запятой.<br>
+
+			Пример:<br>
+
+			Входная строка<br> "Пн: 8:00, Вт: 15:00, Вт: 15:30, Вт: 16:00, Вт: 17:00, Ср: 17:30";<br>
+
+			Выходная строка<br> "Пн: 8:00; Вт: 15:00-16:00, 17:00; Ср: 17:30";<br>
+
+			Условия:<br>
+
+			1. За ШАГ брать пол часа.<br>
+
+			2. Время и дни могут идти не по порядку, например:<br>
+
+			"Ср: 17:30, Пн: 8:00, Вт: 15:30, Вт: 15:00, Вт: 16:00";<br>
+
+			3. В выходной строке все должно идти по порядку.
+		</p>
+		<input type="text" class="input">
+		<button class="submit" id="btn">submit</button>
+		<div class="outer-div">
+			Result:
+		</div>
+	</div>
+	<script>
+		var btn = document.getElementById('btn');
+		btn.addEventListener('click', define);
+		function define () {
+
+
+
+			var outerDiv = document.querySelector('.outer-div');
+			outerDiv.innerHTML = 'Result:';
+
+
+			var inputValue = document.querySelector('input').value;
+			
+			//Создаем массив с введенными данными
+
+			var inputText = inputValue.split(',');
+			console.log(inputText);
+
+			//Создаем рабочий массив с объектами, в котором будут хранится введенные данные для последующего редактирования
+
+			var week = [
+				{
+					name:'Пн',
+					time: []
+				},
+				{
+					name:'Вт',
+					time: []
+				},
+				{
+					name:'Ср',
+					time: []
+				},
+				{
+					name:'Чт',
+					time: []
+				},
+				{
+					name:'Пт',
+					time: []
+				}
+			]
+		
+			// Пробегаем циклом по массиву с введенными данными и помещаем данные со временем в массив week.time согласно дням недели
+
+			for(var i = 0; i < inputText.length; i++){
+
+				var timeRegExp = /\d{1,2}:\d{2}/g;
+			
+				if(inputText[i].match(/Пн/i)){
+					week[0].time.push(inputText[i].match(timeRegExp).toString()) 
+				} else if (inputText[i].match(/Вт/i))	{
+					week[1].time.push(inputText[i].match(timeRegExp).toString()) 
+				} else if (inputText[i].match(/Ср/i))	{
+					week[2].time.push(inputText[i].match(timeRegExp).toString()) 
+				} else if (inputText[i].match(/Чт/i))	{
+					week[3].time.push(inputText[i].match(timeRegExp).toString()) 
+				} else if (inputText[i].match(/Пт/i))	{
+					week[4].time.push(inputText[i].match(timeRegExp).toString()) 
+				} 
+
+			}
+			// Делаем проверку введенных данных, и в случае если время записано в формате <х:хх> добавляем впереди 0, для корректной последующей сортировки времени в массиве
+
+			for (var i = 0; i < week.length; i++){
+				for(var j = 0; j < week[i].time.length; j++){
+					if(week[i].time[j].length == 4){
+						week[i].time.splice(j, 1, '0' + week[i].time[j])
+					}
+				}
+			}
+
+			// Пробегаем по массиву с внесенными данными
+
+			for(var i = 0; i < week.length; i++){
+
+				// сортируем время по возрастанию
+
+				week[i].time.sort()
+
+				var currentTimeArray = week[i].time;
+
+
+				
+				//проверяем длинну массива со временем
+
+				if(week[i].time.length > 1){
+
+					//создаем массив строк со временем, которые имеют разницу в 30 минут
+
+					var matches = [];
+
+					console.log(currentTimeArray)
+
+					// Пробегаем циклом по массиву и сравниваем его со следующим элементом массива. Если шаг равен 30 минутам, добавляем его в массив matches
+
+					for(var j = 0; j < currentTimeArray.length; j++){
+						console.log('current time item = ' + week[i].time[j]);
+
+						if(j+1 < currentTimeArray.length && week[i].time[j][3] == 0){
+							var item = currentTimeArray[j].replace('00', '30')
+							
+							if(currentTimeArray[j+1] == item){
+								console.log('matched: ' + currentTimeArray[j] + ' and ' + item);
+
+								if(matches.length == 0)  {
+									matches.push(currentTimeArray[j])
+								}
+
+
+								matches.push(item);
+
+							}
+
+						} 
+
+						if(j+1 < currentTimeArray.length && currentTimeArray[j][3] == 3){			
+							var hours = currentTimeArray[j][0] + currentTimeArray[j][1];
+							console.log(hours)
+							if(hours[0]==0){
+								console.log('hours[0] = ' + hours[0])
+								hours = currentTimeArray[j][1];
+								var item = currentTimeArray[j].replace(hours,  +hours +1).replace('30', '00');
+								if(item.length == 6){item = '10:00';}
+							console.log(item)
+							} else {
+								hours = currentTimeArray[j][0] + week[i].time[j][1];
+								var item = currentTimeArray[j].replace(hours, +hours+1).replace('30', '00');
+								console.log(item)
+							}
+							console.log('matched = ' + currentTimeArray[j] + ' and ' + item)
+
+							if(j+1 < currentTimeArray.length && currentTimeArray[j+1] == item){
+
+								if(matches.length == 0)  {
+									matches.push(currentTimeArray[j])
+								}
+
+								if(matches[matches.length-1] !== week[i].time[j]){
+									anotherMatches.push(week[i].time[j]);
+								}
+
+								matches.push(item);
+							}
+
+						}
+						console.log('matches array = ' + matches);
+						
+					}
+					
+					// Сравниваем начальный массив с данными, с полученным массивом
+
+
+					var newArray = [];
+
+					for(var k = 0, j = 0; k < currentTimeArray.length; k++){
+
+						if(matches[j] == currentTimeArray[k]){
+							console.log('match found: ' + matches[j])
+							j++;
+						} else {
+							newArray.push(currentTimeArray[k])
+						}
+					}
+
+
+					// редактируем массив согласно условиям задания
+
+
+					if(matches.length != 0){
+						var currentTimeArray = [matches[0]+'-'+matches[matches.length-1]];
+					} else {
+						currentTimeArray = [];
+					}
+					console.log('newArray = ' + newArray);
+
+
+					if(newArray.length > 0){
+						for(var j = 0; j < newArray.length; j++){
+							currentTimeArray.push(newArray[j])
+						console.log(currentTimeArray);
+						};
+						currentTimeArray = currentTimeArray.sort()
+					}
+
+					// Перезаписываем данные массива времени в рабочем объекте week
+
+					week[i].time = currentTimeArray;
+					matches = [];
+					newArray = [];
+
+			}
+
+				
+			//	выводим результат 
+			if(week[i].time.length > 0){
+				var p = document.createElement('p');	
+				p.innerHTML = week[i].name + ': ' + week[i].time + '; ';
+				outerDiv.appendChild(p);
+			}
+		};
+
+	};
+
+	</script>
+</body>
+</html>
