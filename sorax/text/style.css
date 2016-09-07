@@ -1,0 +1,16 @@
+body {
+	background: #ccc; /* grey */
+	font-family: 'Tahoma', Arial, sans-serif;
+	font-size: 19px; /* (0.8em = 80%)*/
+	font-weight: 900; /*(0-900)*/
+	font-style: italic; /*oblique = наклонный = italic, */
+	font-variant: small-caps; /* маленькие заглавные */
+	text-decoration: blink; /* line-through, underline, overline, none */
+	text-transform: lowercase; /* uppercase, capitalize - первые буквы заглавные */
+	text-align: center; /* justify - распределить по ширине left right*/
+	text-indent: 30px; /*абзац*/
+	line-height: 20px; 
+	word-spacing: 20px;
+	letter-spacing: 1px;
+	text-shadow: 0 1px 0 #fff; /* горизонталь/вертикаль/размытие/цвет*/
+}

@@ -1,0 +1,32 @@
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	
+}
+.sprites .sprite1 {
+	background-position: 0px 0px;
+}
+.sprites .sprite2 {
+	background-position: -87px 0;
+}
+.sprites .sprite3 {
+	background-position: -170px 0;
+}
+.sprites .sprite1:hover {
+	background-position: 0px -85px;
+}
+.sprites .sprite2:hover {
+	background-position: -87px -85px;
+}
+.sprites .sprite3:hover {
+	background-position: -170px -85px;
+}
+.sprites li {
+	background: url(img.png) no-repeat;
+	display: inline-block;
+	width: 75px;
+	height: 75px;
+}
+

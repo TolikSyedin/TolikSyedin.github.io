@@ -1,0 +1,72 @@
+*{
+	background: #fafafa;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+	font-family: Tahoma, sans-serif;
+	font-size: 1em;
+}
+
+.nav {
+	padding: 0;
+	list-style: none;
+	margin: 30px;
+	width: 50px;
+}
+.nav li {
+	opacity: .5;
+	height: 50px;
+	width: 50px;
+	overflow: hidden;
+	transition: all .3s ease-in-out;
+}
+
+li a {
+	display: block;
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	background: #ccc;
+	padding-left: 15px;
+	margin: 1px;
+	cursor: pointer;
+	transition: background .4s ease-in-out; 
+
+}
+
+li  a:first-child {
+	position: relative;
+	font-size: 1.1em;	
+	height: 50px;
+	line-height: 50px;
+	text-indent: 36px;
+}
+li a:first-child:before{
+	content: '';
+	position: absolute;
+	display: block;
+	height: 32px;
+	width: 32px;
+	top: 9px;
+	left: 7px;
+	color: #fff;
+}
+
+li a:hover{
+	background: #2ed4ff;
+}
+.nav li:hover {
+	opacity: 1;
+	width: 200px;
+	height: 175px;
+}
+.main-menu a:first-child:before{
+	background: url(png/signs.png) center center no-repeat;
+}
+.settings a:first-child:before{
+	background: url(png/controls.png) center center no-repeat;
+}.links a:first-child:before{
+	background: url(png/browser.png) center center no-repeat;
+}.search a:first-child:before{
+	background: url(png/search.png) center center no-repeat;
+}

@@ -1,0 +1,50 @@
+body {
+	background: rgb(120,0,120);
+	/*color: rgba(0,0,0,.5);*/
+	color: #000; /* 0-9. a-f*/
+}
+
+.container {
+	width: 200px;
+	height: 200px;
+	margin: 20px;
+	background: #eee;
+
+	border: 3px solid  #000; /*transparent dashed dotted hidden inset medium groove */
+	border-bottom-right-radius; /* 10px 30px; скругление по х и у  */
+	border-radius: 50%; /*круг*/
+}
+
+.triangle-up {
+
+	width: 0px;
+	height: 0px;
+
+	border-bottom: 100px solid #000;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	/*треулогильник вверх*/
+}
+.little_tip {
+	margin-top: 50px;
+	width: 150px;
+	height: 80px;
+	background: #888;
+	border-radius: 5px;
+	position: relative;
+}
+
+.little_tip:after {
+	content:'';
+	position: absolute;
+	bottom: -10px;
+	left: 65px;
+
+	width: 0;
+	height: 0;
+	border-top: 10px solid #888;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+
+
+}
