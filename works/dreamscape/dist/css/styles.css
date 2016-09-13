@@ -1002,7 +1002,7 @@ button.swiper-pagination-bullet {
     display: block;
     content: '';
     background: url("../img/curve.png") center center no-repeat; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 769px) {
     .about__title, .journal__title, .team__title {
       padding: 65px 0; } }
 
@@ -1011,21 +1011,21 @@ button.swiper-pagination-bullet {
   padding: 0;
   margin: 50px 0px;
   /*vertical-align: middle;*/ }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 769px) {
     .about__item {
       height: 300px;
       text-align: center; }
       .about__item .about__img {
         height: 500px; } }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
   .about__item--img2 {
     margin-top: 550px; } }
 
 .about__item--text, .about__item--text2 {
   padding: 10% 9%; }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
   .about__item--text2 {
     margin-top: -700px;
     margin-bottom: 600px; } }
@@ -1034,13 +1034,13 @@ button.swiper-pagination-bullet {
   padding: 10% 0 0 10%;
   height: 350px;
   text-align: left; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 769px) {
     .about__item--left, .about__item--right {
       padding: 10%; } }
 
 .about__item--right {
   padding: 10% 10% 0 2%; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 769px) {
     .about__item--right {
       padding: 10%; } }
 
@@ -1116,7 +1116,7 @@ button.swiper-pagination-bullet {
       background: #dfdfdf;
       width: 250px;
       height: 2px; } }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 769px) {
     .projects__viewport:after {
       display: none; } }
 
@@ -1128,7 +1128,7 @@ button.swiper-pagination-bullet {
   @media only screen and (max-width: 1199px) {
     .projects__container {
       margin-left: 20%; } }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 769px) {
     .projects__container {
       margin-left: 0; } }
 
@@ -1139,11 +1139,11 @@ button.swiper-pagination-bullet {
     .projects__wrapper {
       width: 80%;
       margin-left: -7%; } }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 769px) {
     .projects__wrapper {
       margin-left: 5%; } }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
   .projects__pagination {
     display: none; } }
 
@@ -1192,7 +1192,7 @@ button.swiper-pagination-bullet {
     .projects__item {
       margin-right: 10%;
       margin-left: -10%; } }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 769px) {
     .projects__item {
       /*margin-right: 2%;*/
       margin-left: 15%; } }
@@ -1222,7 +1222,7 @@ button.swiper-pagination-bullet {
   width: 100%; }
   .projects__desc:first-child {
     display: block; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 769px) {
     .projects__desc {
       margin: -100px 0 0 50px;
       text-align: center; } }
@@ -1233,7 +1233,7 @@ button.swiper-pagination-bullet {
   .journal .wrapper {
     padding-bottom: 200px; }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
   .journal__header {
     margin-top: 400px;
     text-align: center; } }
@@ -1244,7 +1244,7 @@ button.swiper-pagination-bullet {
   padding: 0; }
   .journal__title:before {
     margin: 30px 0; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 769px) {
     .journal__title {
       text-align: center;
       margin: 20px auto; }
@@ -1260,7 +1260,7 @@ button.swiper-pagination-bullet {
 .journal__little-photo {
   margin-top: 220px;
   z-index: 1; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 769px) {
     .journal__little-photo {
       display: none; } }
 
@@ -1277,7 +1277,7 @@ button.swiper-pagination-bullet {
       width: 150%;
       margin-left: -100px;
       height: 80%; } }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 769px) {
     .journal__big-photo .journal__img {
       width: 100%;
       margin-left: 0; } }
@@ -1329,7 +1329,7 @@ button.swiper-pagination-bullet {
 .footer__item {
   line-height: 50px;
   padding: 0; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 769px) {
     .footer__item {
       margin: 40px auto; } }
 
@@ -1364,7 +1364,7 @@ button.swiper-pagination-bullet {
   margin-top: 20px;
   border: 2px solid #949494;
   width: 335px; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 769px) {
     .footer__formbox {
       min-width: 100%; } }
 
@@ -1376,7 +1376,7 @@ button.swiper-pagination-bullet {
   font: 12px/40px "open_sansregular";
   height: 40px;
   padding: 0 0 0 25px; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 769px) {
     .footer__input {
       min-width: 90%; } }
 
