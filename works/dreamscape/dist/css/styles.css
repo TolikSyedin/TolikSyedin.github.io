@@ -1019,7 +1019,7 @@ button.swiper-pagination-bullet {
   .about__item--img2 {
     margin-top: 550px; } }
 
-.about__item--text, .about__item-text2 {
+.about__item--text, .about__item--text2 {
   padding: 10% 9%; }
 
 @media only screen and (max-width: 768px) {
