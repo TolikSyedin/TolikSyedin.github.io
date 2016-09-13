@@ -168,6 +168,9 @@
 		content: '';
 		background: url('../img/curve.png') center center no-repeat;
 	};
+	@include respond-to ($tablet){
+		padding: 65px 0;
+	}
 
 }
 .about__item{
