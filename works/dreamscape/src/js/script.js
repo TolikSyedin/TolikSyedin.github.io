@@ -24,6 +24,7 @@ $(document).ready(function () {
         		index++;
         		$('.projects__desc').fadeOut(100);
         		$('#desc'+ index).delay(300).fadeIn(100);
+                paginationBulletRender();
         	   }
             
     });
