@@ -31,7 +31,7 @@ $(document).ready(function () {
 
     $(window).resize(function(){
         var ww = $(window).width()
-         if(ww < 1400 && ww > 1200){
+         if(ww < 1500 && ww > 1200){
             pItem.css('margin', '0 8% 0 0%');
             pWrap.css({
                 marginLeft: '-200px',
@@ -43,12 +43,11 @@ $(document).ready(function () {
             swiper = new Swiper ('.swiper-container', params)
 
         } else if (ww < 769 && ww > 650) {
-            pItem.css('margin', '0 13% 0 -1px');
+            pItem.css('margin', '0 11% 0 -1%');
             pWrap.css('marginLeft', '10%');
             swiper = new Swiper ('.swiper-container', params)
-            
+        } 
 
-        }
 
     });
     $(window).trigger("resize");
