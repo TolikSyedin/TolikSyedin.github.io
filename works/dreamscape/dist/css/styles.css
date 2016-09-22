@@ -6573,23 +6573,10 @@ button.swiper-pagination-bullet {
   max-width: 95%;
   padding: 5%;
   overflow: hidden; }
-  @media only screen and (max-width: 1199px) {
-    .projects__container {
-      margin-left: 20%; } }
-  @media only screen and (max-width: 768px) {
-    .projects__container {
-      margin-left: 0; } }
 
 .projects__wrapper {
-  margin-left: -200px;
+  width: 100%;
   min-height: 500px; }
-  @media only screen and (max-width: 1199px) {
-    .projects__wrapper {
-      width: 80%;
-      margin-left: -7%; } }
-  @media only screen and (max-width: 768px) {
-    .projects__wrapper {
-      margin-left: 5%; } }
 
 @media only screen and (max-width: 768px) {
   .projects__pagination {
@@ -6634,16 +6621,7 @@ button.swiper-pagination-bullet {
   right: -1px; }
 
 .projects__item {
-  float: left;
-  margin-right: 5%; }
-  @media only screen and (max-width: 1199px) {
-    .projects__item {
-      margin-right: 10%;
-      margin-left: -10%; } }
-  @media only screen and (max-width: 768px) {
-    .projects__item {
-      /*margin-right: 2%;*/
-      margin-left: 15%; } }
+  float: left; }
 
 .projects__img {
   width: 100%;
@@ -6714,7 +6692,6 @@ button.swiper-pagination-bullet {
 
 .journal__big-photo {
   position: absolute;
-  /*float: right;*/
   overflow: hidden;
   top: -100px;
   height: 600px;

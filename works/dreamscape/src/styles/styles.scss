@@ -316,24 +316,12 @@
     max-width: 95%;
     padding: 5%;
 	overflow: hidden;
-	@include respond-to ($widescreen){
- 		margin-left: 20%; 
-	}
-	@include respond-to ($tablet){
-		margin-left: 0;
-	}
-	
+
 }  
 .projects__wrapper {
-	margin-left: -200px;
+
+	width: 100%;
 	min-height: 500px;
-	@include respond-to ($widescreen){
-		width: 80%;
-		margin-left: -7%;
-    }
-    @include respond-to ($tablet){
-    	margin-left: 5%;
-    }
 }
 .projects__pagination{
 	@include respond-to($tablet){
@@ -384,16 +372,6 @@
 }
 .projects__item{
 	float: left;
-	margin-right: 5%;
-	@include respond-to ($widescreen){
-		margin-right: 10%;
-		margin-left: -10%;
-	}
-	@include respond-to ($tablet){
-
-		/*margin-right: 2%;*/
-		margin-left: 15%;
-	}
 }
 .projects__img{
 	width: 100%;
@@ -482,7 +460,6 @@
 }
 .journal__big-photo{
 	position: absolute;
-	/*float: right;*/
 	overflow: hidden;
 	top: -100px;
 	height: 600px;
