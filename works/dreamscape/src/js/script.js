@@ -5,16 +5,16 @@ $(document).ready(function () {
         ww = $(window).width(),
         params,
         swiper = new Swiper('.swiper-container', {
-            pagination: '.swiper-pagination',
-            slidesPerView: 'auto',
-        	autoHeight: true,
+            autoHeight: true,
             centeredSlides: true,
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
+            slidesPerView: 'auto',
             spaceBetween: 0,
-            paginationClickable: true, 
             autoResize: false,
             resizeReInit: true,
+            prevButton: '.swiper-button-prev',
+            nextButton: '.swiper-button-next',
+            pagination: '.swiper-pagination',
+            paginationClickable: true, 
             paginationBulletRender: function (index, className) {
                 return '<span class="' + className + '">' + '0' +(index + 1) + '</span>';
                 },
@@ -24,8 +24,11 @@ $(document).ready(function () {
         		index++;
         		$('.projects__desc').fadeOut(100);
         		$('#desc'+ index).delay(300).fadeIn(100);
-                paginationBulletRender();
-        	   }
+                
+                console.log('done!');
+
+        	   },
+
             
     });
     params = swiper.params;

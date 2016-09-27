@@ -312,6 +312,10 @@
   background: rgba(0, 0, 0, 0.85) url("../img/build.jpg") center center no-repeat;
   background-size: cover; }
 
+.portfolio__item--dreamscape:hover .portfolio__innerblock {
+  background: rgba(0, 0, 0, 0.85) url("../img/dreamscape.jpg") center center no-repeat;
+  background-size: cover; }
+
 .portfolio__innerblock {
   position: absolute;
   border: 1px solid rgba(66, 155, 184, 0.8);
@@ -351,6 +355,10 @@
 
 .portfolio__innerblock--build {
   background: rgba(0, 0, 0, 0.1) url("../img/build.jpg") center center no-repeat;
+  background-size: cover; }
+
+.portfolio__innerblock--dreamscape {
+  background: rgba(0, 0, 0, 0.1) url("../img/dreamscape.jpg") center center no-repeat;
   background-size: cover; }
 
 .portfolio__icons {

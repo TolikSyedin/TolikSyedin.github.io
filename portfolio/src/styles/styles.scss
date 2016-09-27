@@ -353,9 +353,10 @@ $fullscreen: 1350px;
 
 }
 .portfolio__item--urlaubs{@include hoverBg(urlaubs);}
-.portfolio__item--pingbuller{@include hoverBg(pingbuller);.portfolio__icons{left: 40px;top: 50px;}}
+.portfolio__item--pingbuller{@include hoverBg(pingbuller).portfolio__icons{left: 40px;top: 50px;}}
 .portfolio__item--mountains{@include hoverBg(mountain);}
 .portfolio__item--build{@include hoverBg(build);}
+.portfolio__item--dreamscape{@include hoverBg(dreamscape)}
 
 
 .portfolio__innerblock{
@@ -386,6 +387,8 @@ $fullscreen: 1350px;
 .portfolio__innerblock--pingbuller{@include innerBg(pingbuller);.portfolio__icons{left: 40px;top: 50px;}}
 .portfolio__innerblock--mountains{@include innerBg(mountain);}
 .portfolio__innerblock--build{@include innerBg(build);}
+.portfolio__innerblock--dreamscape{@include innerBg(dreamscape)}
+
 
 	
 .portfolio__icons{
