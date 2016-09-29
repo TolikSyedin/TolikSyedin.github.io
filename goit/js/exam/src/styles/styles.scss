@@ -389,6 +389,9 @@ $semitablet: 480px;
     line-height: 10px;
     margin-left: -1px;
 }
+.footer__link{
+	color: #ccc;
+}
 .footer__design{
 	@include font(9px, $montserratBold, #ccc);
 	text-transform: uppercase;

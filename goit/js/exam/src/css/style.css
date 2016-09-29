@@ -455,6 +455,9 @@
   line-height: 10px;
   margin-left: -1px; }
 
+.footer__link {
+  color: #ccc; }
+
 .footer__design {
   font: 9px "montserrat-bold", sans-serif;
   color: #ccc;
