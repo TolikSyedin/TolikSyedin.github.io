@@ -1,7 +1,7 @@
 require(
 	[	
 		'../src/tmpl',
-		'../src/jquery-3.0.0.min',
+		'../src/jquery-2.2.4.min',
 		'../src/model',
 		'../src/view',
 		'../src/controller',
