@@ -18,13 +18,12 @@ $(document).ready(function () {
             paginationBulletRender: function (index, className) {
                 return '<span class="' + className + '">' + '0' +(index + 1) + '</span>';
                 },
-            onSlideChangeStart: function(swiper){
+            onSlideChangeEnd: function(swiper, className){
         		var slide = swiper.slides;
         		var index = swiper.snapIndex
-        		index++;
-        		$('.projects__desc').fadeOut(100);
-        		$('#desc'+ index).delay(300).fadeIn(100);
-                
+                index++;
+                $('.projects__desc').fadeOut(100);
+                $('#desc'+ index).delay(400).fadeIn(300)
                 console.log('done!');
 
         	   },
