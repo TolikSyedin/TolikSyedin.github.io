@@ -37,7 +37,7 @@ body {
 
 footer {
 	text-align: right;
-    position: fixed;
+    position: absolute;
     bottom: 20px;
     right: 10px;
 }
