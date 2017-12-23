@@ -13,7 +13,7 @@
 
 body {
 	font-family: 'rosamunda', arial, sans-serif;
-	font-size: 40px;
+	font-size: 90px;
     background-image: url('../img/bg.jpg');
     background-size: cover;
     background-position: center;
@@ -25,10 +25,14 @@ body {
 }
 
 .row {
-	width: 500px;
-	margin: 0 auto;
+	width: 100%;
+	margin: 20px auto;
 	text-align: center;
 	line-height: 50px;
+}
+
+.row:last-child{
+	margin-top: 50px;
 }
 
 footer {
@@ -39,11 +43,26 @@ footer {
 }
 
 @media screen and (max-width: 769px) {
-	body{
-		font-size: 30px
+	body {
+		font-size: 50px
 	}
 
+}
+@media screen and (max-width: 600px) {
+	body {
+		font-size: 40px
+	}
+
+}
+@media screen and (max-width: 600px) {
+	body {
+		font-size: 30px
+	}
 	.row {
-		width: 100%;
+		margin: 10px auto;
+		line-height: 20px;
+	}
+	.row:last-child{
+		margin-top: 20px;
 	}
 }
