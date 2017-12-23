@@ -42,24 +42,47 @@ footer {
     right: 10px;
 }
 
+aside div {
+	line-height: 50px;	
+	margin: 0;
+}
+
+.sign {
+	font-size: 40px;
+}
+
+
 @media screen and (max-width: 769px) {
 	body {
 		font-size: 50px
 	}
 
 }
+
 @media screen and (max-width: 600px) {
 	body {
 		font-size: 40px
 	}
-
+	.sign {
+		font-size: 40px;
+	}
+	aside div {
+		line-height: 50px;
+	}
 }
+
 @media screen and (max-width: 600px) {
 	body {
 		font-size: 30px
 	}
+	.sign {
+		font-size: 30px;
+	}
 	.row {
 		margin: 10px auto;
+		line-height: 20px;
+	}
+	aside div {
 		line-height: 20px;
 	}
 	.row:last-child{
