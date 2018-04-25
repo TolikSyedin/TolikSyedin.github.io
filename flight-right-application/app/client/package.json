@@ -1,0 +1,29 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "flexbox-react": "^4.4.0",
+    "material-ui": "^0.20.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-flex": "^2.2.8",
+    "react-render-html": "^0.6.0",
+    "react-scripts": "1.1.4",
+    "showdown": "^1.8.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+  },
+  "proxy": "http://localhost:5000",
+  "devDependencies": {
+    "flexbox-react": "^4.4.0",
+    "material-ui": "^0.20.0",
+    "react-render-html": "^0.6.0",
+    "showdown": "^1.8.6"
+  }
+}

@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-top: 50px;
+  font-family: sans-serif;
+  background: rgba(0,0,0,.1) url('/images/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+header {
+  text-align: center;
+}
