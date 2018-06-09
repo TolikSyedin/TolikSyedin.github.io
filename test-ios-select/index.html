@@ -108,6 +108,39 @@ body {
     background-color: #fff;
     line-height: 2;
 }
+        .t-flugrecht .customSelect:before, .t-flugrecht thead tr {
+    color: #fff;
+    background-color: hsla(0,0%,56%,.8);
+}
+.customSelect:before {
+    content: "";
+    position: absolute;
+    top: -.09em;
+    left: 100%;
+    display: block;
+    width: 3.125em;
+    height: 3.125em;
+    border-top-right-radius: .25em;
+    border-bottom-right-radius: .25em;
+    transform: translateX(-3.0325em);
+    background: #478bd3;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}.customSelect:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: .45em;
+    width: 0;
+    height: 0;
+    border-left: .3125em solid transparent;
+    border-right: .3125em solid transparent;
+    border-top: .3125em solid #fff;
+    transform: translateY(-50%);
+    font-size: 2em;
+}
+        
 *, :after, :before {
     box-sizing: inherit;
 }
