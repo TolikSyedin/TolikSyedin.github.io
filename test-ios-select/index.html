@@ -6,14 +6,128 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        #qa-select {
-            font-size: 50px;
-        }
-        @media screen and (-webkit-min-device-pixel-ratio: 0) {
-            select:focus, textarea:focus, input:focus {
-                    font-size: 16px;
-                }
-            }
+    #qa-select {
+        font-size: 50px;
+        -webkit-appearance: menulist-button;
+        width: 155px;
+        position: absolute;
+        opacity: 0;
+        height: 44px;
+        font-size: 14px;
+    }
+   
+.hasCustomSelect {
+    position: relative;
+    z-index: 3;
+}
+label, select {
+    display: block;
+    width: 100%;
+}
+address, blockquote, dl, fieldset, figure, h1, h2, h3, h4, h5, h6, hr, input[type=checkbox], input[type=radio], ol, p, pre, select, table, ul {
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+}
+button, select {
+    text-transform: none;
+}
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+
+select:not(:-internal-list-box) {
+    overflow: visible !important;
+}
+
+select, input[type="color" i][list] {
+    background-color: rgb(248, 248, 248);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(166, 166, 166);
+    border-image: initial;
+}
+
+select {
+    -webkit-appearance: menulist;
+    box-sizing: border-box;
+    align-items: center;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    color: black;
+    background-color: white;
+    cursor: default;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+}
+
+select {
+    border-radius: 5px;
+}
+
+input, textarea, select, button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 11px system-ui;
+}
+user agent stylesheet
+input, textarea, select, button, meter, progress {
+    -webkit-writing-mode: horizontal-tb !important;
+}
+.txt-xs {
+    font-size: 14px!important;
+    font-size: .875rem!important;
+    line-height: 1.71429!important;
+}
+.txt-center {
+    text-align: center!important;
+}
+.transportation-item__delay {
+    font-size: .875em;
+    margin: 0 0 1.25em;
+}
+form {
+    font-size: 1rem;
+}
+body {
+    font-style: normal;
+    background-color: #fff;
+    -webkit-animation: bugfix infinite 1s;
+}
+html, html a {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+html {
+    font-family: sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #1f262c;
+}
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
     </style>
 </head>
 <body>
